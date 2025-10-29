@@ -7,7 +7,7 @@ CACHE_FILENAME = ".structure_state.json"
 MAX_SOURCES_IN_PROMPT = 150
 MAX_LOG_ENTRIES = 200
 
-TAX_KEYWORDS = {"tax", "steuer", "steuerbescheid", "taxes", "steuererklaerung", "steuererklärung"}
+TAX_KEYWORDS = {"tax", "steuer", "steuerbescheid", "taxes", "steuererklaerung"}
 INSURANCE_KEYWORDS = {
     "insurance",
     "versicherung",
@@ -115,10 +115,8 @@ MONTH_NAME_MAP = {
     "february": "02",
     "februar": "02",
     "februari": "02",
-    "mär": "03",
     "maer": "03",
     "maerz": "03",
-    "märz": "03",
     "mar": "03",
     "march": "03",
     "mrt": "03",

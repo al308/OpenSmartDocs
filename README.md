@@ -1,60 +1,60 @@
 # OneDrive → Ollama Document Pipeline
 
-Dieses Projekt automatisiert die Ablage gescannter Dokumente in Microsoft OneDrive. Die Pipeline
+This project automates filing scanned documents to Microsoft OneDrive. The pipeline
 
-- erkennt neue PDFs im _Inbox_-Ordner,
-- erzeugt ein Vorschaubild der ersten Seite,
-- ruft strukturierte Metadaten über ein Ollama‑Model (OpenAI-kompatibles API) ab,
-- bettet die Metadaten ins PDF ein und verschiebt die Datei in den _Sorted_-Ordner.
+- detects new PDFs in `_inbox`,
+- renders the first page as an image,
+- calls an Ollama (OpenAI-compatible) model to obtain structured metadata,
+- embeds the metadata back into the PDF and moves it to `_sorted`.
 
-Ein SQLite-State-Store verhindert Doppelverarbeitung, und ein FastAPI-Admin-Dashboard liefert Status,
-Konfiguration, Logs, manuelle Ingest-Funktionen und einen KI-gestützten Vorschlag für die Folder-Struktur.
+An SQLite state store prevents duplicates, and a FastAPI admin dashboard shows status,
+configuration, logs, manual ingest functions, and an AI-assisted folder structure proposal.
 
 ## Highlights
 
-- **OneDrive-Integration** über Microsoft Graph (inkl. Remote/Shortcut-Unterstützung, optional Device-Code-Flow bzw. Client-Credentials).
-- **PDF-Aufbereitung** mit `pdf2image` und `pikepdf` (Metadaten werden als JSON eingebettet).
-- **Ollama/OpenAI Client**: Nutzung der offiziellen `openai`-Python-Bibliothek gegen das Ollama-Endpunkt (`/api/chat`), inkl. strukturierter JSON-Antworten und automatischer Downscaling-Logik für große Bilder.
-- **Struktur-Assistent** (LLM): schlägt Ordner-/Dateibenennungen vor, erstellt Kopien im `_sorted`-Namespace, verschiebt Originale sofort nach `_sorted/_done` und ermöglicht Revert.
-- **Admin-Dashboard** (`static/admin.html`): Tabs für Ingest, Inbox (inkl. manueller Selektion & Fortschrittsanzeige) sowie Struktur (mit Konfig-Unterklappboxen).
-- **Konfigurationsverwaltung** über `config.json` (z. B. `auto_process_inbox`, separates Strukturmodell, `structure.language` für deutschsprachige Titel usw.).
-- **Start-Skript** (`start.sh`): startet UI und Pipeline getrennt und respektiert `auto_process_inbox` (Pipeline bleibt aus, wenn deaktiviert).
-- Schlanke Status-Polls: Metadaten werden als Vorschau (`metadata_preview`) geliefert, nicht als kompletter JSON-Blob.
-- Umfangreiche Tests (pytest) mit Stubs für Ollama/OpenAI, Graph und Struktur-Service.
+- **OneDrive integration** through Microsoft Graph (includes shortcut support plus optional device-code or client-credential auth).
+- **PDF preparation** with `pdf2image` and `pikepdf`; extracted metadata is embedded back into each PDF as JSON.
+- **Ollama/OpenAI client** built on the official `openai` Python library targeting the Ollama `/api/chat` endpoint with structured JSON responses and automatic image downscaling.
+- **Structure assistant (LLM)** proposes folders and renamed copies inside `_sorted`, immediately moves originals into `_sorted/_done`, and supports revert.
+- **Admin dashboard** (`static/admin.html`) offers Ingest, Inbox, and Structure tabs with collapsible configuration drawers.
+- **Config management** happens via `config.json` (e.g., `auto_process_inbox`, dedicated structure model, `structure.language`).
+- **Start script** (`start.sh`) launches UI and pipeline as separate processes and honors `auto_process_inbox`.
+- Lean status polling: the API returns compact `metadata_preview` payloads instead of entire JSON blobs.
+- Extensive pytest suite with stubs for Ollama/OpenAI, Microsoft Graph, and the structure service.
 
-## Projektstruktur
+## Project layout
 
 ```
 src/onedrive_ollama_pipeline/
-  admin_app.py        # FastAPI-Endpunkte + Routing
-  static/admin.html   # Entkoppeltes Admin-Frontend (HTML/CSS/JS)
-  cli.py              # CLI-Einstiegspunkt für die Pipeline
-  config.py           # Settings-Lader für .env + config.json
-  database.py         # SQLite-Helfer (Schema & Verbindungen)
-  logging_utils.py    # Logging-Konfiguration + Runtime-Level
-  ollama_client.py    # OpenAI/Ollama-Client mit JSON-Output
-  onedrive_client.py  # Graph-Wrapper (Listen, Download, Upload, Tree Walk)
-  pdf_processor.py    # PDF → PNG & Metadaten-Embedding
-  pipeline.py         # Orchestriert Download → Metadaten → Upload
-  state_store.py      # SQLite-basierter Verlauf, Success/Failure
-  structure_service.py# LLM-Strukturvorschläge, Apply/Revert, Logging
+  admin_app.py        # FastAPI endpoints and routing
+  static/admin.html   # Decoupled admin frontend (HTML/CSS/JS)
+  cli.py              # CLI entry point for the pipeline
+  config.py           # Settings loader for .env + config.json
+  database.py         # SQLite helpers (schema & connections)
+  logging_utils.py    # Logging configuration and runtime level switches
+  ollama_client.py    # OpenAI/Ollama client with structured JSON output
+  onedrive_client.py  # Microsoft Graph wrapper (list, download, upload, tree walk)
+  pdf_processor.py    # PDF → PNG conversion and metadata embedding
+  pipeline.py         # Orchestrates download → metadata → upload
+  state_store.py      # SQLite-backed history of successes/failures
+  structure_service.py# LLM structure proposals, apply/revert, logging
 
-tests/                # Pytest-Suite
-config.json           # Konfigurierbare Optionen (Modelle, Polling etc.)
-start.sh              # Komfort-Skript für UI + Pipeline (optional)
+tests/                # Pytest suite
+config.json           # Configurable options (models, polling, etc.)
+start.sh              # Convenience script to launch UI + pipeline (optional)
 ```
 
-## Voraussetzungen
+## Requirements
 
 - Python ≥ 3.11
-- Poppler für `pdf2image`
-  - z.B. via `brew install poppler` oder lokal in `vendor/poppler` bundeln
-  - `POPPLER_PATH` in `.env` setzen, falls Poppler nicht global erreichbar ist
-- Ollama lokal (`ollama serve`) mit passenden Modellen (z.B. `llava`, `moondream`, `qwen3-vl`, …)
-- `openai` Python Client (wird via `pip install -e .` mitinstalliert)
-- Microsoft Graph App-Registrierung mit `Files.ReadWrite.All`
+- Poppler for `pdf2image`
+  - e.g. `brew install poppler` or bundle locally under `vendor/poppler`
+  - set `POPPLER_PATH` in `.env` if Poppler is not globally available
+- Ollama (`ollama serve`) with suitable models (e.g. `qwen3-vl`, `llava`, …)
+- `openai` Python client (installed via `pip install -e .`)
+- Microsoft Graph app registration with `Files.ReadWrite.All`
 
-OAuth funktioniert auch ohne Unternehmensdomäne über den Device-Code-Flow. Alternativ sind Client-Credentials möglich. Eine Schritt-für-Schritt-Anleitung zum Device-Flow ist in den Microsoft-Dokumenten beschrieben: [Device Code Flow](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code).
+OAuth via device-code flow works without a corporate tenant. Client credentials are also possible; see the Microsoft docs for details: [Device Code Flow](https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code).
 
 ## Installation
 
@@ -64,18 +64,18 @@ source .venv/bin/activate
 pip install -e .[dev]
 ```
 
-## Konfiguration
+## Configuration
 
 ### `.env`
 
 ```bash
 GRAPH_TENANT_ID="consumers"
 GRAPH_CLIENT_ID="<app-client-id>"
-# optional: GRAPH_CLIENT_SECRET="<dein-secret>"
-GRAPH_USER_ID="alex@example.com"  # oder "me" für persönliche Konten
+# optional: GRAPH_CLIENT_SECRET="<your-secret>"
+GRAPH_USER_ID="al308@example.com"  # or "me" for personal accounts
 GRAPH_TOKEN_CACHE_PATH="~/.onedrive_ollama_token_cache.json"
 OLLAMA_BASE_URL="http://localhost:11434/v1"
-# optional: OLLAMA_API_KEY (falls dein Ollama-Endpunkt Auth verlangt)
+# optional: OLLAMA_API_KEY (if the Ollama endpoint requires auth)
 # optional: PIPELINE_DB_PATH, PIPELINE_LOG_PATH, PIPELINE_CONFIG_PATH, POPPLER_PATH
 ```
 
@@ -97,18 +97,18 @@ OLLAMA_BASE_URL="http://localhost:11434/v1"
     "auto_process_inbox": false
   },
   "structure": {
-    "model": "",          # optional: ansonsten wird das Metadatenmodell wiederverwendet
-    "language": "auto"    # z. B. "de" für deutschsprachige Struktur-Vorschläge
+    "model": "",          # optional: otherwise reuse the metadata model
+    "language": "auto"    # e.g. "de" to prefer German titles
   }
 }
 ```
 
-- `poll_interval_seconds`: `null`/`0` → einmalige Ausführung; >0 → Polling.
-- `auto_process_inbox`: `false` (Standard) → Pipeline manuell starten; `true` → automatisches Polling.
-- `structure.model`: separates LLM für Strukturvorschläge; leer ⇒ Metadatenmodell.
-- Änderungen über das UI schreiben in diese Datei. Die Pipeline liest die Config nur beim Start.
+- `poll_interval_seconds`: `null`/`0` → single run; >0 → polling frequency in seconds.
+- `auto_process_inbox`: `false` → manual runs; `true` → automatic polling.
+- `structure.model`: dedicated model for structure proposals; empty ⇒ reuse metadata model.
+- Updates via the UI persist to this file. The pipeline reads it on startup.
 
-## Betrieb
+## Operation
 
 ### Pipeline (CLI)
 
@@ -116,53 +116,51 @@ OLLAMA_BASE_URL="http://localhost:11434/v1"
 python -m onedrive_ollama_pipeline.cli
 ```
 
-- Führt einen Durchlauf aus (oder Polling, falls konfiguriert).
-- Respektiert `auto_process_inbox` – ist der Wert `false`, beendet sich der Prozess sofort.
-- Log-Level wird aus `config.json` übernommen (`--debug` überschreibt).
+- Executes a single run (or keeps polling when configured).
+- Respects `auto_process_inbox` – when `false`, the process exits immediately.
+- Log level comes from `config.json` (`--debug` overrides).
 
-### Start-Skript (optional)
+### Start script (optional)
 
-`./start.sh` startet Admin-UI + Pipeline in separaten Prozessen. Wenn `auto_process_inbox = false`, wird nur das UI betrieben.
+`./start.sh` starts the admin UI and pipeline in separate processes. If `auto_process_inbox = false`, only the UI runs.
 
-### Admin-Dashboard
+### Admin dashboard
 
 ```bash
 uvicorn onedrive_ollama_pipeline.admin_app:app --reload
 ```
 
-Tabs im Dashboard:
+Dashboard tabs:
 
-- **Status**: Pollt `/api/status`, zeigt Counters + letzte Dokumente (`metadata_preview` reduziert die Payload-Größe).
-- **Ingest**: Manuelles PDF-Upload (single oder duplex Scan).
-- **Structure**: 
-  - Generiert per Button eine Struktur-Empfehlung (JSON-Pläne mit Ordnern/Kopien).
-  - „Apply plan“ kopiert (nicht verschiebt!) Dateien in Unterordner, „Revert“ entfernt nur angelegte Kopien/Ordner.
-  - Aktivitätslog, Modellname/Endpoint bei Fehlern in der Logansicht.
-- **Configuration**: Formular zur Pflege der `config.json` plus Button „Test Ollama connection“ (prüft Metadaten- und ggf. Strukturmodell über `/api/ollama/test`).
-- **Logs**: Liefert Tail der Pipeline-Logdatei.
-- **SQL Console**: Nur `SELECT`-Queries gegen `processed_items` (read-only).
+- **Ingest**: Upload single PDFs or merge duplex scans directly into `_inbox`.
+- **Inbox**: Shows all OneDrive inbox files, their processing status, selection checkboxes, and live progress while running metadata extraction.
+- **Structure**:
+  - Generates structure proposals (JSON plans with folders/copies).
+  - “Apply plan” copies files into recommended folders; originals move to `_sorted/_done` immediately.
+  - Activity log includes model/endpoint and validation notes.
+- Collapsible configuration sections allow updating relevant settings without leaving the tab.
 
-## LLM-Integration
+## LLM integration
 
-- `ollama_client.py` nutzt `openai.OpenAI` und erzwingt strukturierte Antworten:
-  - Metadatenaufrufe laufen mit `response_format={"type": "json_object"}`.
-  - Strukturpläne geben zusätzlich ein JSON-Schema (aus Pydantic) via `response_format={"type": "json_schema", ...}` vor, sodass Modelle exakt die erwartete Struktur liefern.
-- `structure_service.py` salvaged JSON-Ausgaben, toleriert Listen/Summary-Synonyme und trimmt Modellrauschen; Prompts werden geloggt und Antworten bei Bedarf repariert.
-- Struktur-Pläne werden im Cache (`.structure_state.json`) gehalten:
-  - `plan`: letzter Vorschlag
-  - `applied`: Kopien/Ordner des letzten Apply-Run
-  - `log`: Chronik (inkl. leere Antworten/Modelle).
-- Alle genutzten Prompt-Templates liegen unter `src/onedrive_ollama_pipeline/prompts/` und werden zur Laufzeit per Loader eingebunden, sodass Anpassungen ohne Codeänderung möglich sind.
-- Fällt das Modell bei der Strukturplanung ohne Aktionen zurück, generiert der Service heuristische Fallback-Operationen (einschließlich passender Ordnernamen) auf Basis der Dokument-Metadaten.
-- Kann die JSON-Antwort nicht geparst werden, wird einmalig ein Autorepair-Aufruf gestartet; erfolgreiche Pläne laufen zusätzlich durch eine LLM-gestützte Sanity-Check-Schleife, bevor sie gespeichert werden.
-- Struktur-Hints berücksichtigen `structure.language` (z. B. deutsche Begriffe, Ausgabe der handelnden Partei im Dateinamen) und ermitteln aussagekräftige Ordnerpfade wie `Finance/Taxes/2024` statt generischer Jahresordner.
+- `ollama_client.py` uses `openai.OpenAI` and enforces structured responses:
+  - Metadata calls run with `response_format={"type": "json_object"}`.
+  - Structure plans supply a JSON schema (derived from Pydantic) via `response_format={"type": "json_schema", ...}` so models emit the exact structure.
+- `structure_service.py` salvages imperfect JSON outputs, tolerates summary synonyms, trims model noise, logs prompts, and repairs responses when needed.
+- Structure plans are cached in `.structure_state.json` with sections for:
+  - `plan`: latest proposal
+  - `applied`: operations from the last apply run
+  - `log`: chronological history (including fallback information and model details)
+- Prompt templates live in `src/onedrive_ollama_pipeline/prompts/` and are loaded at runtime so they can be edited without code changes.
+- When the model fails to suggest any operations, the service derives heuristic fallback operations (including meaningful folder names) from document metadata.
+- If JSON parsing fails, an automatic repair request is issued once; successful plans then run through an LLM-assisted sanity check before being stored.
+- Structure hints respect `structure.language` and still surface descriptive folder paths such as `Finance/Taxes/2024` instead of generic year folders.
 
-## Weitere Komponenten
+## Components
 
-- **StateStore (`state_store.py`)** speichert Graph-Item-IDs + Metadaten in SQLite (`processed_items`).
-- **OneDrive-Client** kann das `_sorted`-Tree strukturiert laufen (`walk_sorted_tree`), Dateien kopieren und Pfade löschen (für Reverts).
-- **Status-Endpunkt** trimmt Metadaten auf `metadata_preview` und verhindert überflüssige Payloads (~22 KB → wenige KB).
-- **Rolling Logs**: `logging_utils.py` erlaubt Anpassung des Log-Levels zur Laufzeit über das UI.
+- **StateStore (`state_store.py`)** records Graph item IDs plus metadata in SQLite (`processed_items`).
+- **OneDrive client** walks the `_sorted` tree, downloads/uploads, and deletes paths and can move originals into `_done`.
+- **Status endpoint** returns lightweight previews instead of embedding full metadata payloads.
+- **Rolling logs**: `logging_utils.py` enables runtime log level changes via the UI.
 
 ## Tests
 
@@ -170,12 +168,12 @@ Tabs im Dashboard:
 pytest
 ```
 
-- Stubs simulieren OpenAI/Ollama und Graph-API.
-- Tests decken Pipeline, Admin-API, Struktur-Service (Plan/Apply/Revert, JSON-Salvage) und Ollama-Client ab.
+- Stubs cover OpenAI/Ollama and Graph APIs.
+- Tests exercise the pipeline, admin API, structure service (plan/apply/revert, JSON salvage), and Ollama client.
 
-## Roadmap-Ideen
+## Roadmap ideas
 
-- OneDrive delta-API nutzen statt Polling.
-- Mehrseitige Analyse oder zusätzliche Metadatenerkennung.
-- Automatische Ordnerregeln je nach Dokumenttyp.
-- Scheduler-Integration (cron, systemd timer etc.).
+- Use the OneDrive delta API instead of polling.
+- Support multi-page analysis or additional metadata extraction.
+- Add automatic folder rules per document type.
+- Provide scheduler integration (cron, systemd timer, etc.).

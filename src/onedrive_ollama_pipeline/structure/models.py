@@ -70,6 +70,14 @@ class StructureSource:
             for token in re.split(r"[^\w]+", text.lower()):
                 if token:
                     tokens.add(token)
+                    ascii_token = (
+                        token.replace("ä", "ae")
+                        .replace("ö", "oe")
+                        .replace("ü", "ue")
+                        .replace("ß", "ss")
+                    )
+                    if ascii_token and ascii_token != token:
+                        tokens.add(ascii_token)
 
         _push(self.metadata.get("document_type"))
         tags = self.metadata.get("tags")
@@ -85,6 +93,7 @@ class StructureSource:
         keywords = self._keywords()
         year = self.document_year()
         doc_type = str(self.metadata.get("document_type") or "").lower()
+        doc_type_ascii = doc_type.encode("ascii", "ignore").decode()
 
         def append_year(base: str, allow_year: bool = True) -> str:
             if allow_year and year:
@@ -99,7 +108,7 @@ class StructureSource:
             return append_year("Finance/Income")
         if keywords & constants.UTILITY_KEYWORDS or "utility" in doc_type or "energy" in doc_type or "rechnung" in doc_type:
             return append_year("Finance/Utilities")
-        if "government" in doc_type or "bürgeramt" in doc_type or "official" in doc_type:
+        if "government" in doc_type or "burgeramt" in doc_type_ascii or "official" in doc_type:
             return append_year("Civic/Government")
         if "consent" in doc_type or "agreement" in doc_type:
             return append_year("Finance/Agreements")
@@ -131,19 +140,6 @@ class StructureSource:
             actor_clean = self._sanitize_actor(actor)
             if actor_clean and actor_clean.lower() not in title.lower():
                 title = f"{title} - {actor_clean}" if title else actor_clean
-        if self.locale.lower().startswith("de"):
-            replacements = {
-                "Invoice": "Rechnung",
-                "Receipt": "Beleg",
-                "Statement": "Auszug",
-                "Consent": "Einverständnis",
-                "Agreement": "Vereinbarung",
-                "Letter": "Schreiben",
-                "Report": "Bericht",
-            }
-            for english, german in replacements.items():
-                pattern = re.compile(rf"\b{english}\b", re.IGNORECASE)
-                title = pattern.sub(german, title)
         extension = self.extension or Path(self.name).suffix
         return f"{prefix} {title}{extension}"
 

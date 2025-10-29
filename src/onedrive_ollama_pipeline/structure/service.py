@@ -134,42 +134,73 @@ class StructureService:
         created_files: list[str] = []
         created_folders: list[str] = []
         applied_ops: list[Dict[str, Any]] = []
+        existing_folders = set(plan["context"].get("existing_folders", []))
+        executed_folder_paths: set[str] = set()
+        created_folder_paths: set[str] = set()
+        pending_folder_ops: list[Dict[str, Any]] = []
+        processed_sources: set[str] = set()
 
-        for entry in operations:
-            action = entry["action"]
-            if action == "create_folder":
-                detail = self._normalized_relative(entry["path"])
+        def _execute_pending_folders() -> None:
+            nonlocal pending_folder_ops
+            if not pending_folder_ops:
+                return
+            items = pending_folder_ops
+            pending_folder_ops = []
+            for folder_entry in items:
+                detail = self._normalized_relative(folder_entry.get("path"))
+                if not detail or detail in executed_folder_paths:
+                    continue
                 try:
                     self._onedrive.ensure_sorted_subfolder(detail)
-                    applied_ops.append(entry)
-                    if detail not in plan["context"]["existing_folders"]:
+                    executed_folder_paths.add(detail)
+                    applied_ops.append(folder_entry)
+                    if detail not in existing_folders and detail not in created_folder_paths:
                         created_folders.append(detail)
+                        created_folder_paths.add(detail)
                     self._cache.append_log(f"Ensured folder '{detail}' exists.")
                 except Exception as exc:  # pragma: no cover - network failure
                     LOGGER.exception("Failed to ensure folder '%s': %s", detail, exc)
                     self._cache.append_log(f"Failed to create folder '{detail}': {exc}", level="error")
-                    continue
+
+        def _record_copy(entry: Dict[str, Any], target_folder: str, target_name: str, source_info: Dict[str, Any]) -> None:
+            applied_ops.append(entry)
+            destination_path = "/".join(part for part in [target_folder, target_name] if part)
+            if destination_path not in created_files:
+                created_files.append(destination_path)
+            self._cache.append_log(f"Copied '{source_info['name']}' to '{destination_path}'.")
+
+        for entry in operations:
+            action = entry["action"]
+            if action == "create_folder":
+                pending_folder_ops.append(entry)
             elif action == "copy_file":
                 source_id = entry["source_id"]
                 source_info = sources_index.get(source_id)
                 if not source_info:
                     raise ValueError(f"Unknown source id '{source_id}' in plan.")
+                if source_id in processed_sources:
+                    self._cache.append_log(
+                        f"Skipping duplicate copy operation for '{source_info['name']}' (already processed).",
+                        level="warn",
+                    )
+                    continue
+                _execute_pending_folders()
                 target_folder = self._normalized_relative(entry.get("target_folder", ""))
                 target_name = entry["target_name"]
                 try:
                     _, content = self._onedrive.download_sorted_file(source_info["relative_path"])
                     self._onedrive.upload_bytes_to_sorted(target_name, content, folder_path=target_folder)
-                    applied_ops.append(entry)
-                    destination_path = "/".join(part for part in [target_folder, target_name] if part)
-                    created_files.append(destination_path)
-                    self._cache.append_log(f"Copied '{source_info['name']}' to '{destination_path}'.")
+                    _record_copy(entry, target_folder, target_name, source_info)
                     self._move_source_to_done(source_info)
+                    processed_sources.add(source_id)
                 except Exception as exc:  # pragma: no cover - network failure
                     LOGGER.exception("Failed to copy '%s' to '%s': %s", source_info["relative_path"], target_folder, exc)
                     self._cache.append_log(f"Failed to copy '{source_info['name']}': {exc}", level="error")
                     continue
             else:
                 raise ValueError(f"Unsupported action '{action}' in plan.")
+
+        _execute_pending_folders()
 
         applied_state = {
             "plan_id": plan["plan_id"],

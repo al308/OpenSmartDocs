@@ -221,7 +221,7 @@ def test_structure_source_actor_included_in_title():
     target = source.suggested_target_name()
     assert target.startswith("2025-02-01")
     assert "ACME" in target
-    assert "Rechnung" in target
+    assert "Invoice" in target
 
 
 def test_structure_source_government_folder():

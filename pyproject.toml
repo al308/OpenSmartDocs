@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "onedrive-ollama-pipeline"
 version = "0.1.0"
 description = "OneDrive PDF enrichment pipeline powered by Ollama"
-authors = [{name = "Alex"}]
+authors = [{name = "al308"}]
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
