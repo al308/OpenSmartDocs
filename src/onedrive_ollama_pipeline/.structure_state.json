@@ -1,0 +1,3067 @@
+{
+  "log": [
+    {
+      "timestamp": "2025-10-29T10:28:36.499729+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_22_40 PM.pdf' to '2025/General/2025-10-27 Dein neues Girokonto bei der DKB.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:28:39.601818+00:00",
+      "level": "info",
+      "message": "Ensured folder '2023/Taxes' exists."
+    },
+    {
+      "timestamp": "2025-10-29T10:28:46.379465+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_24_36 PM.pdf' to '2023/Taxes/2023-01-01 Ihre Jahressteuerbescheinigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:28:52.489369+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_25_34 PM.pdf' to '2025/General/2025-10-27 Mikrobiologischer LABORBERICHT.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:28:55.402071+00:00",
+      "level": "info",
+      "message": "Ensured folder '2020/General' exists."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:01.606291+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_26_43 PM.pdf' to '2020/General/2020-09-22 Endbefundbericht Stoffwechsellabor.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:07.794067+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_32_14 PM.pdf' to '2023/Taxes/2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:09.749792+00:00",
+      "level": "info",
+      "message": "Ensured folder '2025/Insurance' exists."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:15.562056+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_33_44 PM.pdf' to '2025/Insurance/2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:18.178271+00:00",
+      "level": "info",
+      "message": "Ensured folder '2022/Insurance' exists."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:22.618604+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_34_20 PM.pdf' to '2022/Insurance/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:24.653767+00:00",
+      "level": "info",
+      "message": "Ensured folder '2022/Utilities' exists."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:30.175328+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_35_43 PM.pdf' to '2022/Utilities/2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:33.075653+00:00",
+      "level": "info",
+      "message": "Ensured folder '2023/Insurance' exists."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:42.565972+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_38_06 PM.pdf' to '2023/Insurance/2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:49.736008+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_42_48 PM.pdf' to '2025/Insurance/2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:52.703622+00:00",
+      "level": "info",
+      "message": "Ensured folder '2022/Finance' exists."
+    },
+    {
+      "timestamp": "2025-10-29T10:29:59.668535+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_36_47 AM.pdf' to '2022/Finance/2022-06-14 Rechnung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:30:05.539179+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_37_28 AM.pdf' to '2025/Insurance/2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:30:07.758250+00:00",
+      "level": "info",
+      "message": "Ensured folder '2025/Utilities' exists."
+    },
+    {
+      "timestamp": "2025-10-29T10:30:15.661997+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_38_46 AM.pdf' to '2025/Utilities/2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:30:22.359744+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_39_34 AM.pdf' to '2024/Taxes/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:30:28.301790+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_40_02 AM.pdf' to '2022/Insurance/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T10:30:34.689716+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_40_29 AM.pdf' to '2025/Insurance/2025-10-28 ACHTUNG NEUE BANKVERBINDUNG.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T14:48:34.895480+00:00",
+      "level": "info",
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
+    },
+    {
+      "timestamp": "2025-10-29T14:48:40.078680+00:00",
+      "level": "warning",
+      "message": "Generated fallback operations for 51 source(s)."
+    },
+    {
+      "timestamp": "2025-10-29T14:48:51.090406+00:00",
+      "level": "warning",
+      "message": "Sanity check warning: Most operations are valid, but several issues exist: duplicate filenames in same folders may cause overwrites, some folder categories (like 'Finance') are inconsistently used, and one folder ('2002/Income') appears misclassified for a pension letter that should likely be under 'Insurance'."
+    },
+    {
+      "timestamp": "2025-10-29T14:48:51.100560+00:00",
+      "level": "info",
+      "message": "Generated structure plan with 72 operation(s)."
+    },
+    {
+      "timestamp": "2025-10-29T15:06:35.842776+00:00",
+      "level": "info",
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
+    },
+    {
+      "timestamp": "2025-10-29T15:06:38.470992+00:00",
+      "level": "warning",
+      "message": "Generated fallback operations for 51 source(s)."
+    },
+    {
+      "timestamp": "2025-10-29T15:06:50.410084+00:00",
+      "level": "warning",
+      "message": "Sanity check warning: Most operations are valid, but there are duplicate filenames in the same folder and potential misclassifications. Some files may overwrite each other during copy."
+    },
+    {
+      "timestamp": "2025-10-29T15:06:50.412275+00:00",
+      "level": "info",
+      "message": "Generated structure plan with 72 operation(s)."
+    },
+    {
+      "timestamp": "2025-10-29T15:07:32.626352+00:00",
+      "level": "info",
+      "message": "Ensured folder 'General/2021' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:07:38.368875+00:00",
+      "level": "info",
+      "message": "Copied 'Corona-PCR-21.10.2021.pdf' to 'General/2021/2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:07:41.012716+00:00",
+      "level": "info",
+      "message": "Ensured folder 'General/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:07:47.894909+00:00",
+      "level": "info",
+      "message": "Copied 'HOLLAND-BSN Kopie.pdf' to 'General/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:07:53.831870+00:00",
+      "level": "info",
+      "message": "Copied 'HOLLAND-BSN.pdf' to 'General/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:07:56.596332+00:00",
+      "level": "info",
+      "message": "Ensured folder 'General/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:00.334735+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-23 02_25_32 PM.pdf' to 'General/2025/2025-10-23 Product Safety and Regulatory Information.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:05.346065+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-23 08_27_09 PM.pdf' to 'General/2025/2025-10-23 MacBook Keyboard and Dock Screenshot.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:10.299308+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-23 09_28_25 PM.pdf' to 'General/2025/2025-10-23 Green Castle Wall with Stone Texture.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:14.230471+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Taxes/2024' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:19.944003+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:25.960712+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:31.413678+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 07_28_54 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:36.635903+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 07_32_33 AM.pdf' to 'General/2025/2025-10-24 Blank Lined Notebook Page.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:42.006346+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 08_45_18 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:46.773424+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 09_57_24 AM.pdf' to 'General/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:51.381972+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 11_16_56 AM.pdf' to 'General/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:08:54.555604+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Insurance/2024' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:07.246562+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_13_56 PM.pdf' to 'Finance/Insurance/2024/2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:11.451934+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Household/Utilities/2024' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:16.675111+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_14_37 PM.pdf' to 'Household/Utilities/2024/2024-11-30 Rechnung R2411093.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:19.110520+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Taxes/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:26.506236+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_15_11 PM.pdf' to 'Finance/Taxes/2025/2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:36.123474+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_18_11 PM.pdf' to 'General/2025/2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:38.793861+00:00",
+      "level": "info",
+      "message": "Ensured folder 'General/2011' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:48.340479+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_20_12 PM.pdf' to 'General/2011/2011-02-04 Bauantragsplanung - Kellergeschoss.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:52.976793+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_21_12 PM.pdf' to 'General/2025/2025-10-27 Ansicht von innen Maßstab 1 15.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:09:59.378837+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_22_40 PM.pdf' to 'General/2025/2025-10-27 Dein neues Girokonto bei der DKB.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:02.770158+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Taxes/2023' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:09.850057+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_24_36 PM.pdf' to 'Finance/Taxes/2023/2023-01-01 Ihre Jahressteuerbescheinigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:15.940509+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_25_34 PM.pdf' to 'General/2025/2025-10-27 Mikrobiologischer LABORBERICHT.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:18.432265+00:00",
+      "level": "info",
+      "message": "Ensured folder 'General/2020' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:24.139435+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_26_43 PM.pdf' to 'General/2020/2020-09-22 Endbefundbericht Stoffwechsellabor.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:31.151715+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_32_14 PM.pdf' to 'Finance/Taxes/2023/2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:33.898289+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Insurance/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:40.440607+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_33_44 PM.pdf' to 'Finance/Insurance/2025/2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:42.890975+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Insurance/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:48.304105+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_34_20 PM.pdf' to 'Finance/Insurance/2022/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:50.845403+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Household/Utilities/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:10:57.523337+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_35_43 PM.pdf' to 'Household/Utilities/2022/2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:00.247320+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Insurance/2023' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:12.280207+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_38_06 PM.pdf' to 'Finance/Insurance/2023/2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:21.270026+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_42_48 PM.pdf' to 'Finance/Insurance/2025/2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:26.292584+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Reference/Documents/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:32.071865+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_36_47 AM.pdf' to 'Reference/Documents/2022/2022-06-14 Rechnung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:38.992248+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_37_28 AM.pdf' to 'Finance/Insurance/2025/2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:41.787879+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Household/Utilities/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:49.867255+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_38_46 AM.pdf' to 'Household/Utilities/2025/2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:11:57.751312+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_39_34 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:04.506012+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_40_02 AM.pdf' to 'Finance/Insurance/2022/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:11.481496+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_40_29 AM.pdf' to 'Finance/Insurance/2025/2025-10-28 ACHTUNG NEUE BANKVERBINDUNG.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:14.789705+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Insurance/2026' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:21.201976+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 02_00_42 PM.pdf' to 'Finance/Insurance/2026/2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:24.395575+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Insurance/2050' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:31.529263+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_31_30 AM.pdf' to 'Finance/Insurance/2050/2050-06-01 Ihre Renteninformation.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:35.538222+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Income/2002' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:43.043953+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_32_05 AM.pdf' to 'Finance/Income/2002/2002-08-01 Renteninformation 2025.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:45.982722+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Reference/Documents/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:12:57.098464+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_33_22 AM.pdf' to 'Reference/Documents/2025/2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:02.652453+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_34_17 AM.pdf' to 'Reference/Documents/2025/2025-10-29 Einverständniserklärung des Anlagenbetreibers.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:08.510990+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_35_18 AM.pdf' to 'Reference/Documents/2025/2025-08-20 Rechnung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:11.466008+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Insurance/2021' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:17.653800+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_37_20 AM.pdf' to 'Finance/Insurance/2021/2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:24.237101+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_37_45 AM.pdf' to 'Finance/Insurance/2022/2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:29.503653+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_38_22 AM.pdf' to 'General/2022/2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:35.238014+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_38_47 AM.pdf' to 'Household/Utilities/2025/2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:41.022481+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_39_31 AM.pdf' to 'Household/Utilities/2025/2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:48.857936+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_40_29 AM.pdf' to 'Reference/Documents/2022/2022-07-28 Anmeldebestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:13:57.925590+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_41_18 AM.pdf' to 'Reference/Documents/2022/2022-07-28 Anmeldebestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:14:05.719145+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_41_54 AM.pdf' to 'Reference/Documents/2022/2022-07-28 Anmeldebestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:14:14.759766+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_42_28 AM.pdf' to 'Reference/Documents/2022/2022-07-28 Anmeldebestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:14:22.375289+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_43_07 AM.pdf' to 'Finance/Insurance/2025/2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:14:27.133210+00:00",
+      "level": "error",
+      "message": "Failed to move 'Corona-PCR-21.10.2021.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s6f672a6b1a9f43bab31116a35df5c69f"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:29.936926+00:00",
+      "level": "error",
+      "message": "Failed to move 'HOLLAND-BSN Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s4f0b67e98bda4cb5aaa8d8f4a0f08084"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:32.265466+00:00",
+      "level": "error",
+      "message": "Failed to move 'HOLLAND-BSN.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s7de39c5ac8a24347a7ad57c22d0ea2da"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:34.648467+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-23 02_25_32 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s63902efd7d514dfcb9b822d8b3fa0d7c"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:37.020989+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-23 08_27_09 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9c282fa07c684e22ac6e86660c4f64b6"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:40.646686+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-23 09_28_25 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s75125510116f4b6fba166348096b0f1b"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:43.267366+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se829e04d106646a98e34eca50910b044"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:45.911517+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s5ed64000b3df4869af6b5859acf1c932"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:48.369353+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 07_28_54 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s388fd6d7415e49c997c58494e8a0145b"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:50.724372+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 07_32_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa70591baaf1d4b38becd05c3742726a1"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:53.291235+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 08_45_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sdcd1f63bec0f433d9f467ea304688988"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:55.635479+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 09_57_24 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s30b0dbaa6a8e41f79dc671929c57ad92"
+    },
+    {
+      "timestamp": "2025-10-29T15:14:58.170174+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 11_16_56 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sb5cf871160ab47a18ff264cbc4ab2e44"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:00.222035+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_13_56 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se06717b8e37540a48b39161120f231d7"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:02.154196+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_14_37 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa1692041613d4685a9ef4c6f74bb587a"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:04.512720+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_15_11 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s124e47be52624273bc44a8ed34387aff"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:06.699391+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_18_11 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s1dcad8ffa02746fbb0fa123b9c3b04ae"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:08.747139+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_20_12 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se0762b20e96f4479baae5cb6ecc4561b"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:10.823135+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_21_12 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9a893d99e6c949189b14f74827676944"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:12.842329+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_22_40 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s13d43b15826e44fd81c1c15a84b60dbb"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:15.144850+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_24_36 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa487cf434cb448eb8d219a60fd76450d"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:17.451130+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_25_34 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s787e3c0308c9484796ab565226eda140"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:20.023858+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_26_43 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sae78c10d003648ee9de1dbb2e23f0e46"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:21.957862+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_32_14 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sded26c55d7684ce9b2722e96ecda1653"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:24.881003+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_33_44 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s1734426a0ddf485ca500eb12ceb14f58"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:27.486720+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_34_20 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sbc1e2d4273614732bafcb4821f74cc0a"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:29.637859+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_35_43 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s4375025f23f24a3b97ae76228bb03c64"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:32.096524+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_38_06 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9dc0487fc45f452da600384cf974c02a"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:34.448802+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_42_48 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s3750069c217e40109c654d9ae5f0009b"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:36.853888+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_36_47 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s24d1224c32b944448c4fe29955241116"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:39.237983+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_37_28 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!saa772f6bfd5a4258925de83939729601"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:42.130053+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_38_46 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sae000b7f325546e9ae27443bc9d74b5f"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:44.691975+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_39_34 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s53b06608f49b41a4a812ee0fb9fe04de"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:46.838419+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_40_02 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sbcafce66d97f40e88ee4183109301d40"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:48.776713+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_40_29 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9dbf8b9716f34eb08fcff15f35aa053f"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:51.275616+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 02_00_42 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!saa12e7509c284f7cb14f42c31c69ec55"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:53.716695+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_31_30 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa28628f6415a49f88ee54bf6cf08caa3"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:56.260228+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_32_05 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sb64f767bd53f4b0bb07d1d2a33943cc4"
+    },
+    {
+      "timestamp": "2025-10-29T15:15:59.182141+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_33_22 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s0579cdefa301403b914669199ebc2a56"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:01.792723+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_34_17 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s70a41aaa9cc54ed5a0e20147441d9b54"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:04.556063+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_35_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s4308a4ae91b54089b28e4f242a0b83b0"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:07.034999+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_37_20 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sd3e06ee09d244441816a728ce17b6042"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:11.007749+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_37_45 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa00c6f675aa94af4bb763da6ca726067"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:14.442845+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_38_22 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sc873c51691324bb787e52a29210a605a"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:16.699174+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_38_47 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sf1eeb368257b445fb18e1d0a43193bca"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:18.994818+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_39_31 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se9dccbd6dc03462d857a4620522fae57"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:21.549009+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_40_29 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s58a5c27d3b2447a7af648fd47f333e59"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:24.173568+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_41_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sfae331edd6fb4c4f84e21e72c97ae8c9"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:26.880573+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_41_54 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa92ddd21d737462c885765ee3b3e550f"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:29.105273+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_42_28 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s35d96b2137ba4d40a9893bfd3656df6d"
+    },
+    {
+      "timestamp": "2025-10-29T15:16:31.389615+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_43_07 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!seeb454fc0c144850915dd7d07c0ccf66"
+    },
+    {
+      "timestamp": "2025-10-29T15:38:35.922215+00:00",
+      "level": "info",
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
+    },
+    {
+      "timestamp": "2025-10-29T15:38:39.783066+00:00",
+      "level": "warning",
+      "message": "Generated fallback operations for 51 source(s)."
+    },
+    {
+      "timestamp": "2025-10-29T15:39:13.391649+00:00",
+      "level": "warning",
+      "message": "Sanity check warning: Most operations are valid, but there are duplicate filenames in the same folder and potential misclassifications. Some files are copied to folders that may not logically match their content (e.g., marketing letters in Insurance). Also, multiple files share identical names in the same folder, which may cause overwrites or confusion."
+    },
+    {
+      "timestamp": "2025-10-29T15:39:13.395314+00:00",
+      "level": "info",
+      "message": "Generated structure plan with 75 operation(s)."
+    },
+    {
+      "timestamp": "2025-10-29T15:40:16.366679+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Health/Records/2021' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:40:21.386287+00:00",
+      "level": "info",
+      "message": "Copied 'Corona-PCR-21.10.2021.pdf' to 'Health/Records/2021/2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:40:26.421792+00:00",
+      "level": "error",
+      "message": "Failed to move 'Corona-PCR-21.10.2021.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s6f672a6b1a9f43bab31116a35df5c69f"
+    },
+    {
+      "timestamp": "2025-10-29T15:40:30.433397+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Civic/Government/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:40:37.153852+00:00",
+      "level": "info",
+      "message": "Copied 'HOLLAND-BSN Kopie.pdf' to 'Civic/Government/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:40:39.119514+00:00",
+      "level": "error",
+      "message": "Failed to move 'HOLLAND-BSN Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s4f0b67e98bda4cb5aaa8d8f4a0f08084"
+    },
+    {
+      "timestamp": "2025-10-29T15:40:52.717538+00:00",
+      "level": "info",
+      "message": "Copied 'HOLLAND-BSN.pdf' to 'Civic/Government/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:40:54.783576+00:00",
+      "level": "error",
+      "message": "Failed to move 'HOLLAND-BSN.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s7de39c5ac8a24347a7ad57c22d0ea2da"
+    },
+    {
+      "timestamp": "2025-10-29T15:40:57.965344+00:00",
+      "level": "info",
+      "message": "Ensured folder 'General/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:03.267056+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-23 02_25_32 PM.pdf' to 'General/2025/2025-10-23 Product Safety and Regulatory Information - small.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:06.085123+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-23 02_25_32 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s63902efd7d514dfcb9b822d8b3fa0d7c"
+    },
+    {
+      "timestamp": "2025-10-29T15:41:12.245500+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-23 08_27_09 PM.pdf' to 'General/2025/2025-10-23 MacBook Keyboard and Dock Screenshot.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:15.000080+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-23 08_27_09 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9c282fa07c684e22ac6e86660c4f64b6"
+    },
+    {
+      "timestamp": "2025-10-29T15:41:20.164272+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-23 09_28_25 PM.pdf' to 'General/2025/2025-10-23 Green Castle Wall with Stone Texture.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:23.763087+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-23 09_28_25 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s75125510116f4b6fba166348096b0f1b"
+    },
+    {
+      "timestamp": "2025-10-29T15:41:28.525356+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Taxes/2024' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:33.856499+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:36.035535+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se829e04d106646a98e34eca50910b044"
+    },
+    {
+      "timestamp": "2025-10-29T15:41:41.668517+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:43.824664+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s5ed64000b3df4869af6b5859acf1c932"
+    },
+    {
+      "timestamp": "2025-10-29T15:41:49.653826+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 07_28_54 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:51.759440+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 07_28_54 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s388fd6d7415e49c997c58494e8a0145b"
+    },
+    {
+      "timestamp": "2025-10-29T15:41:56.863533+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 07_32_33 AM.pdf' to 'General/2025/2025-10-24 Blank Lined Notebook Page.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:41:59.420882+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 07_32_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa70591baaf1d4b38becd05c3742726a1"
+    },
+    {
+      "timestamp": "2025-10-29T15:42:15.561001+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 08_45_18 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:42:18.019646+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 08_45_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sdcd1f63bec0f433d9f467ea304688988"
+    },
+    {
+      "timestamp": "2025-10-29T15:42:22.100553+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Agreements/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:42:28.668169+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 09_57_24 AM.pdf' to 'Finance/Agreements/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:42:32.373765+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 09_57_24 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s30b0dbaa6a8e41f79dc671929c57ad92"
+    },
+    {
+      "timestamp": "2025-10-29T15:42:38.371005+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-24 11_16_56 AM.pdf' to 'Finance/Agreements/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:42:40.973200+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-24 11_16_56 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sb5cf871160ab47a18ff264cbc4ab2e44"
+    },
+    {
+      "timestamp": "2025-10-29T15:42:45.098467+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Insurance/2024' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:42:57.539348+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_13_56 PM.pdf' to 'Finance/Insurance/2024/2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:43:01.044520+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_13_56 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se06717b8e37540a48b39161120f231d7"
+    },
+    {
+      "timestamp": "2025-10-29T15:43:04.663184+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Utilities/2024' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:43:10.769941+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_14_37 PM.pdf' to 'Finance/Utilities/2024/2024-11-30 Rechnung R2411093 - Jan.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:43:13.171379+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_14_37 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa1692041613d4685a9ef4c6f74bb587a"
+    },
+    {
+      "timestamp": "2025-10-29T15:43:16.496525+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finance/Taxes/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T15:43:24.068305+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_15_11 PM.pdf' to 'Finance/Taxes/2025/2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T15:43:26.960253+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_15_11 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s124e47be52624273bc44a8ed34387aff"
+    },
+    {
+      "timestamp": "2025-10-29T15:43:36.459274+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_18_11 PM.pdf' to 'General/2025/2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf'."
+    }
+  ],
+  "plan": {
+    "plan_id": "961319ec-6f19-4d39-8cb0-a571448c5746",
+    "generated_at": "2025-10-29T15:38:39.729704+00:00",
+    "model": "qwen3-vl:235b-cloud",
+    "summary": "Organizing 51 documents into structured folders by type and year, following filing guidelines. Creating necessary category and year subfolders, renaming files with date prefixes and key actors, and ensuring every source_id is covered by at least one copy_file operation. (Sanity check: Most operations are valid, but there are duplicate filenames in the same folder and potential misclassifications. Some files are copied to folders that may not logically match their content (e.g., marketing letters in Insurance). Also, multiple files share identical names in the same folder, which may cause overwrites or confusion.)",
+    "operations": [
+      {
+        "action": "create_folder",
+        "path": "Health/Records/2021",
+        "justification": "Create folder for Medical Test Result based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC001",
+        "target_folder": "Health/Records/2021",
+        "target_name": "2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf",
+        "justification": "Ensure medical test result from 2021 is filed under 'Health/Records/2021' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Civic/Government/2022",
+        "justification": "Create folder for Official Government Letter based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC002",
+        "target_folder": "Civic/Government/2022",
+        "target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf",
+        "justification": "Ensure official government letter from 2022 is filed under 'Civic/Government/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC003",
+        "target_folder": "Civic/Government/2022",
+        "target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf",
+        "justification": "Ensure official letter from 2022 is filed under 'Civic/Government/2022' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "General/2025",
+        "justification": "Create folder for Product Packaging Label based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC004",
+        "target_folder": "General/2025",
+        "target_name": "2025-10-23 Product Safety and Regulatory Information - small.pdf",
+        "justification": "Ensure product packaging label from 2025 is filed under 'General/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC005",
+        "target_folder": "General/2025",
+        "target_name": "2025-10-23 MacBook Keyboard and Dock Screenshot.pdf",
+        "justification": "Ensure image from 2025 is filed under 'General/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC006",
+        "target_folder": "General/2025",
+        "target_name": "2025-10-23 Green Castle Wall with Stone Texture.pdf",
+        "justification": "Ensure image from 2025 is filed under 'General/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Taxes/2024",
+        "justification": "Create folder for Insurance Premium Invoice based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC007",
+        "target_folder": "Finance/Taxes/2024",
+        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC008",
+        "target_folder": "Finance/Taxes/2024",
+        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC009",
+        "target_folder": "Finance/Taxes/2024",
+        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC010",
+        "target_folder": "General/2025",
+        "target_name": "2025-10-24 Blank Lined Notebook Page.pdf",
+        "justification": "Ensure notebook page from 2025 is filed under 'General/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC011",
+        "target_folder": "Finance/Taxes/2024",
+        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Agreements/2025",
+        "justification": "Create folder for Consent Declaration / Agreement Form based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC012",
+        "target_folder": "Finance/Agreements/2025",
+        "target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf",
+        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finance/Agreements/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC013",
+        "target_folder": "Finance/Agreements/2025",
+        "target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf",
+        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finance/Agreements/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Insurance/2024",
+        "justification": "Create folder for Insurance Policy Amendment Notice based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC014",
+        "target_folder": "Finance/Insurance/2024",
+        "target_name": "2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf",
+        "justification": "Ensure insurance policy amendment notice from 2024 is filed under 'Finance/Insurance/2024' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Utilities/2024",
+        "justification": "Create folder for Invoice based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC015",
+        "target_folder": "Finance/Utilities/2024",
+        "target_name": "2024-11-30 Rechnung R2411093 - Jan.pdf",
+        "justification": "Ensure invoice from 2024 is filed under 'Finance/Utilities/2024' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Taxes/2025",
+        "justification": "Create folder for Official Notice / Tax Assessment based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC016",
+        "target_folder": "Finance/Taxes/2025",
+        "target_name": "2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf",
+        "justification": "Ensure official notice / tax assessment from 2025 is filed under 'Finance/Taxes/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC017",
+        "target_folder": "General/2025",
+        "target_name": "2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf",
+        "justification": "Ensure offer / quotation from 2025 is filed under 'General/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "General/2011",
+        "justification": "Create folder for Architectural Plan based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC018",
+        "target_folder": "General/2011",
+        "target_name": "2011-02-04 Bauantragsplanung - Kellergeschoss.pdf",
+        "justification": "Ensure architectural plan from 2011 is filed under 'General/2011' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC019",
+        "target_folder": "General/2025",
+        "target_name": "2025-10-27 Ansicht von innen Maßstab 1 15.pdf",
+        "justification": "Ensure architectural drawing from 2025 is filed under 'General/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC020",
+        "target_folder": "General/2025",
+        "target_name": "2025-10-27 Dein neues Girokonto bei der DKB.pdf",
+        "justification": "Ensure banking welcome letter from 2025 is filed under 'General/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Taxes/2023",
+        "justification": "Create folder for Tax Certificate based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC021",
+        "target_folder": "Finance/Taxes/2023",
+        "target_name": "2023-01-01 Ihre Jahressteuerbescheinigung - January.pdf",
+        "justification": "Ensure tax certificate from 2023 is filed under 'Finance/Taxes/2023' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Health/Records/2025",
+        "justification": "Create folder for Medical Laboratory Report based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC022",
+        "target_folder": "Health/Records/2025",
+        "target_name": "2025-10-27 Mikrobiologischer LABORBERICHT.pdf",
+        "justification": "Ensure medical laboratory report from 2025 is filed under 'Health/Records/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Health/Records/2020",
+        "justification": "Create folder for Medical Laboratory Report based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC023",
+        "target_folder": "Health/Records/2020",
+        "target_name": "2020-09-22 Endbefundbericht Stoffwechsellabor - UniversitätsKlinikum.pdf",
+        "justification": "Ensure medical laboratory report from 2020 is filed under 'Health/Records/2020' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC024",
+        "target_folder": "Finance/Taxes/2023",
+        "target_name": "2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2023 is filed under 'Finance/Taxes/2023' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Insurance/2025",
+        "justification": "Create folder for Insurance Premium Adjustment Notice based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC025",
+        "target_folder": "Finance/Insurance/2025",
+        "target_name": "2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium adjustment notice from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Insurance/2022",
+        "justification": "Create folder for Official Letter based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC026",
+        "target_folder": "Finance/Insurance/2022",
+        "target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf",
+        "justification": "Ensure official letter from 2022 is filed under 'Finance/Insurance/2022' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Utilities/2022",
+        "justification": "Create folder for Utility Bill based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC027",
+        "target_folder": "Finance/Utilities/2022",
+        "target_name": "2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf",
+        "justification": "Ensure utility bill from 2022 is filed under 'Finance/Utilities/2022' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Insurance/2023",
+        "justification": "Create folder for Insurance Notification Letter based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC028",
+        "target_folder": "Finance/Insurance/2023",
+        "target_name": "2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik - ALTE.pdf",
+        "justification": "Ensure insurance notification letter from 2023 is filed under 'Finance/Insurance/2023' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC029",
+        "target_folder": "Finance/Insurance/2025",
+        "target_name": "2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf",
+        "justification": "Ensure official letter / notification from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Reference/Correspondence/2022",
+        "justification": "Create folder for Invoice based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC030",
+        "target_folder": "Reference/Correspondence/2022",
+        "target_name": "2022-06-14 Rechnung - Neubeck.pdf",
+        "justification": "Ensure invoice from 2022 is filed under 'Reference/Correspondence/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC031",
+        "target_folder": "Finance/Insurance/2025",
+        "target_name": "2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393 - HUK-COBURG.pdf",
+        "justification": "Ensure insurance confirmation letter from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Utilities/2025",
+        "justification": "Create folder for Customer Service Letter based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC032",
+        "target_folder": "Finance/Utilities/2025",
+        "target_name": "2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte - Telekom.pdf",
+        "justification": "Ensure customer service letter from 2025 is filed under 'Finance/Utilities/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC033",
+        "target_folder": "Finance/Taxes/2024",
+        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC034",
+        "target_folder": "Finance/Insurance/2022",
+        "target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf",
+        "justification": "Ensure official letter from 2022 is filed under 'Finance/Insurance/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC035",
+        "target_folder": "Finance/Insurance/2025",
+        "target_name": "2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf",
+        "justification": "Ensure official notification letter from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Insurance/2026",
+        "justification": "Create folder for Insurance Policy Amendment based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC036",
+        "target_folder": "Finance/Insurance/2026",
+        "target_name": "2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf",
+        "justification": "Ensure insurance policy amendment from 2026 is filed under 'Finance/Insurance/2026' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Insurance/2050",
+        "justification": "Create folder for Pension Information Letter based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC037",
+        "target_folder": "Finance/Insurance/2050",
+        "target_name": "2050-06-01 Ihre Renteninformation - Deutsche.pdf",
+        "justification": "Ensure pension information letter from 2050 is filed under 'Finance/Insurance/2050' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Income/2002",
+        "justification": "Create folder for Pension Information Letter based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC038",
+        "target_folder": "Finance/Income/2002",
+        "target_name": "2002-08-01 Renteninformation 2025 - 01 08 2002.pdf",
+        "justification": "Ensure pension information letter from 2002 is filed under 'Finance/Income/2002' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Reference/Correspondence/2025",
+        "justification": "Create folder for Order Confirmation based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC039",
+        "target_folder": "Reference/Correspondence/2025",
+        "target_name": "2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf",
+        "justification": "Ensure order confirmation from 2025 is filed under 'Reference/Correspondence/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC040",
+        "target_folder": "Finance/Agreements/2025",
+        "target_name": "2025-10-29 Einverständniserklärung des Anlagenbetreibers - evd.pdf",
+        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finance/Agreements/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC041",
+        "target_folder": "Reference/Correspondence/2025",
+        "target_name": "2025-08-20 Rechnung - Janning.pdf",
+        "justification": "Ensure invoice from 2025 is filed under 'Reference/Correspondence/2025' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "Finance/Insurance/2021",
+        "justification": "Create folder for Social Security Certificate based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC042",
+        "target_folder": "Finance/Insurance/2021",
+        "target_name": "2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - January.pdf",
+        "justification": "Ensure social security certificate from 2021 is filed under 'Finance/Insurance/2021' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC043",
+        "target_folder": "Finance/Insurance/2022",
+        "target_name": "2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - 01 10 2021.pdf",
+        "justification": "Ensure social security certificate from 2022 is filed under 'Finance/Insurance/2022' with date-prefixed name."
+      },
+      {
+        "action": "create_folder",
+        "path": "General/2022",
+        "justification": "Create folder for Customer Service Letter based on heuristics."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC044",
+        "target_folder": "General/2022",
+        "target_name": "2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf",
+        "justification": "Ensure customer service letter from 2022 is filed under 'General/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC045",
+        "target_folder": "Finance/Utilities/2025",
+        "target_name": "2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf",
+        "justification": "Ensure customer letter / access credentials notice from 2025 is filed under 'Finance/Utilities/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC046",
+        "target_folder": "Finance/Utilities/2025",
+        "target_name": "2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf",
+        "justification": "Ensure customer information letter from 2025 is filed under 'Finance/Utilities/2025' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC047",
+        "target_folder": "Reference/Correspondence/2022",
+        "target_name": "2022-07-28 Anmeldebestätigung - the.pdf",
+        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Reference/Correspondence/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC048",
+        "target_folder": "Reference/Correspondence/2022",
+        "target_name": "2022-07-28 Anmeldebestätigung - the.pdf",
+        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Reference/Correspondence/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC049",
+        "target_folder": "Civic/Government/2022",
+        "target_name": "2022-07-28 Anmeldebestätigung.pdf",
+        "justification": "Ensure official registration confirmation from 2022 is filed under 'Civic/Government/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC050",
+        "target_folder": "Reference/Correspondence/2022",
+        "target_name": "2022-07-28 Anmeldebestätigung.pdf",
+        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Reference/Correspondence/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC051",
+        "target_folder": "Finance/Insurance/2025",
+        "target_name": "2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm - BARMER.pdf",
+        "justification": "Ensure marketing letter / insurance promotion from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
+      }
+    ],
+    "context": {
+      "sources": [
+        {
+          "id": "SRC001",
+          "relative_path": "Corona-PCR-21.10.2021.pdf",
+          "name": "Corona-PCR-21.10.2021.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Coronavirus SARS-CoV-2-Testergebnisse: 13405000 - VAULT Kunde",
+            "author": "MVZ Labor Dr. Kirkamm GmbH",
+            "document_type": "Medical Test Result",
+            "summary": "This document reports a positive SARS-CoV-2 PCR test result for order number 13405000. The test targeted SARS-CoV-2 E-Gen and RdRP-Gen with Ct-values of 18.49 and 19.1 respectively. Patients are advised to contact their treating physician and consult Robert Koch Institute guidelines for next steps.",
+            "tags": [
+              "SARS-CoV-2",
+              "PCR Test",
+              "Positive Result",
+              "Medical Report",
+              "COVID-19",
+              "MVZ Labor Dr. Kirkamm GmbH",
+              "VAULT Software",
+              "Robert Koch Institute"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2021-10-21",
+            "document_year": "2021",
+            "document_type": "Medical Test Result",
+            "suggested_folder": "Health/Records/2021",
+            "suggested_target_name": "2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf"
+          }
+        },
+        {
+          "id": "SRC002",
+          "relative_path": "HOLLAND-BSN Kopie.pdf",
+          "name": "HOLLAND-BSN Kopie.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Inschrijving als niet-ingezetene in de Basisregistratie Personen",
+            "author": "F.G.A.M. Jacob, Directeur Uitvoering Rijksdienst voor Identiteitsgegevens",
+            "document_type": "Official Government Letter",
+            "summary": "This letter from the Dutch Rijksdienst voor Identiteitsgegevens confirms the registration of Mr. A. Lemken as a non-resident in the Basisregistratie Personen (BRP) effective January 18, 2022. It provides his citizen service number (BSN: 436721090) and directs him to the BelastingTelefoon Buitenland for inquiries. The registration was initiated at the request of the Ministry of Finance.",
+            "tags": [
+              "Netherlands",
+              "BRP",
+              "BSN",
+              "non-resident registration",
+              "government letter",
+              "Ministerie van Binnenlandse Zaken",
+              "Rijksdienst voor Identiteitsgegevens"
+            ],
+            "language": "Dutch"
+          },
+          "hints": {
+            "document_date": "2022-01-18",
+            "document_year": "2022",
+            "document_type": "Official Government Letter",
+            "suggested_folder": "Civic/Government/2022",
+            "suggested_target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf"
+          }
+        },
+        {
+          "id": "SRC003",
+          "relative_path": "HOLLAND-BSN.pdf",
+          "name": "HOLLAND-BSN.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Inschrijving als niet-ingezetene in de Basisregistratie Personen",
+            "author": "F.G.A.M. Jacob, Directeur Uitvoering Rijksdienst voor Identiteitsgegevens",
+            "document_type": "Official Letter",
+            "summary": "This official letter from the Dutch Rijksdienst voor Identiteitsgegevens confirms the registration of Mr. A. Lemken as a non-resident in the Dutch Basic Registration of Persons (BRP) effective January 18, 2022. It provides his citizen service number (BSN: 436721090) and directs him to the Belastingdienst for further inquiries, including contact details for the BelastingTelefoon Buitenland.",
+            "tags": [
+              "Netherlands",
+              "BRP",
+              "BSN",
+              "Non-resident registration",
+              "Rijksdienst voor Identiteitsgegevens",
+              "Official correspondence",
+              "Dutch government",
+              "Ministerie van Binnenlandse Zaken"
+            ],
+            "language": "Dutch"
+          },
+          "hints": {
+            "document_date": "2022-01-18",
+            "document_year": "2022",
+            "document_type": "Official Letter",
+            "suggested_folder": "Civic/Government/2022",
+            "suggested_target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf"
+          }
+        },
+        {
+          "id": "SRC004",
+          "relative_path": "Scan vom 2025-10-23 02_25_32 PM.pdf",
+          "name": "Scan vom 2025-10-23 02_25_32 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Product Safety and Regulatory Information",
+            "author": "BB Services GmbH",
+            "document_type": "Product Packaging Label",
+            "summary": "This is the back panel of a BlueBrixx product box, containing multilingual safety warnings indicating the product is not suitable for children under 3 years due to choking hazards from small parts. It includes manufacturer details, CE and UKCA conformity marks, country of manufacture (China), and contact information.",
+            "tags": [
+              "safety warning",
+              "choking hazard",
+              "children under 3",
+              "CE mark",
+              "UKCA mark",
+              "multilingual",
+              "product label",
+              "BlueBrixx",
+              "manufactured in China"
+            ],
+            "language": "multilingual"
+          },
+          "hints": {
+            "document_date": "2025-10-23",
+            "document_year": "2025",
+            "document_type": "Product Packaging Label",
+            "suggested_folder": "General/2025",
+            "suggested_target_name": "2025-10-23 Product Safety and Regulatory Information - small.pdf"
+          }
+        },
+        {
+          "id": "SRC005",
+          "relative_path": "Scan vom 2025-10-23 08_27_09 PM.pdf",
+          "name": "Scan vom 2025-10-23 08_27_09 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "MacBook Keyboard and Dock Screenshot",
+            "author": "Unknown",
+            "document_type": "Image",
+            "summary": "Close-up photograph of a MacBook keyboard with a visible macOS dock at the top, showing various application icons. The keyboard layout includes standard QWERTY keys with European characters (e.g., €, @, Ö) and macOS-specific keys like Command and Option. The lighting reflects warm ambient tones on the keys.",
+            "tags": [
+              "MacBook",
+              "keyboard",
+              "macOS",
+              "dock",
+              "screenshot",
+              "technology",
+              "laptop",
+              "QWERTY",
+              "European layout"
+            ],
+            "language": "en"
+          },
+          "hints": {
+            "document_date": "2025-10-23",
+            "document_year": "2025",
+            "document_type": "Image",
+            "suggested_folder": "General/2025",
+            "suggested_target_name": "2025-10-23 MacBook Keyboard and Dock Screenshot.pdf"
+          }
+        },
+        {
+          "id": "SRC006",
+          "relative_path": "Scan vom 2025-10-23 09_28_25 PM.pdf",
+          "name": "Scan vom 2025-10-23 09_28_25 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Green Castle Wall with Stone Texture",
+            "author": "Unknown",
+            "document_type": "Image",
+            "summary": "Close-up of a green castle wall with a textured stone pattern, featuring crenellations and an adjacent arched entryway with wooden elements.",
+            "tags": [
+              "castle",
+              "green wall",
+              "stone texture",
+              "crenellations",
+              "archway",
+              "model",
+              "toy",
+              "architecture"
+            ],
+            "language": "en"
+          },
+          "hints": {
+            "document_date": "2025-10-23",
+            "document_year": "2025",
+            "document_type": "Image",
+            "suggested_folder": "General/2025",
+            "suggested_target_name": "2025-10-23 Green Castle Wall with Stone Texture.pdf"
+          }
+        },
+        {
+          "id": "SRC007",
+          "relative_path": "Scan vom 2025-10-24 07_24_33 AM Kopie.pdf",
+          "name": "Scan vom 2025-10-24 07_24_33 AM Kopie.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Prämienrechnung: Verbundene Wohngebäude-Versicherung",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Insurance Premium Invoice",
+            "summary": "This is a premium invoice from Baloise Sachversicherung AG Deutschland for a combined residential building insurance policy for Dr. Alexander and Jennifer Lemken, covering the period from January 1, 2024, to January 1, 2025. The total premium is EUR 773.42, including a net premium of EUR 664.79 and insurance tax of EUR 108.63. Payment is to be made via a specified bank account or by providing the reference number 3000718989134 if using a different payment method.",
+            "tags": [
+              "insurance",
+              "premium invoice",
+              "Baloise",
+              "Germany",
+              "residential building",
+              "2024",
+              "German language"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2024-01-01",
+            "document_year": "2024",
+            "document_type": "Insurance Premium Invoice",
+            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
+          }
+        },
+        {
+          "id": "SRC008",
+          "relative_path": "Scan vom 2025-10-24 07_24_33 AM.pdf",
+          "name": "Scan vom 2025-10-24 07_24_33 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Prämienrechnung: Verbundene Wohngebäude-Versicherung",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Insurance Premium Invoice",
+            "summary": "This is a premium invoice from Baloise Sachversicherung AG Deutschland for a combined residential building insurance policy covering the period from January 1, 2024, to January 1, 2025. The insured property is located at Sophie-Scholl-Str. 17, 41540 Dormagen. The total premium due is EUR 773.42, broken down into a net premium of EUR 664.79 and insurance tax of EUR 108.63. Payment instructions and reference number are provided.",
+            "tags": [
+              "insurance",
+              "premium invoice",
+              "Baloise",
+              "Germany",
+              "residential building",
+              "2024",
+              "German language"
+            ],
+            "language": "de"
+          },
+          "hints": {
+            "document_date": "2024-01-01",
+            "document_year": "2024",
+            "document_type": "Insurance Premium Invoice",
+            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
+          }
+        },
+        {
+          "id": "SRC009",
+          "relative_path": "Scan vom 2025-10-24 07_28_54 AM.pdf",
+          "name": "Scan vom 2025-10-24 07_28_54 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Prämienrechnung: Verbundene Wohngebäude-Versicherung",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Insurance Premium Invoice",
+            "summary": "This is an insurance premium invoice from Baloise Sachversicherung AG Deutschland for a combined residential building insurance policy covering the period from January 1, 2024, to January 1, 2025. The insured property is located at Sophie-Scholl-Str. 17, 41540 Dormagen. The total gross premium is EUR 773.42, with a net premium of EUR 664.79 and insurance tax of EUR 108.63. Payment instructions and bank details are provided.",
+            "tags": [
+              "insurance",
+              "premium invoice",
+              "Baloise",
+              "residential building",
+              "Germany",
+              "2024",
+              "German language"
+            ],
+            "language": "de"
+          },
+          "hints": {
+            "document_date": "2024-01-01",
+            "document_year": "2024",
+            "document_type": "Insurance Premium Invoice",
+            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
+          }
+        },
+        {
+          "id": "SRC010",
+          "relative_path": "Scan vom 2025-10-24 07_32_33 AM.pdf",
+          "name": "Scan vom 2025-10-24 07_32_33 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Blank Lined Notebook Page",
+            "author": "Unknown",
+            "document_type": "Notebook Page",
+            "summary": "A blank, lined notebook page with a torn left edge and faint shadows cast across its surface. No text or markings are present.",
+            "tags": [
+              "notebook",
+              "lined paper",
+              "blank page",
+              "torn edge",
+              "stationery"
+            ],
+            "language": "None"
+          },
+          "hints": {
+            "document_date": "2025-10-24",
+            "document_year": "2025",
+            "document_type": "Notebook Page",
+            "suggested_folder": "General/2025",
+            "suggested_target_name": "2025-10-24 Blank Lined Notebook Page.pdf"
+          }
+        },
+        {
+          "id": "SRC011",
+          "relative_path": "Scan vom 2025-10-24 08_45_18 AM.pdf",
+          "name": "Scan vom 2025-10-24 08_45_18 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Prämienrechnung: Verbundene Wohngebäude-Versicherung",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Insurance Premium Invoice",
+            "summary": "This is a premium invoice from Baloise for a combined residential building insurance policy covering the period from January 1, 2024, to January 1, 2025. The insured property is located at Sophie-Scholl-Str. 17, 41540 Dormagen. The total gross premium is EUR 773.42, including a net premium of EUR 664.79 and insurance tax of EUR 108.63. Payment instructions and bank details are provided.",
+            "tags": [
+              "insurance",
+              "premium invoice",
+              "Baloise",
+              "Wohngebäudeversicherung",
+              "Germany",
+              "2024",
+              "Dormagen"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2024-01-01",
+            "document_year": "2024",
+            "document_type": "Insurance Premium Invoice",
+            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
+          }
+        },
+        {
+          "id": "SRC012",
+          "relative_path": "Scan vom 2025-10-24 09_57_24 AM.pdf",
+          "name": "Scan vom 2025-10-24 09_57_24 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Einverständniserklärung des Anlagenbetreibers",
+            "author": "Alexander Lemken",
+            "document_type": "Consent Declaration / Agreement Form",
+            "summary": "This document is a consent declaration from the plant operator, Alexander Lemken, confirming agreement with the contents of the letter, informing the involved electrical contractor, affirming ownership of the property, and stating that the photovoltaic system is in a concrete planning phase. The planned commissioning date is January 2025. A separate section is provided for the landowner’s consent if different from the operator.",
+            "tags": [
+              "Photovoltaic",
+              "Consent Declaration",
+              "Energy Supply",
+              "Germany",
+              "Dormagen",
+              "Landowner Agreement",
+              "Plant Operator",
+              "EVD"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-24",
+            "document_year": "2025",
+            "document_type": "Consent Declaration / Agreement Form",
+            "suggested_folder": "Finance/Agreements/2025",
+            "suggested_target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf"
+          }
+        },
+        {
+          "id": "SRC013",
+          "relative_path": "Scan vom 2025-10-24 11_16_56 AM.pdf",
+          "name": "Scan vom 2025-10-24 11_16_56 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Einverständniserklärung des Anlagenbetreibers",
+            "author": "Alexander Lemken",
+            "document_type": "Consent Declaration / Agreement Form",
+            "summary": "This document is a consent declaration from the plant operator, Alexander Lemken, confirming agreement with the contents of the letter, informing the involved electrical contractor, confirming ownership of the property, and stating that the photovoltaic system is in a concrete planning phase. The planned commissioning date is January 2025. A separate consent declaration from the property owner is included if different from the operator.",
+            "tags": [
+              "Photovoltaic",
+              "Consent Declaration",
+              "Energy Supply",
+              "Germany",
+              "Dormagen",
+              "EVD",
+              "Property Owner",
+              "Plant Operator",
+              "Planning Phase",
+              "2025"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-24",
+            "document_year": "2025",
+            "document_type": "Consent Declaration / Agreement Form",
+            "suggested_folder": "Finance/Agreements/2025",
+            "suggested_target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf"
+          }
+        },
+        {
+          "id": "SRC014",
+          "relative_path": "Scan vom 2025-10-27 04_13_56 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_13_56 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein",
+            "author": "WWK Lebensversicherung a. G.",
+            "document_type": "Insurance Policy Amendment Notice",
+            "summary": "This document is a formal notice from WWK Lebensversicherung a. G. to Mr. Alexander Lemken regarding a dynamic premium adjustment for his insurance policy (WWK-FondsPolice 24 460 105), effective November 1, 2024. It explains that premiums will increase annually based on agreed terms, and outlines conditions under which the adjustment can be canceled, including non-payment or opting out for three consecutive years. Contact details for customer service are provided.",
+            "tags": [
+              "insurance",
+              "policy amendment",
+              "premium adjustment",
+              "WWK",
+              "German document",
+              "life insurance",
+              "dynamic contribution",
+              "customer notice"
+            ],
+            "language": "de"
+          },
+          "hints": {
+            "document_date": "2024-11-01",
+            "document_year": "2024",
+            "document_type": "Insurance Policy Amendment Notice",
+            "suggested_folder": "Finance/Insurance/2024",
+            "suggested_target_name": "2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf"
+          }
+        },
+        {
+          "id": "SRC015",
+          "relative_path": "Scan vom 2025-10-27 04_14_37 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_14_37 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Rechnung R2411093",
+            "author": "Jan Bes Sanitär & Heizung Meisterbetrieb",
+            "document_type": "Invoice",
+            "summary": "Invoice from Jan Bes Sanitär & Heizung Meisterbetrieb to Alexander Lemken for services including replacement of a drinking water filter and installation of a Biocat limescale protection system KLS 3000-C, with a total amount of 4,140.24 EUR. Issued on 30.11.2024.",
+            "tags": [
+              "invoice",
+              "sanitary",
+              "heating",
+              "climate",
+              "Biocat",
+              "water filter",
+              "limescale protection",
+              "Germany",
+              "Dormagen"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2024-11-30",
+            "document_year": "2024",
+            "document_type": "Invoice",
+            "suggested_folder": "Finance/Utilities/2024",
+            "suggested_target_name": "2024-11-30 Rechnung R2411093 - Jan.pdf"
+          }
+        },
+        {
+          "id": "SRC016",
+          "relative_path": "Scan vom 2025-10-27 04_15_11 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_15_11 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Bescheid der Stadt Dormagen über Grundbesitzabgaben",
+            "author": "Stadt Dormagen",
+            "document_type": "Official Notice / Tax Assessment",
+            "summary": "This document is an official notice from the city of Dormagen, Germany, detailing property-related fees for the year 2025. It includes charges for property tax (Grundsteuer B), waste disposal fees (Abfallgebühren), rainwater fees (Regenwassergebühren), and sewage fees (Schmutzwasser). The total amount due is €1,585.71, payable to specified bank accounts with reference to the provided Kassenzeichen. The notice is addressed to Jennifer and Alexander Lemken at Sophie-Scholl-Straße 17, Dormagen.",
+            "tags": [
+              "property tax",
+              "municipal fees",
+              "Germany",
+              "Dormagen",
+              "2025",
+              "official notice",
+              "Grundsteuer",
+              "Abfallgebühren",
+              "Regenwassergebühren",
+              "Schmutzwasser"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-27",
+            "document_year": "2025",
+            "document_type": "Official Notice / Tax Assessment",
+            "suggested_folder": "Finance/Taxes/2025",
+            "suggested_target_name": "2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf"
+          }
+        },
+        {
+          "id": "SRC017",
+          "relative_path": "Scan vom 2025-10-27 04_18_11 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_18_11 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Angebot - Bernhard Pohlmann - Cool Components",
+            "author": "Bernhard Pohlmann",
+            "document_type": "Offer / Quotation",
+            "summary": "This is a commercial offer from Bernhard Pohlmann - Cool Components to Familie Lemken, dated 13.05.2025, for one unit of a Mitsubishi Heavy Industries SCM71ZS-W outdoor unit for SX-Multisplit applications, with detailed technical specifications and pricing including a 37.5% discount, resulting in a total price of €3,121.88.",
+            "tags": [
+              "Offer",
+              "Quotation",
+              "Cooling Technology",
+              "Mitsubishi Heavy Industries",
+              "HVAC",
+              "German",
+              "Commercial Document"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-05-13",
+            "document_year": "2025",
+            "document_type": "Offer / Quotation",
+            "suggested_folder": "General/2025",
+            "suggested_target_name": "2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf"
+          }
+        },
+        {
+          "id": "SRC018",
+          "relative_path": "Scan vom 2025-10-27 04_20_12 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_20_12 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Bauantragsplanung - Kellergeschoss",
+            "author": "FAVORIT MASSIVHAUS",
+            "document_type": "Architectural Plan",
+            "summary": "This is a basement floor plan (Kellergeschoss) for a new single-family home with garage, prepared by FAVORIT MASSIVHAUS for client Frau Heike Marschalkowski in Dormagen-Delhoven. The plan includes labeled rooms (Hobby/Keller, Keller 1, Keller 2, KG-Flur), dimensions, stairwell, and structural details. Scale is 1:100, dated 04.02.2011.",
+            "tags": [
+              "Bauantrag",
+              "Kellergeschoss",
+              "Massivhaus",
+              "Architekturplan",
+              "Einfamilienhaus",
+              "Garage",
+              "FAVORIT",
+              "Bauplan",
+              "Dormagen"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2011-02-04",
+            "document_year": "2011",
+            "document_type": "Architectural Plan",
+            "suggested_folder": "General/2011",
+            "suggested_target_name": "2011-02-04 Bauantragsplanung - Kellergeschoss.pdf"
+          }
+        },
+        {
+          "id": "SRC019",
+          "relative_path": "Scan vom 2025-10-27 04_21_12 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_21_12 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Ansicht von innen (Maßstab 1:15)",
+            "author": "Unknown",
+            "document_type": "Architectural Drawing",
+            "summary": "Technical drawing showing an interior view of a window or facade assembly at a 1:15 scale, including detailed dimensions and panel layout.",
+            "tags": [
+              "architectural drawing",
+              "window design",
+              "technical drawing",
+              "interior view",
+              "scale 1:15",
+              "dimensioned drawing"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-27",
+            "document_year": "2025",
+            "document_type": "Architectural Drawing",
+            "suggested_folder": "General/2025",
+            "suggested_target_name": "2025-10-27 Ansicht von innen Maßstab 1 15.pdf"
+          }
+        },
+        {
+          "id": "SRC020",
+          "relative_path": "Scan vom 2025-10-27 04_22_40 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_22_40 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Dein neues Girokonto bei der DKB",
+            "author": "DKB (Deutsche Kreditbank AG)",
+            "document_type": "Banking Welcome Letter",
+            "summary": "This is a welcome letter from DKB to Alexander Lemken, confirming the activation of his new checking account. It provides his IBAN and BIC, reassures him that his banking access remains unchanged, and outlines next steps: activating his Visa debit card via the DKB app, downloading the app if not already installed, and activating the information service for tips and promotions.",
+            "tags": [
+              "DKB",
+              "Girokonto",
+              "Banking",
+              "Welcome Letter",
+              "IBAN",
+              "BIC",
+              "Deutsche Kreditbank",
+              "Privatkunden"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-27",
+            "document_year": "2025",
+            "document_type": "Banking Welcome Letter",
+            "suggested_folder": "General/2025",
+            "suggested_target_name": "2025-10-27 Dein neues Girokonto bei der DKB.pdf"
+          }
+        },
+        {
+          "id": "SRC021",
+          "relative_path": "Scan vom 2025-10-27 04_24_36 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_24_36 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Ihre Jahressteuerbescheinigung",
+            "author": "Deutsche Bank AG",
+            "document_type": "Tax Certificate",
+            "summary": "This is a German annual tax certificate (Jahressteuerbescheinigung) issued by Deutsche Bank AG to Jennifer Lemken, covering capital gains and taxes for the period from January 1, 2023, to December 31, 2023. It includes details on tax withholding, reporting obligations for German taxpayers, and information on optional earnings statements for tax filing purposes.",
+            "tags": [
+              "Tax Certificate",
+              "Deutsche Bank",
+              "Capital Gains",
+              "German Tax",
+              "Jahressteuerbescheinigung",
+              "2023 Tax Year"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2023-01-01",
+            "document_year": "2023",
+            "document_type": "Tax Certificate",
+            "suggested_folder": "Finance/Taxes/2023",
+            "suggested_target_name": "2023-01-01 Ihre Jahressteuerbescheinigung - January.pdf"
+          }
+        },
+        {
+          "id": "SRC022",
+          "relative_path": "Scan vom 2025-10-27 04_25_34 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_25_34 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Mikrobiologischer LABORBERICHT",
+            "author": "Labor Dr. Klein Dr. Schmitt GmbH",
+            "document_type": "Medical Laboratory Report",
+            "summary": "Microbiological lab report for patient Valerie Lemken, showing urine culture and resistance results. Two bacterial strains were identified: Escherichia coli and Enterococcus faecalis, both at 100,000/ml. The report includes antibiotic susceptibility testing for various drugs, with results indicating sensitivity (S), resistance (R), or intermediate sensitivity (MS). Hemostasis test was negative. Report issued by Medizinisches Versorgungszentrum Labor Dr. Klein Dr. Schmitt GmbH.",
+            "tags": [
+              "Medical Report",
+              "Microbiology",
+              "Urine Culture",
+              "Antibiotic Resistance",
+              "Escherichia coli",
+              "Enterococcus faecalis",
+              "Laboratory Test",
+              "German Document"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-27",
+            "document_year": "2025",
+            "document_type": "Medical Laboratory Report",
+            "suggested_folder": "Health/Records/2025",
+            "suggested_target_name": "2025-10-27 Mikrobiologischer LABORBERICHT.pdf"
+          }
+        },
+        {
+          "id": "SRC023",
+          "relative_path": "Scan vom 2025-10-27 04_26_43 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_26_43 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Endbefundbericht Stoffwechsellabor",
+            "author": "Dr. med. Mirjam Schweitzer-Martin",
+            "document_type": "Medical Laboratory Report",
+            "summary": "This is a metabolic laboratory report from UniversitätsKlinikum Heidelberg for patient Valerie Lemken (born 22.09.2020), detailing urine organic acid analysis. Results show markedly elevated levels of Succinate, Uracil, Dihydrouracil, and 2-OH-Glutarate, suggesting possible bacterial contamination or mitochondrial energy metabolism disorder. The report recommends follow-up testing with preserved urine samples and precise quantification via isotope dilution.",
+            "tags": [
+              "Medical Report",
+              "Metabolic Testing",
+              "Urine Analysis",
+              "Organic Acids",
+              "Pediatrics",
+              "Heidelberg University Hospital",
+              "Laboratory Diagnosis"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2020-09-22",
+            "document_year": "2020",
+            "document_type": "Medical Laboratory Report",
+            "suggested_folder": "Health/Records/2020",
+            "suggested_target_name": "2020-09-22 Endbefundbericht Stoffwechsellabor - UniversitätsKlinikum.pdf"
+          }
+        },
+        {
+          "id": "SRC024",
+          "relative_path": "Scan vom 2025-10-27 04_32_14 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_32_14 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Prämienrechnung: Verbundene Wohngebäude-Versicherung",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Insurance Premium Invoice",
+            "summary": "This is a premium invoice from Baloise Sachversicherung AG Deutschland for a combined residential building insurance policy covering the period from January 1, 2023, to January 1, 2024. The policyholder is Dr. Alexander and Jennifer Lemken, residing in Dormagen. The net premium is EUR 603.60, with a gross premium of EUR 702.23 including 98.63 EUR in insurance tax. Payment instructions and policy details are included.",
+            "tags": [
+              "insurance",
+              "premium invoice",
+              "Baloise",
+              "Wohngebäudeversicherung",
+              "Germany",
+              "2023"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2023-01-01",
+            "document_year": "2023",
+            "document_type": "Insurance Premium Invoice",
+            "suggested_folder": "Finance/Taxes/2023",
+            "suggested_target_name": "2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
+          }
+        },
+        {
+          "id": "SRC025",
+          "relative_path": "Scan vom 2025-10-27 04_33_44 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_33_44 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Insurance Premium Adjustment Notice",
+            "summary": "This document is a notice from Baloise Sachversicherung AG Germany informing Dr. Alexander and Jennifer Lemken about an upcoming premium adjustment for their residential building insurance. The adjustment, effective at the next renewal, is based on rising property values and inflation, increasing their annual premium from EUR 566.46 to EUR 702.23. The notice explains that premiums are adjusted annually according to the 'gleitenden Neuwertfaktor' (sliding replacement value factor) set by the Federal Statistical Office, in accordance with VGB 2000 terms.",
+            "tags": [
+              "insurance",
+              "premium adjustment",
+              "residential building insurance",
+              "Baloise",
+              "Germany",
+              "letter",
+              "German language",
+              "financial notice"
+            ],
+            "language": "de"
+          },
+          "hints": {
+            "document_date": "2025-10-27",
+            "document_year": "2025",
+            "document_type": "Insurance Premium Adjustment Notice",
+            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_target_name": "2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung - Baloise.pdf"
+          }
+        },
+        {
+          "id": "SRC026",
+          "relative_path": "Scan vom 2025-10-27 04_34_20 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_34_20 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Ihre beitragsfreie Versicherung – bitte halten Sie uns auf dem Laufenden",
+            "author": "Techniker Krankenkasse",
+            "document_type": "Official Letter",
+            "summary": "This letter from Techniker Krankenkasse informs Frau Jennifer Lemken that she is eligible for contribution-free health insurance during her parental leave from July 22, 2022, to August 21, 2022. It outlines the conditions for maintaining this status, including income limits (max. 470 EUR/month), no self-employment, and partner’s membership in a statutory health insurance. The letter requests prompt notification of any changes in personal circumstances.",
+            "tags": [
+              "Health Insurance",
+              "Parental Leave",
+              "Contribution-Free",
+              "Techniker Krankenkasse",
+              "German Letter",
+              "Official Communication"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-07-22",
+            "document_year": "2022",
+            "document_type": "Official Letter",
+            "suggested_folder": "Finance/Insurance/2022",
+            "suggested_target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf"
+          }
+        },
+        {
+          "id": "SRC027",
+          "relative_path": "Scan vom 2025-10-27 04_35_43 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_35_43 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Schlussrechnung - evd energieversorgung dormagen",
+            "author": "evd energieversorgung dormagen gmbh",
+            "document_type": "Utility Bill",
+            "summary": "This is a final electricity bill from evd energieversorgung dormagen gmbh, dated 29 July 2022, for the billing period 05.06.2022 to 30.06.2022. The customer, Eheleute Lemken, consumed 22 kWh, resulting in a total gross amount of €27.27, due by 15 August 2022. The bill includes contact details, payment instructions, and online service options.",
+            "tags": [
+              "electricity bill",
+              "utility invoice",
+              "Germany",
+              "evd dormagen",
+              "final bill",
+              "Kunden-Nr. 678.031.453-1",
+              "Rechnungsnummer RN4LM2022/00017249"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-06-05",
+            "document_year": "2022",
+            "document_type": "Utility Bill",
+            "suggested_folder": "Finance/Utilities/2022",
+            "suggested_target_name": "2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf"
+          }
+        },
+        {
+          "id": "SRC028",
+          "relative_path": "Scan vom 2025-10-27 04_38_06 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_38_06 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Versicherungsmitteilung zur jährlichen Dynamik",
+            "author": "ALTE LEIPZIGER Lebensversicherung auf Gegenseitigkeit",
+            "document_type": "Insurance Notification Letter",
+            "summary": "This letter from ALTE LEIPZIGER informs policyholder Jennifer Lemken about the activation of a 5.00% annual dynamic adjustment in her life insurance contract, effective November 1, 2023. The adjustment increases the monthly premium to 119.20 EUR (net payment: 90.55 EUR). It also triggers a review of the appropriateness of her disability and reduced earning capacity pensions, requiring her to verify if the total exceeds 40,000 EUR annually, based on specific income thresholds.",
+            "tags": [
+              "Insurance",
+              "Life Insurance",
+              "Premium Adjustment",
+              "Disability Pension",
+              "German Insurance",
+              "ALTE LEIPZIGER",
+              "Policyholder Notification",
+              "Dynamic Adjustment"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2023-11-01",
+            "document_year": "2023",
+            "document_type": "Insurance Notification Letter",
+            "suggested_folder": "Finance/Insurance/2023",
+            "suggested_target_name": "2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik - ALTE.pdf"
+          }
+        },
+        {
+          "id": "SRC029",
+          "relative_path": "Scan vom 2025-10-27 04_42_48 PM.pdf",
+          "name": "Scan vom 2025-10-27 04_42_48 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Früherkennungsuntersuchung U7a für Ihre Tochter Valerie",
+            "author": "Techniker Krankenkasse",
+            "document_type": "Official Letter / Notification",
+            "summary": "This letter from Techniker Krankenkasse informs Frau Jennifer Lemken about the upcoming U7a preventive health check for her 3-year-old daughter, Valerie. The examination, conducted between the 34th and 36th month of life, assesses speech development and vision. Parents are encouraged to schedule an appointment promptly, as costs are covered by the TK health insurance card. The letter also includes contact information and a reminder about the 2023 Social Election.",
+            "tags": [
+              "Healthcare",
+              "Preventive Medicine",
+              "Child Health",
+              "U7a Examination",
+              "Techniker Krankenkasse",
+              "German Healthcare",
+              "Parent Notification"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-27",
+            "document_year": "2025",
+            "document_type": "Official Letter / Notification",
+            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_target_name": "2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf"
+          }
+        },
+        {
+          "id": "SRC030",
+          "relative_path": "Scan vom 2025-10-28 09_36_47 AM.pdf",
+          "name": "Scan vom 2025-10-28 09_36_47 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Rechnung",
+            "author": "Neubeck Automobile GmbH",
+            "document_type": "Invoice",
+            "summary": "Invoice from Neubeck Automobile GmbH to Frau Jennifer Lemken for a wheel storage service (Rädereinlagerung) for summer 2022, with a net amount of 37,73 EUR and total amount of 44,90 EUR including 19% VAT. The invoice is dated 14.06.2022 and must be paid within 8 days.",
+            "tags": [
+              "invoice",
+              "automobile",
+              "wheel storage",
+              "VAT",
+              "Germany",
+              "Neubeck Automobile GmbH"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-06-14",
+            "document_year": "2022",
+            "document_type": "Invoice",
+            "suggested_folder": "Reference/Correspondence/2022",
+            "suggested_target_name": "2022-06-14 Rechnung - Neubeck.pdf"
+          }
+        },
+        {
+          "id": "SRC031",
+          "relative_path": "Scan vom 2025-10-28 09_37_28 AM.pdf",
+          "name": "Scan vom 2025-10-28 09_37_28 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Versicherungsbestätigung Nr. HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393",
+            "author": "HUK-COBURG-Allgemeine Versicherung AG",
+            "document_type": "Insurance Confirmation Letter",
+            "summary": "This is an insurance confirmation letter from HUK-COBURG addressed to Frau Jennifer Lemken, confirming the update of her vehicle registration (license plate RP-LY 393) due to a change of residence. The letter provides the insurance confirmation number HA221F9, valid for 18 months, and explains its use for vehicle re-registration at the new licensing authority. It also advises on updating other insurance details, such as occupation or property ownership, and offers guidance on adjusting household insurance after moving.",
+            "tags": [
+              "insurance",
+              "vehicle registration",
+              "relocation",
+              "HUK-COBURG",
+              "German document",
+              "confirmation letter"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-28",
+            "document_year": "2025",
+            "document_type": "Insurance Confirmation Letter",
+            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_target_name": "2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393 - HUK-COBURG.pdf"
+          }
+        },
+        {
+          "id": "SRC032",
+          "relative_path": "Scan vom 2025-10-28 09_38_46 AM.pdf",
+          "name": "Scan vom 2025-10-28 09_38_46 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Wichtiges zur Rücksendung Ihrer Mietgeräte",
+            "author": "Marco Holzwarth, Leiter Kundenservice",
+            "document_type": "Customer Service Letter",
+            "summary": "This letter from Telekom Deutschland GmbH informs customer Jennifer Lemken about the necessary steps to return rented equipment. It emphasizes the urgency of returning devices to avoid continued monthly charges and confirms that cancellation becomes effective only upon receipt of the returned items. A return slip and checklist are enclosed, advising the customer to delete personal data before returning the devices.",
+            "tags": [
+              "Telekom",
+              "Customer Service",
+              "Equipment Return",
+              "German",
+              "Letter",
+              "Cancellation",
+              "Billing"
+            ],
+            "language": "de"
+          },
+          "hints": {
+            "document_date": "2025-10-28",
+            "document_year": "2025",
+            "document_type": "Customer Service Letter",
+            "suggested_folder": "Finance/Utilities/2025",
+            "suggested_target_name": "2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte - Telekom.pdf"
+          }
+        },
+        {
+          "id": "SRC033",
+          "relative_path": "Scan vom 2025-10-28 09_39_34 AM.pdf",
+          "name": "Scan vom 2025-10-28 09_39_34 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Prämienrechnung: Verbundene Wohngebäude-Versicherung",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Insurance Premium Invoice",
+            "summary": "This is a premium invoice from Baloise Sachversicherung AG Deutschland for a combined residential building insurance policy (Versicherungsschein Nr. 080476-71898913 BP1) covering the period from 01.01.2024 to 01.01.2025. The insured property is located at Sophie-Scholl-Str. 17, 41540 Dormagen. The total gross premium is EUR 773.42, broken down into a net premium of EUR 664.79 and insurance tax of EUR 108.63. Payment is to be made via the provided payment slip or to account number 3000718989134.",
+            "tags": [
+              "insurance",
+              "premium invoice",
+              "Baloise",
+              "Wohngebäudeversicherung",
+              "Germany",
+              "2024",
+              "Dormagen"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2024-01-01",
+            "document_year": "2024",
+            "document_type": "Insurance Premium Invoice",
+            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
+          }
+        },
+        {
+          "id": "SRC034",
+          "relative_path": "Scan vom 2025-10-28 09_40_02 AM.pdf",
+          "name": "Scan vom 2025-10-28 09_40_02 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Ihre beitragsfreie Versicherung – bitte halten Sie uns auf dem Laufenden",
+            "author": "Techniker Krankenkasse",
+            "document_type": "Official Letter",
+            "summary": "This letter from Techniker Krankenkasse informs Frau Jennifer Lemken that she is eligible for contribution-free health insurance during her parental leave from July 22, 2022, to August 21, 2022. It outlines the conditions for maintaining this status, including income limits (max. 470 EUR/month, excluding child benefit), no employment or self-employment, and partner’s membership in a statutory health insurance. The letter requests prompt notification of any changes in her personal situation.",
+            "tags": [
+              "Health Insurance",
+              "Parental Leave",
+              "Contribution-Free",
+              "Techniker Krankenkasse",
+              "Germany",
+              "Official Communication"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-07-22",
+            "document_year": "2022",
+            "document_type": "Official Letter",
+            "suggested_folder": "Finance/Insurance/2022",
+            "suggested_target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf"
+          }
+        },
+        {
+          "id": "SRC035",
+          "relative_path": "Scan vom 2025-10-28 09_40_29 AM.pdf",
+          "name": "Scan vom 2025-10-28 09_40_29 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "ACHTUNG – NEUE BANKVERBINDUNG",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Official Notification Letter",
+            "summary": "This letter from Baloise Sachversicherung AG Deutschland informs customers of a new bank connection effective immediately. Customers with property insurance policies are instructed to update their payment details to the new account at HypoVereinsbank. The letter also invites customers to participate in SEPA direct debit by returning a signed mandate and provides an email address for correspondence.",
+            "tags": [
+              "bank connection update",
+              "insurance",
+              "SEPA direct debit",
+              "Baloise",
+              "German letter",
+              "customer notification"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-28",
+            "document_year": "2025",
+            "document_type": "Official Notification Letter",
+            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_target_name": "2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf"
+          }
+        },
+        {
+          "id": "SRC036",
+          "relative_path": "Scan vom 2025-10-29 02_00_42 PM.pdf",
+          "name": "Scan vom 2025-10-29 02_00_42 PM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "NACHTRAG ZUM VERSICHERUNGSSCHEIN",
+            "author": "Baloise Sachversicherung AG Deutschland",
+            "document_type": "Insurance Policy Amendment",
+            "summary": "This document is an amendment to an insurance policy (policy number 080476-71898913 BP1) issued by Baloise Sachversicherung AG Deutschland. It formally notifies the policyholders, Dr. Alexander and Jennifer Lemken, that their 'Verbundene-Wohngebäude-Versicherung' (Combined Building Insurance) contract will be terminated effective January 1, 2026, at 00:00. The reason for termination is stated as 'Aufhebung des Vertrages' (Cancellation of the contract). The document is dated October 24, 2025, and signed by Dr. Jürg Schiltknecht and Christoph Willi.",
+            "tags": [
+              "Insurance",
+              "Policy Amendment",
+              "Termination",
+              "Baloise",
+              "Germany",
+              "Building Insurance",
+              "German Language"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2026-01-01",
+            "document_year": "2026",
+            "document_type": "Insurance Policy Amendment",
+            "suggested_folder": "Finance/Insurance/2026",
+            "suggested_target_name": "2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf"
+          }
+        },
+        {
+          "id": "SRC037",
+          "relative_path": "Scan vom 2025-10-29 11_31_30 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_31_30 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Ihre Renteninformation",
+            "author": "Deutsche Rentenversicherung Rheinland",
+            "document_type": "Pension Information Letter",
+            "summary": "This document is a pension information letter from Deutsche Rentenversicherung Rheinland addressed to Herr Alexander Lemken. It provides details on his pension entitlements, including projected monthly pension amounts under different scenarios (e.g., full disability pension, regular old-age pension), and notes that his pension will begin on 01.06.2050. It also discusses potential pension adjustments due to future changes and recommends additional insurance to cover the gap between pension and previous income.",
+            "tags": [
+              "Pension",
+              "Retirement",
+              "Deutsche Rentenversicherung",
+              "Germany",
+              "Pension Information",
+              "Old-Age Pension",
+              "Disability Pension",
+              "Financial Planning"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2050-06-01",
+            "document_year": "2050",
+            "document_type": "Pension Information Letter",
+            "suggested_folder": "Finance/Insurance/2050",
+            "suggested_target_name": "2050-06-01 Ihre Renteninformation - Deutsche.pdf"
+          }
+        },
+        {
+          "id": "SRC038",
+          "relative_path": "Scan vom 2025-10-29 11_32_05 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_32_05 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Renteninformation 2025",
+            "author": "Deutsche Rentenversicherung Rheinland",
+            "document_type": "Pension Information Letter",
+            "summary": "This document is a pension information letter addressed to Herr Alexander Lemken, detailing his pension entitlements based on contributions from 01.08.2002 to 31.12.2024. It outlines his projected regular pension starting 01.06.2050, potential pension amounts under different scenarios (including full disability and future adjustments), and advises on additional retirement savings to offset future income gaps. Key figures include a projected monthly pension of 2,748.23 EUR, with alternative scenarios of 1,242.87 EUR (full disability) and 717.87 EUR (current entitlement).",
+            "tags": [
+              "Pension",
+              "Retirement",
+              "Germany",
+              "Deutsche Rentenversicherung",
+              "Pension Information",
+              "Financial Planning",
+              "Social Security"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2002-08-01",
+            "document_year": "2002",
+            "document_type": "Pension Information Letter",
+            "suggested_folder": "Finance/Income/2002",
+            "suggested_target_name": "2002-08-01 Renteninformation 2025 - 01 08 2002.pdf"
+          }
+        },
+        {
+          "id": "SRC039",
+          "relative_path": "Scan vom 2025-10-29 11_33_22 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_33_22 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung",
+            "author": "Elektro-Wandelt",
+            "document_type": "Order Confirmation",
+            "summary": "This is an order confirmation email from Elektro-Wandelt to Simon Suraha for order #3668028, placed via PayPal Express. The email confirms receipt of the order, provides delivery and tracking information, and lists three ordered items with prices, quantities, and total cost including VAT and shipping. The billing and shipping address are identical.",
+            "tags": [
+              "order confirmation",
+              "electrical supplies",
+              "PayPal Express",
+              "German",
+              "invoice",
+              "shipping",
+              "VAT"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-29",
+            "document_year": "2025",
+            "document_type": "Order Confirmation",
+            "suggested_folder": "Reference/Correspondence/2025",
+            "suggested_target_name": "2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf"
+          }
+        },
+        {
+          "id": "SRC040",
+          "relative_path": "Scan vom 2025-10-29 11_34_17 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_34_17 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Einverständniserklärung des Anlagenbetreibers",
+            "author": "Alexander Lemken",
+            "document_type": "Consent Declaration / Agreement Form",
+            "summary": "This document is a consent declaration form from evd energieversorgung dormagen, signed by Alexander Lemken, confirming agreement with the contents of the letter regarding a photovoltaic installation in the planning phase. It includes confirmation of property ownership, notification of the involved electrical contractor, and planned commissioning date (January 2025). A separate section is provided for the landowner’s consent if different from the operator.",
+            "tags": [
+              "Photovoltaic",
+              "Consent Form",
+              "Energy Supply",
+              "Germany",
+              "Property Owner",
+              "Installation Planning",
+              "evd Dormagen"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-29",
+            "document_year": "2025",
+            "document_type": "Consent Declaration / Agreement Form",
+            "suggested_folder": "Finance/Agreements/2025",
+            "suggested_target_name": "2025-10-29 Einverständniserklärung des Anlagenbetreibers - evd.pdf"
+          }
+        },
+        {
+          "id": "SRC041",
+          "relative_path": "Scan vom 2025-10-29 11_35_18 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_35_18 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Rechnung",
+            "author": "Janning GmbH",
+            "document_type": "Invoice",
+            "summary": "Invoice from Janning GmbH dated 20.08.2025 for services including roller shutter disposal, plastic roller shutter panel replacement in old building, end strip, and vehicle costs. Total amount: 660,94 EUR. Includes 19% VAT and labor costs of 179,85 EUR. Payment due within 10 days.",
+            "tags": [
+              "invoice",
+              "Janning GmbH",
+              "roller shutters",
+              "German document",
+              "VAT",
+              "payment terms",
+              "construction services"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-08-20",
+            "document_year": "2025",
+            "document_type": "Invoice",
+            "suggested_folder": "Reference/Correspondence/2025",
+            "suggested_target_name": "2025-08-20 Rechnung - Janning.pdf"
+          }
+        },
+        {
+          "id": "SRC042",
+          "relative_path": "Scan vom 2025-10-29 11_37_20 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_37_20 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Bescheinigung zur Sozialversicherung gemäß § 25 DEÜV",
+            "author": "Parametric Technology GmbH",
+            "document_type": "Social Security Certificate",
+            "summary": "This is a German social security certificate (Bescheinigung zur Sozialversicherung) issued under § 25 DEÜV for Alexander Lemken, employed by Parametric Technology GmbH. It covers the reporting period from January 1, 2021, to March 31, 2021, and includes personal details, employer information, insurance number, contribution group, and applicable social security codes. The document also contains explanatory notes and multilingual warnings to preserve the document.",
+            "tags": [
+              "Social Security",
+              "Germany",
+              "DEÜV",
+              "Employment Certificate",
+              "Parametric Technology",
+              "Alexander Lemken",
+              "Multilingual Document",
+              "Insurance Number",
+              "Contribution Group"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2021-01-01",
+            "document_year": "2021",
+            "document_type": "Social Security Certificate",
+            "suggested_folder": "Finance/Insurance/2021",
+            "suggested_target_name": "2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - January.pdf"
+          }
+        },
+        {
+          "id": "SRC043",
+          "relative_path": "Scan vom 2025-10-29 11_37_45 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_37_45 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Bescheinigung zur Sozialversicherung gemäß § 25 DEÜV",
+            "author": "Parametric Technology GmbH",
+            "document_type": "Social Security Certificate",
+            "summary": "This is a German social security certificate (Bescheinigung zur Sozialversicherung) issued under § 25 DEÜV for Alexander Lemken, employed by Parametric Technology GmbH. It includes personal data, insurance number, employment details, contribution groups, and information on a previously submitted notification (Stornierung) dated 24.01.2022 regarding employment from 01.10.2021 to 31.12.2021. The document also contains explanatory tables for notification reasons, person groups, contribution groups, and nationality codes.",
+            "tags": [
+              "Social Security",
+              "Germany",
+              "DEÜV",
+              "Employment Certificate",
+              "Insurance",
+              "Parametric Technology",
+              "Alexander Lemken",
+              "Stornierung",
+              "German Document"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-01-24",
+            "document_year": "2022",
+            "document_type": "Social Security Certificate",
+            "suggested_folder": "Finance/Insurance/2022",
+            "suggested_target_name": "2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - 01 10 2021.pdf"
+          }
+        },
+        {
+          "id": "SRC044",
+          "relative_path": "Scan vom 2025-10-29 11_38_22 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_38_22 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Ihre 1&1 Service-PIN für den telefonischen Kontakt",
+            "author": "Jörg Schur, Leiter 1&1 Kundenservice",
+            "document_type": "Customer Service Letter",
+            "summary": "This letter from 1&1 Telecom GmbH provides customer Alexander Lemken with his 1&1 Service-PIN (42915) for secure telephone customer service access. It explains the PIN’s purpose for identity verification, advises against sharing it, and directs the customer to the 1&1 Control-Center for managing account details and invoices. The letter is dated July 23, 2022, and signed by Jörg Schur.",
+            "tags": [
+              "1&1 Telecom",
+              "Service-PIN",
+              "Customer Service",
+              "German Letter",
+              "Account Security",
+              "Telecom",
+              "Customer Communication"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-07-23",
+            "document_year": "2022",
+            "document_type": "Customer Service Letter",
+            "suggested_folder": "General/2022",
+            "suggested_target_name": "2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf"
+          }
+        },
+        {
+          "id": "SRC045",
+          "relative_path": "Scan vom 2025-10-29 11_38_47 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_38_47 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Ihre Zugangsdaten für den 1&1 DSL-Anschluss",
+            "author": "Jörg Schur, Leiter 1&1 Kundenservice",
+            "document_type": "Customer Letter / Access Credentials Notice",
+            "summary": "This is an official letter from 1&1 Telecom GmbH providing Alexander Lemken with access credentials for his new 1&1 DSL 50 internet connection. It includes the Start-Code, Internet access ID, and password, along with instructions for manual setup and a reminder to keep the data secure. The letter is signed by Jörg Schur, Customer Service Manager.",
+            "tags": [
+              "DSL",
+              "Internet Access",
+              "Customer Service",
+              "1&1 Telecom",
+              "Access Credentials",
+              "German Letter",
+              "Telecom"
+            ],
+            "language": "de"
+          },
+          "hints": {
+            "document_date": "2025-10-29",
+            "document_year": "2025",
+            "document_type": "Customer Letter / Access Credentials Notice",
+            "suggested_folder": "Finance/Utilities/2025",
+            "suggested_target_name": "2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf"
+          }
+        },
+        {
+          "id": "SRC046",
+          "relative_path": "Scan vom 2025-10-29 11_39_31 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_39_31 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "1&1 Internetzugang - Nützliche Tipps und Informationen",
+            "author": "Jörg Schur, Leiter 1&1 Kundenservice",
+            "document_type": "Customer Information Letter",
+            "summary": "This letter from 1&1 Telecom GmbH provides a customer, Herr Alexander Lemken, with access data for his internet connection. It includes a quick-start guide for setting up AVM devices using the 1&1 Start-Code and managing VoIP passwords via the 1&1 Control-Center. The letter also directs the recipient to an online help center for further information and is signed by Jörg Schur, Head of Customer Service.",
+            "tags": [
+              "1&1 Telecom",
+              "Internet Access",
+              "Customer Service",
+              "German Letter",
+              "Setup Guide",
+              "AVM Devices",
+              "VoIP",
+              "Control-Center"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-29",
+            "document_year": "2025",
+            "document_type": "Customer Information Letter",
+            "suggested_folder": "Finance/Utilities/2025",
+            "suggested_target_name": "2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf"
+          }
+        },
+        {
+          "id": "SRC047",
+          "relative_path": "Scan vom 2025-10-29 11_40_29 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_40_29 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Anmeldebestätigung",
+            "author": "Stadt Dormagen, Bürgeramt",
+            "document_type": "Residence Registration Confirmation",
+            "summary": "Official confirmation from the City of Dormagen, Germany, verifying the registration of Jennifer Sabine Lemken at Sophie-Scholl-Straße 17, 41540 Dormagen. The document confirms her move-in and registration date as July 28, 2022, and includes personal details, contact information for the Bürgeramt, and official seals.",
+            "tags": [
+              "residence registration",
+              "Germany",
+              "Dormagen",
+              "official document",
+              "Bürgeramt",
+              "Anmeldebestätigung",
+              "proof of address"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-07-28",
+            "document_year": "2022",
+            "document_type": "Residence Registration Confirmation",
+            "suggested_folder": "Reference/Correspondence/2022",
+            "suggested_target_name": "2022-07-28 Anmeldebestätigung - the.pdf"
+          }
+        },
+        {
+          "id": "SRC048",
+          "relative_path": "Scan vom 2025-10-29 11_41_18 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_41_18 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Anmeldebestätigung",
+            "author": "Stadt Dormagen, Bürgeramt",
+            "document_type": "Residence Registration Confirmation",
+            "summary": "Official confirmation from the city of Dormagen, Germany, verifying the registration of Tom Lemken at Sophie-Scholl-Straße 17, 41540 Dormagen. The document confirms his move-in date and registration date as 28.07.2022, and includes personal details such as birth date (22.09.2020) and housing status (Einzelne Wohnung). Issued by Frau Heihoff, Bürgeramt, with official stamp and signature.",
+            "tags": [
+              "residence registration",
+              "Germany",
+              "Dormagen",
+              "official document",
+              "Bürgeramt",
+              "Anmeldebestätigung",
+              "Tom Lemken"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-07-28",
+            "document_year": "2022",
+            "document_type": "Residence Registration Confirmation",
+            "suggested_folder": "Reference/Correspondence/2022",
+            "suggested_target_name": "2022-07-28 Anmeldebestätigung - the.pdf"
+          }
+        },
+        {
+          "id": "SRC049",
+          "relative_path": "Scan vom 2025-10-29 11_41_54 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_41_54 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Anmeldebestätigung",
+            "author": "Stadt Dormagen, Bürgeramt",
+            "document_type": "Official Registration Confirmation",
+            "summary": "This is an official confirmation of residence registration (Anmeldebestätigung) issued by the City of Dormagen, Germany, for Valerie Lemken. The document confirms her registration at Sophie-Scholl-Straße 17, 41540 Dormagen, with an entry and registration date of 28.07.2022. It includes personal details, housing status, and contact information for the local citizen’s office.",
+            "tags": [
+              "residence registration",
+              "Germany",
+              "Dormagen",
+              "official document",
+              "Anmeldebestätigung",
+              "citizen services"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-07-28",
+            "document_year": "2022",
+            "document_type": "Official Registration Confirmation",
+            "suggested_folder": "Civic/Government/2022",
+            "suggested_target_name": "2022-07-28 Anmeldebestätigung.pdf"
+          }
+        },
+        {
+          "id": "SRC050",
+          "relative_path": "Scan vom 2025-10-29 11_42_28 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_42_28 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Anmeldebestätigung",
+            "author": "Stadt Dormagen, Bürgeramt",
+            "document_type": "Residence Registration Confirmation",
+            "summary": "Official confirmation of residence registration for Alexander Lemken at Sophie-Scholl-Straße 17, 41540 Dormagen, issued by the Bürgeramt of Stadt Dormagen on 28.07.2022. Includes personal details, address, and registration date.",
+            "tags": [
+              "residence registration",
+              "Germany",
+              "Dormagen",
+              "Bürgeramt",
+              "official document",
+              "Anmeldebestätigung"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2022-07-28",
+            "document_year": "2022",
+            "document_type": "Residence Registration Confirmation",
+            "suggested_folder": "Reference/Correspondence/2022",
+            "suggested_target_name": "2022-07-28 Anmeldebestätigung.pdf"
+          }
+        },
+        {
+          "id": "SRC051",
+          "relative_path": "Scan vom 2025-10-29 11_43_07 AM.pdf",
+          "name": "Scan vom 2025-10-29 11_43_07 AM.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm",
+            "author": "BARMER",
+            "document_type": "Marketing Letter / Insurance Promotion",
+            "summary": "This is a promotional letter from BARMER addressed to Herr Alexander Lemken, offering up to 600 EUR annually through cash-back tariffs and a bonus program. It highlights benefits such as up to 450 EUR annual cash-back for low medical usage, full coverage for preventive care and treatments without prescription, and a bonus program offering up to 150 EUR for activities like gym memberships or health courses. The letter encourages downloading the BARMER app to claim bonuses and provides QR codes and URLs for more information.",
+            "tags": [
+              "Insurance",
+              "Promotion",
+              "Cashback",
+              "Bonus Program",
+              "Healthcare",
+              "BARMER",
+              "German",
+              "Marketing Letter"
+            ],
+            "language": "German"
+          },
+          "hints": {
+            "document_date": "2025-10-29",
+            "document_year": "2025",
+            "document_type": "Marketing Letter / Insurance Promotion",
+            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_target_name": "2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm - BARMER.pdf"
+          }
+        }
+      ],
+      "existing_folders": [],
+      "folder_examples": {
+        "/": [
+          "Corona-PCR-21.10.2021.pdf",
+          "HOLLAND-BSN Kopie.pdf",
+          "HOLLAND-BSN.pdf"
+        ]
+      }
+    },
+    "validation": {
+      "status": "warn",
+      "notes": "Most operations are valid, but there are duplicate filenames in the same folder and potential misclassifications. Some files are copied to folders that may not logically match their content (e.g., marketing letters in Insurance). Also, multiple files share identical names in the same folder, which may cause overwrites or confusion.",
+      "issues": [
+        "Duplicate filenames in same folder: '2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf' (SRC002, SRC003) in 'Civic/Government/2022'.",
+        "Duplicate filenames in same folder: '2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf' (SRC007, SRC008, SRC009, SRC011, SRC024, SRC033) in 'Finance/Taxes/2024'.",
+        "Duplicate filenames in same folder: '2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf' (SRC012, SRC013) in 'Finance/Agreements/2025'.",
+        "Duplicate filenames in same folder: '2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf' (SRC026, SRC034) in 'Finance/Insurance/2022'.",
+        "Duplicate filenames in same folder: '2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf' (SRC029) and '2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393 - HUK-COBURG.pdf' (SRC031) and '2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf' (SRC035) and '2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm - BARMER.pdf' (SRC051) in 'Finance/Insurance/2025' — while not identical, multiple files may be misclassified as 'Insurance' when some are marketing or notifications.",
+        "Potential misclassification: Marketing/promotional letter (SRC051) filed under 'Finance/Insurance/2025' — may belong in 'Reference/Correspondence' or a separate 'Marketing' folder.",
+        "Potential misclassification: '2025-10-27 Dein neues Girokonto bei der DKB.pdf' (SRC020) filed under 'General/2025' — may belong in 'Finance/Banking/2025'.",
+        "Potential misclassification: '2025-10-27 Ansicht von innen Maßstab 1 15.pdf' (SRC019) filed under 'General/2025' — may belong in 'General/Architectural/2025' or similar.",
+        "Potential misclassification: '2025-10-23 MacBook Keyboard and Dock Screenshot.pdf' (SRC005) and '2025-10-23 Green Castle Wall with Stone Texture.pdf' (SRC006) filed under 'General/2025' — may belong in 'Media/Images/2025' or similar if image categorization is intended.",
+        "Folder 'Finance/Income/2002' created for pension info (SRC038) — may be better under 'Finance/Insurance/2002' or 'Finance/Pensions/2002'.",
+        "Folder 'Finance/Utilities/2025' contains customer service letters (SRC032, SRC045, SRC046) — may be better under 'Reference/Correspondence/2025' or a 'CustomerService' subfolder.",
+        "Folder 'Reference/Correspondence/2022' contains multiple 'Anmeldebestätigung' files (SRC047, SRC048, SRC050) — may be better under 'Civic/Government/2022' for consistency with SRC049."
+      ]
+    }
+  }
+}

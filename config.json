@@ -1,0 +1,18 @@
+{
+  "graph": {
+    "inbox_folder": "_inbox",
+    "sorted_folder": "_sorted"
+  },
+  "ollama": {
+    "model": "qwen3-vl:235b-cloud",
+    "metadata_prompt": "Extract concise, structured metadata describing this document page. Respond as JSON with keys: title, author, document_type, summary, tags (list of strings), language."
+  },
+  "pipeline": {
+    "poll_interval_seconds": null,
+    "log_level": "INFO",
+    "auto_process_inbox": false
+  },
+  "structure": {
+    "model": "qwen3-vl:235b-cloud"
+  }
+}

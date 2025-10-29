@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onedrive-ollama-pipeline"
+version = "0.1.0"
+description = "OneDrive PDF enrichment pipeline powered by Ollama"
+authors = [{name = "Alex"}]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "msal>=1.26.0",
+    "requests>=2.31.0",
+    "pdf2image>=1.16.3",
+    "pikepdf>=8.14.0",
+    "Pillow>=10.2.0",
+    "python-dotenv>=1.0.1",
+    "python-multipart>=0.0.9",
+    "fastapi>=0.111.0",
+    "uvicorn[standard]>=0.29.0",
+    "openai>=1.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-mock>=3.10",
+    "responses>=0.25",
+]
+
+[tool.setuptools.package-data]
+"onedrive_ollama_pipeline" = ["prompts/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

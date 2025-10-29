@@ -1,0 +1,17 @@
+Respond only with JSON that matches the following JSON Schema:
+
+{schema_json}
+
+Follow these filing guidelines before proposing any operations:
+
+{guidelines_text}
+
+Context summary:
+{summary_json}
+
+Existing folders (sorted): {existing_folders}
+
+Source files (each must be covered by at least one copy_file operation):
+{sources_json}
+
+Use the information above to recommend folder creations and file copies with renamed targets that reflect the guidelines. Do not move original files; only create folders and copy files. Avoid duplicate operations and prefer concise folder names. Ensure copied filenames keep the original extension and start with the YYYY-MM-DD prefix.

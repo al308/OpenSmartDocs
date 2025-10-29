@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>OneDrive → Ollama Pipeline Admin</title>
+        <style>
+            :root {
+                color-scheme: dark;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                background: #0f172a;
+                color: #e2e8f0;
+                margin: 0;
+            }
+            header {
+                background: #1e293b;
+                padding: 1rem 2rem;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+            }
+            h1 {
+                margin: 0;
+                font-size: 1.6rem;
+            }
+            main {
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .tabs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .tab-button {
+                background: #334155;
+                border: none;
+                color: #e2e8f0;
+                padding: 0.6rem 1rem;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background 0.2s ease;
+            }
+            .tab-button:hover {
+                background: #475569;
+            }
+            .tab-button.active {
+                background: #60a5fa;
+                color: #0f172a;
+                font-weight: 600;
+            }
+            .panel {
+                display: none;
+                background: #1e293b;
+                border-radius: 10px;
+                padding: 1.75rem;
+                box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.12);
+            }
+            .panel.active {
+                display: block;
+            }
+            .ingest-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+            .ingest-card {
+                background: rgba(148, 163, 184, 0.15);
+                padding: 1.75rem;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .ingest-card h2 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+            .dropzone {
+                border: 2px dashed rgba(148, 163, 184, 0.35);
+                padding: 1.5rem;
+                border-radius: 10px;
+                text-align: center;
+                cursor: pointer;
+                transition: border-color 0.2s ease, background 0.2s ease;
+            }
+            .dropzone.dragover {
+                border-color: #38bdf8;
+                background: rgba(56, 189, 248, 0.12);
+            }
+            .dropzone input {
+                display: none;
+            }
+            .ingest-actions {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            .ingest-status,
+            .inbox-status,
+            .structure-status,
+            .form-status {
+                min-height: 1.2rem;
+                font-size: 0.9rem;
+                color: rgba(226, 232, 240, 0.85);
+                margin-top: 0.35rem;
+            }
+            button.primary {
+                background: #38bdf8;
+                color: #0f172a;
+                border: none;
+                padding: 0.65rem 1.1rem;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 600;
+            }
+            button.secondary {
+                background: #334155;
+                color: #e2e8f0;
+                border: none;
+                padding: 0.55rem 1rem;
+                border-radius: 6px;
+                cursor: pointer;
+            }
+            button.primary:disabled,
+            button.secondary:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+            details.config-details {
+                background: rgba(148, 163, 184, 0.12);
+                border-radius: 8px;
+                padding: 0.75rem 1rem;
+                margin-bottom: 1rem;
+            }
+            details.config-details summary {
+                cursor: pointer;
+                font-weight: 600;
+                color: #93c5fd;
+            }
+            details.config-details[open] summary {
+                margin-bottom: 0.75rem;
+            }
+            .config-form {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 1rem;
+                align-items: flex-end;
+            }
+            .config-form label {
+                display: flex;
+                flex-direction: column;
+                gap: 0.35rem;
+                font-size: 0.9rem;
+            }
+            .config-form input,
+            .config-form select {
+                padding: 0.5rem;
+                border-radius: 6px;
+                border: 1px solid rgba(148, 163, 184, 0.35);
+                background: #0f172a;
+                color: #e2e8f0;
+            }
+            .config-form .checkbox-row {
+                flex-direction: row;
+                align-items: center;
+                gap: 0.6rem;
+            }
+            .config-form .checkbox-row input {
+                width: auto;
+            }
+            .inbox-controls {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 0.75rem;
+            }
+            .inbox-buttons {
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+            .table-wrapper {
+                overflow-x: auto;
+                border-radius: 8px;
+                border: 1px solid rgba(148, 163, 184, 0.18);
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                min-width: 640px;
+            }
+            th,
+            td {
+                text-align: left;
+                padding: 0.55rem 0.8rem;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+                vertical-align: top;
+            }
+            th {
+                font-size: 0.85rem;
+                color: rgba(226, 232, 240, 0.65);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+            tr:last-child td {
+                border-bottom: none;
+            }
+            a.link {
+                color: #93c5fd;
+                text-decoration: none;
+            }
+            a.link:hover {
+                text-decoration: underline;
+            }
+            .status-chip {
+                display: inline-flex;
+                align-items: center;
+                padding: 0.15rem 0.45rem;
+                border-radius: 999px;
+                font-size: 0.75rem;
+                font-weight: 600;
+            }
+            .status-chip.pending {
+                background: rgba(14, 165, 233, 0.18);
+                color: #38bdf8;
+            }
+            .status-chip.success {
+                background: rgba(34, 197, 94, 0.18);
+                color: #4ade80;
+            }
+            .status-chip.failed {
+                background: rgba(248, 113, 113, 0.18);
+                color: #f87171;
+            }
+            .structure-summary {
+                margin-top: 1rem;
+                line-height: 1.55;
+            }
+            .structure-summary ul {
+                padding-left: 1.25rem;
+            }
+            .structure-summary li {
+                margin-bottom: 0.35rem;
+            }
+            .structure-log {
+                margin-top: 1.5rem;
+                background: #0f172a;
+                border-radius: 8px;
+                border: 1px solid rgba(148, 163, 184, 0.2);
+                max-height: 280px;
+                overflow-y: auto;
+                padding: 1rem;
+                font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+                font-size: 0.85rem;
+            }
+            .structure-log-entry {
+                margin-bottom: 0.45rem;
+                color: rgba(226, 232, 240, 0.92);
+            }
+            .structure-log-entry.error {
+                color: #f87171;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>OneDrive → Ollama Pipeline Admin</h1>
+        </header>
+        <main>
+            <div class="tabs">
+                <button class="tab-button active" data-target="ingest">Ingest</button>
+                <button class="tab-button" data-target="inbox">Inbox</button>
+                <button class="tab-button" data-target="structure">Structure</button>
+            </div>
+
+            <section id="ingest" class="panel active">
+                <div class="ingest-grid">
+                    <div class="ingest-card">
+                        <h2>Regular ingest</h2>
+                        <p>Send a single PDF directly to the inbox folder.</p>
+                        <div id="ingest-regular-drop" class="dropzone" role="button" tabindex="0">
+                            <strong id="ingest-regular-label">Drop PDF here or click to select</strong>
+                            <input type="file" id="ingest-regular-input" accept="application/pdf" />
+                        </div>
+                        <div class="ingest-actions">
+                            <button class="primary" id="ingest-regular-upload" disabled>Upload to inbox</button>
+                        </div>
+                        <div class="ingest-status" id="ingest-regular-status"></div>
+                    </div>
+
+                    <div class="ingest-card">
+                        <h2>Mass scan (2-sided)</h2>
+                        <p>Combine odd and even simplex scans, then deliver the merged PDF to the inbox.</p>
+                        <div class="dropzone" id="ingest-odd-drop" role="button" tabindex="0">
+                            <strong id="ingest-odd-label">Drop odd pages PDF</strong>
+                            <div class="ingest-hint">First pass - front sides.</div>
+                            <input type="file" id="ingest-odd-input" accept="application/pdf" />
+                        </div>
+                        <div class="dropzone" id="ingest-even-drop" role="button" tabindex="0">
+                            <strong id="ingest-even-label">Drop even pages PDF</strong>
+                            <div class="ingest-hint">Second pass - back sides.</div>
+                            <input type="file" id="ingest-even-input" accept="application/pdf" />
+                        </div>
+                        <form id="ingest-mass-form" class="ingest-form">
+                            <label>Final filename (optional)
+                                <input type="text" id="ingest-output-name" name="outputName" placeholder="e.g. contract.pdf" />
+                            </label>
+                            <div class="ingest-actions">
+                                <button class="primary" type="submit" id="ingest-mass-submit" disabled>Combine &amp; upload</button>
+                            </div>
+                            <div class="ingest-status" id="ingest-mass-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section id="inbox" class="panel">
+                <details class="config-details" id="inbox-config-details">
+                    <summary>Inbox configuration</summary>
+                    <form id="inbox-config-form" class="config-form">
+                        <label>Inbox folder
+                            <input type="text" name="inboxFolder" autocomplete="off" />
+                        </label>
+                        <label>Polling interval (seconds)
+                            <input type="number" name="pollIntervalSeconds" min="0" />
+                        </label>
+                        <label class="checkbox-row">
+                            <input type="checkbox" name="autoProcessInbox" /> Auto-process inbox
+                        </label>
+                        <div>
+                            <button class="primary" type="submit">Save changes</button>
+                            <div class="form-status" id="inbox-config-status"></div>
+                        </div>
+                    </form>
+                </details>
+
+                <div class="inbox-controls">
+                    <div class="inbox-buttons">
+                        <button class="secondary" id="inbox-select-all">Select all</button>
+                        <button class="secondary" id="inbox-select-pending">Select unprocessed</button>
+                        <button class="secondary" id="inbox-toggle-success">Hide processed</button>
+                        <button class="primary" id="inbox-process" disabled>Run metadata extraction</button>
+                    </div>
+                    <div class="inbox-info" id="inbox-counts"></div>
+                </div>
+                <div class="inbox-status" id="inbox-status"></div>
+
+                <div class="table-wrapper">
+                    <table id="inbox-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Filename</th>
+                                <th>Status</th>
+                                <th>Processed at</th>
+                                <th>Model</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6">Loading inbox…</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="structure" class="panel">
+                <details class="config-details" id="structure-config-details">
+                    <summary>Structure configuration</summary>
+                    <form id="structure-config-form" class="config-form">
+                        <label>Structure model
+                            <input type="text" name="structureModel" autocomplete="off" />
+                        </label>
+                        <label>Language
+                            <select name="structureLanguage">
+                                <option value="auto">Automatisch</option>
+                                <option value="de">Deutsch</option>
+                                <option value="en">English</option>
+                            </select>
+                        </label>
+                        <div>
+                            <button class="primary" type="submit">Save changes</button>
+                            <div class="form-status" id="structure-config-status"></div>
+                        </div>
+                    </form>
+                </details>
+
+                <p>Use the AI assistant to propose where documents under <code>_sorted</code> should live, including suggested folder structures and renamed copies.</p>
+                <div class="structure-actions">
+                    <button class="primary" id="structure-analyze">Generate proposal</button>
+                    <button class="primary" id="structure-apply" disabled>Apply plan</button>
+                    <button class="primary" id="structure-revert" disabled>Revert changes</button>
+                </div>
+                <div class="structure-status" id="structure-status"></div>
+                <div class="structure-summary" id="structure-summary"></div>
+                <div class="structure-summary" id="structure-applied"></div>
+                <div class="structure-log" id="structure-log"></div>
+            </section>
+        </main>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const tabButtons = Array.from(document.querySelectorAll('.tab-button'));
+                const panels = Array.from(document.querySelectorAll('.panel'));
+                function activateTab(targetId) {
+                    tabButtons.forEach((btn) => btn.classList.toggle('active', btn.dataset.target === targetId));
+                    panels.forEach((panel) => panel.classList.toggle('active', panel.id === targetId));
+                }
+                tabButtons.forEach((button) => {
+                    button.addEventListener('click', () => activateTab(button.dataset.target));
+                });
+
+                const inboxTableBody = document.querySelector('#inbox-table tbody');
+                const inboxSelectAll = document.getElementById('inbox-select-all');
+                const inboxSelectPending = document.getElementById('inbox-select-pending');
+                const inboxToggleSuccess = document.getElementById('inbox-toggle-success');
+                const inboxProcessBtn = document.getElementById('inbox-process');
+                const inboxStatus = document.getElementById('inbox-status');
+                const inboxCounts = document.getElementById('inbox-counts');
+                const inboxConfigForm = document.getElementById('inbox-config-form');
+                const inboxConfigStatus = document.getElementById('inbox-config-status');
+
+                const structureAnalyze = document.getElementById('structure-analyze');
+                const structureApply = document.getElementById('structure-apply');
+                const structureRevert = document.getElementById('structure-revert');
+                const structureStatus = document.getElementById('structure-status');
+                const structureSummary = document.getElementById('structure-summary');
+                const structureApplied = document.getElementById('structure-applied');
+                const structureLog = document.getElementById('structure-log');
+                const structureConfigForm = document.getElementById('structure-config-form');
+                const structureConfigStatus = document.getElementById('structure-config-status');
+
+                const DEFAULT_STRUCTURE_POLL_MS = 4000;
+                let structurePollTimer = null;
+                let structurePollIntervalMs = 0;
+                let structurePollInFlight = false;
+
+                const state = {
+                    config: null,
+                    inboxItems: [],
+                    selectedInboxIds: new Set(),
+                    showSuccess: true,
+                    processingQueue: [],
+                    activeProcessingId: null,
+                    processingTimers: new Map(),
+                    progressLabels: {
+                        download: 'Downloading',
+                        convert: 'Converting',
+                        metadata: 'Requesting metadata',
+                        embed: 'Embedding metadata',
+                        upload: 'Uploading copy',
+                        done: 'Completed',
+                    },
+                    progressOrder: ['download', 'convert', 'metadata', 'embed', 'upload'],
+                };
+
+                function showStatus(target, message, level = 'info') {
+                    if (!target) return;
+                    const colors = {
+                        info: 'rgba(226, 232, 240, 0.85)',
+                        success: '#4ade80',
+                        warn: '#facc15',
+                        error: '#f87171',
+                    };
+                    target.style.color = colors[level] || colors.info;
+                    target.textContent = message;
+                }
+
+                async function fetchConfig() {
+                    const res = await fetch('/api/config');
+                    if (!res.ok) {
+                        throw new Error('Failed to load configuration');
+                    }
+                    state.config = await res.json();
+                }
+
+                function populateConfigForms() {
+                    if (!state.config) {
+                        return;
+                    }
+                    if (inboxConfigForm) {
+                        inboxConfigForm.inboxFolder.value = state.config.inbox_folder || '';
+                        inboxConfigForm.pollIntervalSeconds.value = state.config.poll_interval_seconds ?? '';
+                        inboxConfigForm.autoProcessInbox.checked = Boolean(state.config.auto_process_inbox);
+                    }
+                    if (structureConfigForm) {
+                        structureConfigForm.structureModel.value = state.config.structure_model || '';
+                        if (structureConfigForm.structureLanguage) {
+                            structureConfigForm.structureLanguage.value = state.config.structure_language || 'auto';
+                        }
+                    }
+                }
+
+                async function updateConfig(payload, statusElement) {
+                    try {
+                        const res = await fetch('/api/config', {
+                            method: 'PUT',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload),
+                        });
+                        const data = await res.json().catch(() => ({}));
+                        if (!res.ok) {
+                            throw new Error(data.detail || 'Failed to update configuration');
+                        }
+                        state.config = data;
+                        populateConfigForms();
+                        showStatus(statusElement, 'Configuration saved.', 'success');
+                    } catch (error) {
+                        showStatus(statusElement, error.message || 'Failed to update configuration.', 'error');
+                    }
+                }
+
+                if (inboxConfigForm) {
+                    inboxConfigForm.addEventListener('submit', async (event) => {
+                        event.preventDefault();
+                        const payload = {};
+                        const inboxFolder = inboxConfigForm.inboxFolder.value.trim();
+                        if (inboxFolder) {
+                            payload.inboxFolder = inboxFolder;
+                        }
+                        const pollValue = inboxConfigForm.pollIntervalSeconds.value;
+                        if (pollValue !== '') {
+                            payload.pollIntervalSeconds = Number(pollValue);
+                        }
+                        payload.autoProcessInbox = inboxConfigForm.autoProcessInbox.checked;
+                        await updateConfig(payload, inboxConfigStatus);
+                        await loadInbox();
+                    });
+                }
+
+                if (structureConfigForm) {
+                    structureConfigForm.addEventListener('submit', async (event) => {
+                        event.preventDefault();
+                        const structureModel = structureConfigForm.structureModel.value.trim();
+                        const structureLanguage = structureConfigForm.structureLanguage ? structureConfigForm.structureLanguage.value : 'auto';
+                        await updateConfig({ structureModel, structureLanguage }, structureConfigStatus);
+                    });
+                }
+
+                function updateInboxProcessButton() {
+                    inboxProcessBtn.disabled = state.selectedInboxIds.size === 0;
+                }
+
+                function renderInboxTable() {
+                    if (!inboxTableBody) {
+                        return;
+                    }
+                    const visibleItems = state.showSuccess ? state.inboxItems : state.inboxItems.filter((item) => item.status !== 'success');
+                    if (!visibleItems.length) {
+                        inboxTableBody.innerHTML = '<tr><td colspan="6">Inbox is empty.</td></tr>';
+                        updateInboxProcessButton();
+                        return;
+                    }
+                    const rows = visibleItems
+                        .map((item) => {
+                            const checked = state.selectedInboxIds.has(item.id) ? 'checked' : '';
+                            const statusClass = `status-chip ${item.status}`;
+                            const processedAt = item.processed_at ? new Date(item.processed_at).toLocaleString() : '—';
+                            const notes = item.status === 'failed'
+                                ? (item.error_message || item.transient_note || 'Processing failed.')
+                                : item.transient_note || item.metadata_preview || '';
+                            const link = item.web_url ? `<a class="link" href="${item.web_url}" target="_blank" rel="noopener">${item.name}</a>` : item.name;
+                            return `
+                                <tr>
+                                    <td><input type="checkbox" value="${item.id}" ${checked} /></td>
+                                    <td>${link}</td>
+                                    <td><span class="${statusClass}">${item.status}</span></td>
+                                    <td>${processedAt}</td>
+                                    <td>${item.model || '—'}</td>
+                                    <td>${notes || '—'}</td>
+                                </tr>
+                            `;
+                        })
+                        .join('');
+                    inboxTableBody.innerHTML = rows;
+                    inboxTableBody.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+                        checkbox.addEventListener('change', () => {
+                            if (checkbox.checked) {
+                                state.selectedInboxIds.add(checkbox.value);
+                            } else {
+                                state.selectedInboxIds.delete(checkbox.value);
+                            }
+                            updateInboxProcessButton();
+                        });
+                    });
+                    updateInboxProcessButton();
+                }
+
+                function updateInboxCounts(counts) {
+                    if (!inboxCounts) {
+                        return;
+                    }
+                    if (!counts) {
+                        inboxCounts.textContent = '';
+                        return;
+                    }
+                    inboxCounts.textContent = `Total: ${counts.total} · Pending: ${counts.pending} · Processed: ${counts.processed} · Failed: ${counts.failed}`;
+                    if (!state.showSuccess) {
+                        inboxCounts.textContent += ' (processed hidden)';
+                    }
+                }
+
+                async function loadInbox() {
+                    try {
+                        const res = await fetch('/api/inbox');
+                        const data = await res.json().catch(() => ({}));
+                        if (!res.ok) {
+                            throw new Error(data.detail || 'Failed to load inbox');
+                        }
+                        if (data.config) {
+                            state.config = {
+                                ...(state.config || {}),
+                                inbox_folder: data.config.inboxFolder,
+                                poll_interval_seconds: data.config.pollIntervalSeconds,
+                                auto_process_inbox: data.config.autoProcessInbox,
+                                structure_language: data.config.structureLanguage || (state.config ? state.config.structure_language : 'auto'),
+                                structure_model: data.config.structureModel || (state.config ? state.config.structure_model : ''),
+                            };
+                            populateConfigForms();
+                        }
+                        const items = (data.items || []).map((item) => ({ ...item, transient_note: '' }));
+                        state.inboxItems = items;
+                        const presentIds = new Set(items.map((item) => item.id));
+                        state.processingQueue = state.processingQueue.filter((id) => presentIds.has(id));
+                        state.processingTimers.forEach((entry, id) => {
+                            if (!items.find((item) => item.id === id && item.status === 'processing')) {
+                                clearInterval(entry.timer);
+                                state.processingTimers.delete(id);
+                            }
+                        });
+                        if (state.activeProcessingId && !presentIds.has(state.activeProcessingId)) {
+                            state.activeProcessingId = null;
+                        }
+                        if (state.activeProcessingId) {
+                            const activeItem = items.find((item) => item.id === state.activeProcessingId);
+                            if (activeItem) {
+                                activeItem.status = 'processing';
+                                activeItem.transient_note = activeItem.transient_note || 'Processing…';
+                            }
+                        }
+                        state.processingQueue.forEach((id) => {
+                            if (id !== state.activeProcessingId) {
+                                const queuedItem = items.find((item) => item.id === id);
+                                if (queuedItem && queuedItem.status !== 'success' && queuedItem.status !== 'failed') {
+                                    queuedItem.status = 'pending';
+                                    queuedItem.transient_note = 'Queued for processing';
+                                }
+                            }
+                        });
+                        state.selectedInboxIds.forEach((id) => {
+                            if (!state.inboxItems.find((item) => item.id === id && (state.showSuccess || item.status !== 'success'))) {
+                                state.selectedInboxIds.delete(id);
+                            }
+                        });
+                        renderInboxTable();
+                        updateInboxCounts(data.counts);
+                        startProcessingLoop();
+                    } catch (error) {
+                        renderInboxTable();
+                        showStatus(inboxStatus, error.message || 'Failed to load inbox.', 'error');
+                    }
+                }
+
+                async function processSelectedInbox() {
+                    const ids = Array.from(state.selectedInboxIds);
+                    if (!ids.length) {
+                        return;
+                    }
+                    inboxProcessBtn.disabled = true;
+                    showStatus(inboxStatus, 'Processing selected files…', 'info');
+                    startProcessingIndicators(ids);
+                    renderInboxTable();
+                    try {
+                        const res = await fetch('/api/inbox/process', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ itemIds: ids }),
+                        });
+                        const payload = await res.json().catch(() => ({}));
+                        if (!res.ok) {
+                            throw new Error(payload.detail || 'Metadata extraction failed.');
+                        }
+                        const processed = payload.processed || 0;
+                        const failed = payload.failed || 0;
+                        const level = failed ? 'warn' : 'success';
+                        if (Array.isArray(payload.results)) {
+                            payload.results.forEach(updateProcessingResult);
+                            renderInboxTable();
+                        }
+                        showStatus(inboxStatus, `Processed ${processed} file(s), ${failed} failed.`, level);
+                    } catch (error) {
+                        showStatus(inboxStatus, error.message || 'Metadata extraction failed.', 'error');
+                    } finally {
+                        state.selectedInboxIds.clear();
+                        await loadInbox();
+                    }
+                }
+
+                if (inboxSelectAll) {
+                    inboxSelectAll.addEventListener('click', () => {
+                        state.selectedInboxIds = new Set(state.inboxItems.map((item) => item.id));
+                        renderInboxTable();
+                    });
+                }
+
+                if (inboxSelectPending) {
+                    inboxSelectPending.addEventListener('click', () => {
+                        state.selectedInboxIds = new Set(state.inboxItems.filter((item) => item.status !== 'success').map((item) => item.id));
+                        renderInboxTable();
+                    });
+                }
+
+                if (inboxToggleSuccess) {
+                    inboxToggleSuccess.addEventListener('click', () => {
+                        state.showSuccess = !state.showSuccess;
+                        inboxToggleSuccess.textContent = state.showSuccess ? 'Hide processed' : 'Show processed';
+                        if (!state.showSuccess) {
+                            state.selectedInboxIds = new Set(Array.from(state.selectedInboxIds).filter((id) => {
+                                return state.inboxItems.some((item) => item.id === id && item.status !== 'success');
+                            }));
+                        }
+                        renderInboxTable();
+                    });
+                }
+
+                if (inboxProcessBtn) {
+                    inboxProcessBtn.addEventListener('click', processSelectedInbox);
+                }
+
+                function renderStructurePlan(plan) {
+                    if (!structureSummary) {
+                        return;
+                    }
+                    if (!plan) {
+                        structureSummary.innerHTML = '<p>No plan has been generated yet.</p>';
+                        structureApply.disabled = true;
+                        return;
+                    }
+                    const operations = Array.isArray(plan.operations) ? plan.operations : [];
+                    const generatedAt = plan.generated_at ? new Date(plan.generated_at).toLocaleString() : 'recently';
+                    const fragments = [
+                        `<h3>Plan generated ${generatedAt}</h3>`,
+                        `<p>Total operations proposed: <strong>${operations.length}</strong></p>`,
+                    ];
+                    if (plan.summary) {
+                        fragments.push(`<p>${plan.summary}</p>`);
+                    }
+                    if (plan.validation && plan.validation.status) {
+                        const status = String(plan.validation.status || '').toUpperCase();
+                        const notes = plan.validation.notes ? `<br><em>${plan.validation.notes}</em>` : '';
+                        fragments.push(`<p><strong>Sanity check:</strong> ${status}${notes}</p>`);
+                        if (Array.isArray(plan.validation.issues) && plan.validation.issues.length) {
+                            const issues = plan.validation.issues.map((issue) => `<li>${issue}</li>`).join('');
+                            fragments.push(`<details><summary>Validation issues</summary><ul>${issues}</ul></details>`);
+                        }
+                    }
+                    if (operations.length) {
+                        const items = operations
+                            .map((op) => {
+                                if (op.action === 'create_folder') {
+                                    const note = op.justification ? ` <em>${op.justification}</em>` : '';
+                                    return `<li><strong>Create folder</strong> → ${op.path}${note}</li>`;
+                                }
+                                if (op.action === 'copy_file') {
+                                    const folder = op.target_folder ? `${op.target_folder}/` : '';
+                                    const note = op.justification ? ` <em>${op.justification}</em>` : '';
+                                    return `<li><strong>Copy</strong> ${op.source_id} → ${folder}${op.target_name}${note}</li>`;
+                                }
+                                return '';
+                            })
+                            .filter(Boolean)
+                            .join('');
+                        fragments.push(`<ul>${items}</ul>`);
+                    } else {
+                        fragments.push('<p>No actions proposed.</p>');
+                    }
+                    structureSummary.innerHTML = fragments.join('');
+                    structureApply.disabled = operations.length === 0;
+                }
+
+                function renderStructureApplied(applied) {
+                    if (!structureApplied) {
+                        return;
+                    }
+                    if (!applied) {
+                        structureApplied.innerHTML = '';
+                        structureRevert.disabled = true;
+                        return;
+                    }
+                    const createdFiles = Array.isArray(applied.created_files) ? applied.created_files.length : 0;
+                    const createdFolders = Array.isArray(applied.created_folders) ? applied.created_folders.length : 0;
+                    const appliedAt = applied.applied_at ? new Date(applied.applied_at).toLocaleString() : '';
+                    structureApplied.innerHTML = `
+                        <h3>Last applied changes</h3>
+                        ${appliedAt ? `<p>Applied at ${appliedAt}</p>` : ''}
+                        <p>Created files: ${createdFiles}, folders: ${createdFolders}.</p>
+                    `;
+                    structureRevert.disabled = createdFiles === 0 && createdFolders === 0;
+                }
+
+                function renderStructureLog(entries) {
+                    if (!structureLog) {
+                        return;
+                    }
+                    if (!Array.isArray(entries) || !entries.length) {
+                        structureLog.innerHTML = '<p>No structure activity yet.</p>';
+                        return;
+                    }
+                    structureLog.innerHTML = entries
+                        .map((entry) => {
+                            const level = entry.level === 'error' ? ' error' : '';
+                            const timestamp = entry.timestamp ? new Date(entry.timestamp).toLocaleString() : '';
+                            return `<div class="structure-log-entry${level}">[${timestamp}] ${entry.message}</div>`;
+                        })
+                        .join('');
+                }
+
+                async function loadStructureState() {
+                    try {
+                        const res = await fetch('/api/structure');
+                        if (!res.ok) {
+                            throw new Error('Failed to load structure state');
+                        }
+                        const data = await res.json();
+                        renderStructurePlan(data.plan || null);
+                        renderStructureApplied(data.applied || null);
+                        renderStructureLog(data.log || []);
+                        if (!structureStatus.textContent) {
+                            structureStatus.style.color = 'rgba(226, 232, 240, 0.85)';
+                        }
+                    } catch (error) {
+                        showStatus(structureStatus, error.message || 'Failed to load structure state.', 'error');
+                    }
+                }
+
+                function pollStructureState() {
+                    if (structurePollInFlight) {
+                        return;
+                    }
+                    structurePollInFlight = true;
+                    loadStructureState()
+                        .catch(() => {})
+                        .finally(() => {
+                            structurePollInFlight = false;
+                        });
+                }
+
+                function setStructurePolling(intervalMs) {
+                    if (structurePollTimer) {
+                        clearInterval(structurePollTimer);
+                        structurePollTimer = null;
+                    }
+                    structurePollIntervalMs = intervalMs || 0;
+                    if (intervalMs && intervalMs > 0) {
+                        structurePollTimer = setInterval(pollStructureState, intervalMs);
+                    }
+                }
+
+                if (structureAnalyze) {
+                    structureAnalyze.addEventListener('click', async () => {
+                        const previousInterval = structurePollIntervalMs || DEFAULT_STRUCTURE_POLL_MS;
+                        setStructurePolling(2000);
+                        pollStructureState();
+                        structureAnalyze.disabled = true;
+                        showStatus(structureStatus, 'Generating proposal...', 'info');
+                        try {
+                            const res = await fetch('/api/structure/analyze', { method: 'POST' });
+                            const payload = await res.json().catch(() => ({}));
+                            if (!res.ok) {
+                                throw new Error(payload.detail || 'Failed to generate proposal.');
+                            }
+                            renderStructurePlan(payload);
+                            showStatus(structureStatus, 'Proposal ready. Review before applying.', 'success');
+                        } catch (error) {
+                            showStatus(structureStatus, error.message || 'Failed to generate proposal.', 'error');
+                        } finally {
+                            await loadStructureState();
+                            setStructurePolling(previousInterval || DEFAULT_STRUCTURE_POLL_MS);
+                            structureAnalyze.disabled = false;
+                        }
+                    });
+                }
+
+                if (structureApply) {
+                    structureApply.addEventListener('click', async () => {
+                        if (structureApply.disabled) {
+                            return;
+                        }
+                        const previousInterval = structurePollIntervalMs || DEFAULT_STRUCTURE_POLL_MS;
+                        setStructurePolling(2000);
+                        pollStructureState();
+                        structureApply.disabled = true;
+                        showStatus(structureStatus, 'Applying structure plan...', 'info');
+                        try {
+                            const res = await fetch('/api/structure/apply', { method: 'POST' });
+                            const payload = await res.json().catch(() => ({}));
+                            if (!res.ok) {
+                                throw new Error(payload.detail || 'Failed to apply plan.');
+                            }
+                            showStatus(structureStatus, 'Structure plan applied.', 'success');
+                        } catch (error) {
+                            showStatus(structureStatus, error.message || 'Failed to apply plan.', 'error');
+                        } finally {
+                            await loadStructureState();
+                            setStructurePolling(previousInterval || DEFAULT_STRUCTURE_POLL_MS);
+                        }
+                    });
+                }
+
+                if (structureRevert) {
+                    structureRevert.addEventListener('click', async () => {
+                        if (structureRevert.disabled) {
+                            return;
+                        }
+                        if (!confirm('Remove the folders and copies created by the structure assistant?')) {
+                            return;
+                        }
+                        const previousInterval = structurePollIntervalMs || DEFAULT_STRUCTURE_POLL_MS;
+                        setStructurePolling(2000);
+                        pollStructureState();
+                        structureRevert.disabled = true;
+                        showStatus(structureStatus, 'Reverting applied changes...', 'info');
+                        try {
+                            const res = await fetch('/api/structure/revert', { method: 'POST' });
+                            const payload = await res.json().catch(() => ({}));
+                            if (!res.ok) {
+                                throw new Error(payload.detail || 'Failed to revert changes.');
+                            }
+                            showStatus(structureStatus, 'Applied changes have been reverted.', 'success');
+                        } catch (error) {
+                            showStatus(structureStatus, error.message || 'Failed to revert changes.', 'error');
+                        } finally {
+                            await loadStructureState();
+                            setStructurePolling(previousInterval || DEFAULT_STRUCTURE_POLL_MS);
+                            structureRevert.disabled = false;
+                        }
+                    });
+                }
+
+                const regularInput = document.getElementById('ingest-regular-input');
+                const regularDrop = document.getElementById('ingest-regular-drop');
+                const regularLabel = document.getElementById('ingest-regular-label');
+                const regularUpload = document.getElementById('ingest-regular-upload');
+                const regularStatus = document.getElementById('ingest-regular-status');
+                const oddInput = document.getElementById('ingest-odd-input');
+                const evenInput = document.getElementById('ingest-even-input');
+                const oddDrop = document.getElementById('ingest-odd-drop');
+                const evenDrop = document.getElementById('ingest-even-drop');
+                const oddLabel = document.getElementById('ingest-odd-label');
+                const evenLabel = document.getElementById('ingest-even-label');
+                const massForm = document.getElementById('ingest-mass-form');
+                const massSubmit = document.getElementById('ingest-mass-submit');
+                const massStatus = document.getElementById('ingest-mass-status');
+                const outputNameInput = document.getElementById('ingest-output-name');
+
+                const regularDefaultLabel = regularLabel ? regularLabel.textContent : 'Drop PDF here or click to select';
+                const oddDefaultLabel = oddLabel ? oddLabel.textContent : 'Drop odd pages PDF';
+                const evenDefaultLabel = evenLabel ? evenLabel.textContent : 'Drop even pages PDF';
+
+                let regularFile = null;
+                let oddFile = null;
+                let evenFile = null;
+
+                function isPdfFile(file) {
+                    return file && file.type === 'application/pdf';
+                }
+
+                function showIngestStatus(target, message, level = 'info') {
+                    showStatus(target, message, level);
+                }
+
+                function attachDropHandlers(dropzone, input, onFileSelected) {
+                    if (!dropzone || !input) {
+                        return;
+                    }
+                    dropzone.addEventListener('dragover', (event) => {
+                        event.preventDefault();
+                        dropzone.classList.add('dragover');
+                    });
+                    dropzone.addEventListener('dragleave', () => {
+                        dropzone.classList.remove('dragover');
+                    });
+                    dropzone.addEventListener('drop', (event) => {
+                        event.preventDefault();
+                        dropzone.classList.remove('dragover');
+                        const file = event.dataTransfer.files[0];
+                        if (file) {
+                            onFileSelected(file);
+                        }
+                    });
+                    dropzone.addEventListener('click', () => input.click());
+                    input.addEventListener('change', () => {
+                        const file = input.files[0];
+                        if (file) {
+                            onFileSelected(file);
+                        }
+                    });
+                }
+
+                function setRegularFile(file) {
+                    if (!isPdfFile(file)) {
+                        showIngestStatus(regularStatus, 'Please choose a PDF file.', 'error');
+                        regularFile = null;
+                        regularUpload.disabled = true;
+                        if (regularLabel) regularLabel.textContent = regularDefaultLabel;
+                        return;
+                    }
+                    regularFile = file;
+                    if (regularLabel) regularLabel.textContent = file.name;
+                    regularUpload.disabled = false;
+                    if (regularInput) regularInput.value = '';
+                    showIngestStatus(regularStatus, 'Ready to upload.', 'info');
+                }
+
+                function setOddFile(file) {
+                    if (!isPdfFile(file)) {
+                        showIngestStatus(massStatus, 'Odd pages must be a PDF file.', 'error');
+                        oddFile = null;
+                        if (oddLabel) oddLabel.textContent = oddDefaultLabel;
+                        if (oddInput) oddInput.value = '';
+                        updateMassReadyState();
+                        return;
+                    }
+                    oddFile = file;
+                    if (oddLabel) oddLabel.textContent = file.name;
+                    if (oddInput) oddInput.value = '';
+                    updateMassReadyState();
+                }
+
+                function setEvenFile(file) {
+                    if (!isPdfFile(file)) {
+                        showIngestStatus(massStatus, 'Even pages must be a PDF file.', 'error');
+                        evenFile = null;
+                        if (evenLabel) evenLabel.textContent = evenDefaultLabel;
+                        if (evenInput) evenInput.value = '';
+                        updateMassReadyState();
+                        return;
+                    }
+                    evenFile = file;
+                    if (evenLabel) evenLabel.textContent = file.name;
+                    if (evenInput) evenInput.value = '';
+                    updateMassReadyState();
+                }
+
+                function updateMassReadyState() {
+                    const ready = Boolean(oddFile && evenFile);
+                    massSubmit.disabled = !ready;
+                    if (!ready) {
+                        showIngestStatus(massStatus, 'Select both odd and even PDFs.', 'info');
+                    } else {
+                        showIngestStatus(massStatus, '', 'info');
+                    }
+                }
+
+                attachDropHandlers(regularDrop, regularInput, setRegularFile);
+                attachDropHandlers(oddDrop, oddInput, setOddFile);
+                attachDropHandlers(evenDrop, evenInput, setEvenFile);
+
+                if (regularUpload) {
+                    regularUpload.addEventListener('click', async () => {
+                        if (!regularFile) {
+                            return;
+                        }
+                        regularUpload.disabled = true;
+                        showIngestStatus(regularStatus, 'Uploading…', 'info');
+                        const formData = new FormData();
+                        formData.append('file', regularFile, regularFile.name);
+                        try {
+                            const res = await fetch('/api/ingest/upload', { method: 'POST', body: formData });
+                            const payload = await res.json().catch(() => ({}));
+                            if (!res.ok) {
+                                throw new Error(payload.detail || 'Failed to upload PDF');
+                            }
+                            showIngestStatus(regularStatus, `Uploaded ${payload.filename}`, 'success');
+                            regularFile = null;
+                            regularUpload.disabled = true;
+                            if (regularLabel) regularLabel.textContent = regularDefaultLabel;
+                            await loadInbox();
+                        } catch (error) {
+                            showIngestStatus(regularStatus, error.message || 'Upload failed.', 'error');
+                            regularUpload.disabled = false;
+                        }
+                    });
+                }
+
+                if (massForm && massSubmit) {
+                    massSubmit.disabled = true;
+                    massForm.addEventListener('submit', async (event) => {
+                        event.preventDefault();
+                        if (!oddFile || !evenFile) {
+                            showIngestStatus(massStatus, 'Select both odd and even PDFs before uploading.', 'error');
+                            updateMassReadyState();
+                            return;
+                        }
+                        massSubmit.disabled = true;
+                        showIngestStatus(massStatus, 'Combining and uploading…', 'info');
+                        const formData = new FormData();
+                        formData.append('oddFile', oddFile, oddFile.name);
+                        formData.append('evenFile', evenFile, evenFile.name);
+                        if (outputNameInput && outputNameInput.value.trim()) {
+                            formData.append('outputName', outputNameInput.value.trim());
+                        }
+                        try {
+                            const res = await fetch('/api/ingest/mass-scan', { method: 'POST', body: formData });
+                            const payload = await res.json().catch(() => ({}));
+                            if (!res.ok) {
+                                throw new Error(payload.detail || 'Failed to upload merged PDF');
+                            }
+                            showIngestStatus(massStatus, `Uploaded ${payload.filename} (${payload.pages} pages)`, 'success');
+                            oddFile = null;
+                            evenFile = null;
+                            if (oddLabel) oddLabel.textContent = oddDefaultLabel;
+                            if (evenLabel) evenLabel.textContent = evenDefaultLabel;
+                            if (oddInput) oddInput.value = '';
+                            if (evenInput) evenInput.value = '';
+                            if (outputNameInput) outputNameInput.value = '';
+                            await loadInbox();
+                        } catch (error) {
+                            showIngestStatus(massStatus, error.message || 'Upload failed.', 'error');
+                        } finally {
+                            updateMassReadyState();
+                        }
+                    });
+                }
+
+                function startProcessingIndicators(ids) {
+                    ids.forEach((id) => {
+                        if (!state.processingQueue.includes(id) && state.activeProcessingId !== id) {
+                            const item = state.inboxItems.find((entry) => entry.id === id);
+                            if (!item) {
+                                return;
+                            }
+                            if (item.status === 'success') {
+                                return;
+                            }
+                            if (item.status === 'failed') {
+                                item.status = 'pending';
+                                item.error_message = null;
+                            }
+                            state.processingQueue.push(id);
+                            item.transient_note = 'Queued for processing';
+                            state.selectedInboxIds.add(id);
+                        }
+                    });
+                    renderInboxTable();
+                    startProcessingLoop();
+                }
+
+                function stopProcessingIndicator(id) {
+                    const entry = state.processingTimers.get(id);
+                    if (entry) {
+                        clearInterval(entry.timer);
+                        state.processingTimers.delete(id);
+                    }
+                }
+
+                function startProcessingLoop() {
+                    if (state.activeProcessingId) {
+                        renderInboxTable();
+                        return;
+                    }
+                    while (state.processingQueue.length) {
+                        const nextId = state.processingQueue.shift();
+                        const item = state.inboxItems.find((entry) => entry.id === nextId);
+                        if (!item || item.status === 'success' || item.status === 'failed') {
+                            continue;
+                        }
+                        state.activeProcessingId = nextId;
+                        item.status = 'processing';
+                        item.error_message = null;
+                        let stageIndex = 0;
+                        const stageKeys = state.progressOrder;
+
+                        const updateNote = () => {
+                            const key = stageKeys[Math.min(stageIndex, stageKeys.length - 1)];
+                            const label = state.progressLabels[key] || key;
+                            item.transient_note = `Processing: ${label}`;
+                            renderInboxTable();
+                            if (stageIndex < stageKeys.length - 1) {
+                                stageIndex += 1;
+                            }
+                        };
+
+                        updateNote();
+                        const timer = setInterval(updateNote, 2000);
+                        state.processingTimers.set(nextId, { timer });
+                        renderInboxTable();
+                        return;
+                    }
+                    renderInboxTable();
+                }
+
+                function updateProcessingResult(result) {
+                    stopProcessingIndicator(result.id);
+                    const item = state.inboxItems.find((entry) => entry.id === result.id);
+                    if (!item) {
+                        return;
+                    }
+                    state.selectedInboxIds.delete(result.id);
+                    const progress = Array.isArray(result.progress) ? result.progress : [];
+                    const progressText = progress
+                        .map((stage) => state.progressLabels[stage] || stage)
+                        .filter(Boolean)
+                        .join(' → ');
+                    if (result.status === 'success') {
+                        item.status = 'success';
+                        item.error_message = null;
+                        item.metadata_preview = item.metadata_preview || '';
+                        item.transient_note = progressText ? `Completed: ${progressText}` : 'Completed.';
+                    } else if (result.status === 'failed') {
+                        item.status = 'failed';
+                        item.error_message = result.error || 'Processing failed.';
+                        item.transient_note = progressText ? `Aborted after: ${progressText}` : (item.error_message || 'Processing failed.');
+                    } else if (result.status === 'missing') {
+                        item.status = 'pending';
+                        item.transient_note = 'Item missing from inbox.';
+                    }
+                    if (state.activeProcessingId === result.id) {
+                        state.activeProcessingId = null;
+                    }
+                    state.processingQueue = state.processingQueue.filter((id) => id !== result.id);
+                    startProcessingLoop();
+                }
+
+                async function init() {
+                    try {
+                        await fetchConfig();
+                        populateConfigForms();
+                    } catch (error) {
+                        console.error(error);
+                    }
+                    await loadInbox();
+                    await loadStructureState();
+                    setStructurePolling(DEFAULT_STRUCTURE_POLL_MS);
+                }
+
+                init().catch((error) => {
+                    console.error('Initialization failed:', error);
+                });
+            });
+        </script>
+    </body>
+</html>

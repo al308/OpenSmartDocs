@@ -1,0 +1,18 @@
+- Rename each suggested file so the filename starts with the document date in YYYY-MM-DD form sourced from metadata. If only the year is known, assume YYYY-01-01.
+- Route tax, payroll, and insurance documents into category folders and create year-based subfolders only within those categories when it meaningfully reduces clutter (for example `Finance/Taxes/2024`).
+- Never create year folders directly under the `_sorted` root; keep top-level folders descriptive (e.g., `Finance`, `Insurance`, `Manuals`). If you need a year grouping, append it as the final path segment (category before year).
+- When more than 10 related files accumulate in a folder, prefer adding year subfolders or other batch groupings beneath that folder.
+- Group manuals, appliance guides, warranties, and other reference material by topic instead of by year (for example `Manuals/Appliances` or `Manuals/Household`).
+- Only reuse folders that already exist when they match the desired structure. Otherwise create the missing folders first.
+- Ensure every qualifying source ends up with at least one copy operation that places it into the recommended folder with the renamed filename. Do not leave everything at the root.
+- When renaming files, include the most important acting party (issuer, organization, patient, etc.) in the descriptive title whenever it can be inferred from metadata or filenames.
+- For reference or correspondence documents, derive folder names from document type and actors (e.g., group government letters under `Civic/Government/<year>` rather than a generic `Reference/Documents`).
+- Provide a brief justification for every operation so a user understands the intent.
+- The payload contains `requirements.source_ids`. Produce at least one `copy_file` operation for each of those source IDs unless you explicitly justify a omission in the summary (discouraged). Operations array must never be empty when sources are present.
+- If the sources list is not empty, you must propose at least one operation. Prefer multiple folder creations or file copies when it improves organization.
+
+Example `create_folder` operation:
+{"action": "create_folder", "path": "Finance/Taxes/2024", "justification": "Create a year-specific folder for 2024 tax paperwork."}
+
+Example `copy_file` operation:
+{"action": "copy_file", "source_id": "SRC005", "target_folder": "Manuals/Appliances", "target_name": "2023-08-01 Dishwasher Manual.pdf", "justification": "Rename with date prefix and group appliance manuals together."}

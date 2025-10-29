@@ -1,0 +1,26 @@
+Expected validation schema:
+{schema_json}
+
+Plan summary and operations:
+{plan_json}
+
+Existing folders (sorted): {existing_folders}
+
+For `copy_file` actions, remember that execution performs:
+- `download_sorted_file(source_relative_path)`
+- `upload_bytes_to_sorted(target_name, folder_path=target_folder)`
+
+For `create_folder` actions, execution calls:
+- `ensure_sorted_subfolder(path)`
+
+Review the plan for the following:
+- Are folder creations meaningful and non-duplicate?
+- Do copy destinations exist or get created in this plan?
+- Do filenames keep their original extensions and include the date prefix?
+- Would any operation fail due to missing folders or unsupported actions?
+- Are there obvious mis-classifications or missing groupings?
+
+Respond with JSON containing:
+- `"status"`: `"ok"`, `"warn"`, or `"error"`
+- `"notes"`: concise explanation
+- `"issues"`: array of specific concerns (empty if none)

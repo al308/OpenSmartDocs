@@ -1,0 +1,1 @@
+Extract concise, structured metadata describing this document page. Respond as JSON with keys: title, author, document_type, summary, tags (list of strings), language.

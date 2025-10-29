@@ -1,0 +1,15 @@
+The previous response failed to parse as JSON.
+
+Expected schema:
+{schema_json}
+
+Original instruction prompt:
+{instruction_prompt}
+
+Model response that failed:
+{model_response}
+
+Parsing error:
+{error_message}
+
+Return a corrected JSON object that strictly matches the schema and the original intent. Do not include any text outside the JSON.
