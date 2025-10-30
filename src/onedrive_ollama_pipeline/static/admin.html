@@ -110,6 +110,41 @@
                 color: rgba(226, 232, 240, 0.85);
                 margin-top: 0.35rem;
             }
+            .ingest-analysis {
+                display: none;
+                flex-direction: column;
+                gap: 0.75rem;
+                border-top: 1px solid rgba(148, 163, 184, 0.25);
+                padding-top: 1rem;
+            }
+            .ingest-analysis.visible {
+                display: flex;
+            }
+            .ingest-analysis-summary {
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+                font-size: 0.9rem;
+            }
+            .ingest-analysis-preview {
+                margin: 0;
+                padding: 0.75rem;
+                background: rgba(15, 23, 42, 0.9);
+                border-radius: 6px;
+                max-height: 140px;
+                overflow-y: auto;
+                font-size: 0.85rem;
+                white-space: pre-wrap;
+                line-height: 1.35;
+            }
+            .ingest-option-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            .ingest-mode-button {
+                min-width: 180px;
+            }
             button.primary {
                 background: #38bdf8;
                 color: #0f172a;
@@ -130,6 +165,23 @@
             button.primary:disabled,
             button.secondary:disabled {
                 opacity: 0.6;
+                cursor: not-allowed;
+            }
+            .icon-button {
+                background: transparent;
+                border: none;
+                color: #93c5fd;
+                cursor: pointer;
+                padding: 0.25rem;
+                border-radius: 4px;
+                line-height: 1;
+                font-size: 1rem;
+            }
+            .icon-button:hover {
+                background: rgba(96, 165, 250, 0.18);
+            }
+            .icon-button:disabled {
+                opacity: 0.4;
                 cursor: not-allowed;
             }
             details.config-details {
@@ -187,10 +239,56 @@
                 gap: 0.5rem;
                 flex-wrap: wrap;
             }
+            .table-preview-container {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) minmax(260px, 28%);
+                gap: 1rem;
+                align-items: stretch;
+            }
             .table-wrapper {
                 overflow-x: auto;
                 border-radius: 8px;
                 border: 1px solid rgba(148, 163, 184, 0.18);
+            }
+            .preview-panel {
+                background: #111c3a;
+                border-radius: 8px;
+                border: 1px solid rgba(148, 163, 184, 0.18);
+                padding: 0.75rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                min-height: 320px;
+            }
+            .preview-panel h3 {
+                margin: 0;
+                font-size: 1rem;
+            }
+            .preview-placeholder {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: rgba(226, 232, 240, 0.65);
+                font-size: 0.9rem;
+                padding: 1rem;
+                border: 1px dashed rgba(148, 163, 184, 0.25);
+                border-radius: 6px;
+            }
+            .preview-frame {
+                flex: 1;
+                border: none;
+                border-radius: 6px;
+                background: #0b1224;
+            }
+            @media (max-width: 1024px) {
+                .table-preview-container {
+                    grid-template-columns: 1fr;
+                }
+                .preview-panel {
+                    min-height: 240px;
+                }
             }
             table {
                 width: 100%;
@@ -250,6 +348,68 @@
             .structure-summary li {
                 margin-bottom: 0.35rem;
             }
+            .text-chip {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 2.5rem;
+                padding: 0.2rem 0.45rem;
+                border-radius: 999px;
+                font-size: 0.75rem;
+                font-weight: 600;
+            }
+            .text-chip.has-text {
+                background: rgba(34, 197, 94, 0.18);
+                color: #4ade80;
+            }
+            .text-chip.no-text {
+                background: rgba(148, 163, 184, 0.16);
+                color: rgba(226, 232, 240, 0.85);
+            }
+            .text-chip.pending {
+                background: rgba(148, 163, 184, 0.12);
+                color: rgba(226, 232, 240, 0.65);
+            }
+            .text-chip.error {
+                background: rgba(248, 113, 113, 0.18);
+                color: #f87171;
+            }
+            .structure-controls {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                margin-bottom: 1rem;
+            }
+            .structure-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                align-items: center;
+            }
+            .structure-summary-details {
+                margin-top: 1rem;
+                background: rgba(148, 163, 184, 0.12);
+                border-radius: 8px;
+                padding: 0.75rem 1rem;
+            }
+            .structure-summary-details summary {
+                cursor: pointer;
+                font-weight: 600;
+                color: #93c5fd;
+            }
+            .structure-summary-details[open] summary {
+                margin-bottom: 0.75rem;
+            }
+            #structure-sources-table tbody tr.selected {
+                background: rgba(96, 165, 250, 0.18);
+            }
+            #structure-sources-table tbody tr.planned {
+                border-left: 3px solid #38bdf8;
+            }
+            #structure-sources-table td,
+            #structure-sources-table th {
+                vertical-align: top;
+            }
             .structure-log {
                 margin-top: 1.5rem;
                 background: #0f172a;
@@ -294,6 +454,19 @@
                             <button class="primary" id="ingest-regular-upload" disabled>Upload to inbox</button>
                         </div>
                         <div class="ingest-status" id="ingest-regular-status"></div>
+                        <div class="ingest-analysis" id="ingest-analysis" hidden>
+                            <div class="ingest-analysis-summary">
+                                <div id="ingest-analysis-text"></div>
+                                <div id="ingest-analysis-meta"></div>
+                                <pre class="ingest-analysis-preview" id="ingest-analysis-preview"></pre>
+                            </div>
+                            <div class="ingest-option-buttons">
+                                <button class="secondary ingest-mode-button" id="ingest-mode-text" data-mode="text">Use text &amp; metadata</button>
+                                <button class="secondary ingest-mode-button" id="ingest-mode-image" data-mode="image">Use first page image</button>
+                                <button class="secondary ingest-mode-button" id="ingest-mode-both" data-mode="both">Use text &amp; image</button>
+                            </div>
+                            <div class="ingest-status" id="ingest-analysis-status"></div>
+                        </div>
                     </div>
 
                     <div class="ingest-card">
@@ -353,24 +526,32 @@
                 </div>
                 <div class="inbox-status" id="inbox-status"></div>
 
-                <div class="table-wrapper">
-                    <table id="inbox-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Filename</th>
-                                <th>Status</th>
-                                <th>Processed at</th>
-                                <th>Model</th>
-                                <th>Notes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="6">Loading inbox…</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="table-preview-container">
+                    <div class="table-wrapper">
+                        <table id="inbox-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Text</th>
+                                    <th>Filename</th>
+                                    <th>Status</th>
+                                    <th>Processed at</th>
+                                    <th>Model</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="8">Loading inbox…</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <aside class="preview-panel" id="inbox-preview">
+                        <h3>Preview</h3>
+                        <div class="preview-placeholder">Select a PDF to preview it here.</div>
+                    </aside>
                 </div>
             </section>
 
@@ -396,13 +577,42 @@
                 </details>
 
                 <p>Use the AI assistant to propose where documents under <code>_sorted</code> should live, including suggested folder structures and renamed copies.</p>
-                <div class="structure-actions">
-                    <button class="primary" id="structure-analyze">Generate proposal</button>
-                    <button class="primary" id="structure-apply" disabled>Apply plan</button>
-                    <button class="primary" id="structure-revert" disabled>Revert changes</button>
+                <div class="structure-controls">
+                    <div class="structure-buttons">
+                        <button class="secondary" id="structure-select-root">Select all on root level</button>
+                        <button class="primary" id="structure-analyze" disabled>Generate proposal</button>
+                        <button class="primary" id="structure-execute" disabled>Execute proposed plan</button>
+                        <button class="secondary" id="structure-revert" disabled>Revert changes</button>
+                    </div>
+                    <div class="structure-status" id="structure-status"></div>
                 </div>
-                <div class="structure-status" id="structure-status"></div>
-                <div class="structure-summary" id="structure-summary"></div>
+                <div class="table-preview-container">
+                    <div class="table-wrapper">
+                        <table id="structure-sources-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th>Text</th>
+                                    <th>File</th>
+                                    <th>Current folder</th>
+                                    <th>Proposed folder</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td colspan="6">Loading sorted files…</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <aside class="preview-panel" id="structure-preview">
+                        <h3>Preview</h3>
+                        <div class="preview-placeholder">Select a PDF to preview it here.</div>
+                    </aside>
+                </div>
+                <details class="structure-summary-details" id="structure-summary-panel">
+                    <summary>Proposal summary</summary>
+                    <div class="structure-summary" id="structure-summary"></div>
+                </details>
                 <div class="structure-summary" id="structure-applied"></div>
                 <div class="structure-log" id="structure-log"></div>
             </section>
@@ -429,16 +639,21 @@
                 const inboxCounts = document.getElementById('inbox-counts');
                 const inboxConfigForm = document.getElementById('inbox-config-form');
                 const inboxConfigStatus = document.getElementById('inbox-config-status');
+                const inboxPreviewPanel = document.getElementById('inbox-preview');
 
+                const structureSelectRoot = document.getElementById('structure-select-root');
                 const structureAnalyze = document.getElementById('structure-analyze');
-                const structureApply = document.getElementById('structure-apply');
+                const structureExecute = document.getElementById('structure-execute');
                 const structureRevert = document.getElementById('structure-revert');
                 const structureStatus = document.getElementById('structure-status');
+                const structureSourcesTableBody = document.querySelector('#structure-sources-table tbody');
                 const structureSummary = document.getElementById('structure-summary');
+                const structureSummaryPanel = document.getElementById('structure-summary-panel');
                 const structureApplied = document.getElementById('structure-applied');
                 const structureLog = document.getElementById('structure-log');
                 const structureConfigForm = document.getElementById('structure-config-form');
                 const structureConfigStatus = document.getElementById('structure-config-status');
+                const structurePreviewPanel = document.getElementById('structure-preview');
 
                 const DEFAULT_STRUCTURE_POLL_MS = 4000;
                 let structurePollTimer = null;
@@ -450,6 +665,18 @@
                     inboxItems: [],
                     selectedInboxIds: new Set(),
                     showSuccess: true,
+                    structureSources: [],
+                    selectedStructurePaths: new Set(),
+                    structurePlan: null,
+                    structureSourcesLoading: false,
+                    preview: {
+                        inbox: { objectUrl: null, title: '', loading: false, error: '' },
+                        structure: { objectUrl: null, title: '', loading: false, error: '' },
+                    },
+                    textInfo: {
+                        inbox: new Map(),
+                        structure: new Map(),
+                    },
                     processingQueue: [],
                     activeProcessingId: null,
                     processingTimers: new Map(),
@@ -474,6 +701,142 @@
                     };
                     target.style.color = colors[level] || colors.info;
                     target.textContent = message;
+                }
+
+                function escapeHtml(value) {
+                    if (value === undefined || value === null) {
+                        return '';
+                    }
+                    return String(value)
+                        .replace(/&/g, '&amp;')
+                        .replace(/</g, '&lt;')
+                        .replace(/>/g, '&gt;')
+                        .replace(/"/g, '&quot;')
+                        .replace(/'/g, '&#39;');
+                }
+
+                function getPreviewContainer(scope) {
+                    return scope === 'structure' ? structurePreviewPanel : inboxPreviewPanel;
+                }
+
+                function setPreviewState(scope, updates) {
+                    const preview = state.preview[scope];
+                    if (!preview) {
+                        return;
+                    }
+                    if (Object.prototype.hasOwnProperty.call(updates, 'objectUrl')) {
+                        if (preview.objectUrl && preview.objectUrl !== updates.objectUrl) {
+                            try {
+                                URL.revokeObjectURL(preview.objectUrl);
+                            } catch (_err) {
+                                /* ignore */
+                            }
+                        }
+                        preview.objectUrl = updates.objectUrl || null;
+                    }
+                    if (Object.prototype.hasOwnProperty.call(updates, 'title')) {
+                        preview.title = updates.title || '';
+                    }
+                    if (Object.prototype.hasOwnProperty.call(updates, 'loading')) {
+                        preview.loading = Boolean(updates.loading);
+                    }
+                    if (Object.prototype.hasOwnProperty.call(updates, 'error')) {
+                        preview.error = updates.error || '';
+                    }
+                    renderPreviewPanel(scope);
+                }
+
+                function renderPreviewPanel(scope) {
+                    const container = getPreviewContainer(scope);
+                    if (!container) {
+                        return;
+                    }
+                    const preview = state.preview[scope];
+                    if (!preview) {
+                        return;
+                    }
+                    let bodyHtml = '<div class="preview-placeholder">Select a PDF to preview it here.</div>';
+                    if (preview.loading) {
+                        bodyHtml = '<div class="preview-placeholder">Loading preview…</div>';
+                    } else if (preview.error) {
+                        bodyHtml = `<div class="preview-placeholder">${escapeHtml(preview.error)}</div>`;
+                    } else if (preview.objectUrl) {
+                        const title = escapeHtml(preview.title || 'PDF preview');
+                        bodyHtml = `<iframe class="preview-frame" src="${preview.objectUrl}" title="${title}"></iframe>`;
+                    }
+                    container.innerHTML = `<h3>Preview</h3>${bodyHtml}`;
+                }
+
+                async function openPreview(scope, endpoint, title) {
+                    setPreviewState(scope, { loading: true, error: '', title, objectUrl: null });
+                    try {
+                        const res = await fetch(endpoint);
+                        if (!res.ok) {
+                            const payload = await res.json().catch(() => ({}));
+                            const detail = payload.detail || res.statusText || 'Failed to load preview.';
+                            throw new Error(detail);
+                        }
+                        const blob = await res.blob();
+                        const objectUrl = URL.createObjectURL(blob);
+                        setPreviewState(scope, { objectUrl, loading: false, error: '', title });
+                    } catch (error) {
+                        setPreviewState(scope, { loading: false, error: error.message || 'Failed to load preview.', objectUrl: null, title });
+                    }
+                }
+
+                function renderTextBadge(info) {
+                    if (!info || info.status === 'loading' || info.status === undefined) {
+                        return '<span class="text-chip pending">…</span>';
+                    }
+                    if (info.status === 'error') {
+                        const message = info.error ? escapeHtml(info.error) : 'Unavailable';
+                        return `<span class="text-chip error" title="${message}">Err</span>`;
+                    }
+                    return info.value ? '<span class="text-chip has-text">Yes</span>' : '<span class="text-chip no-text">No</span>';
+                }
+
+                function ensureTextInfo(scope, key, endpoint) {
+                    if (!key || !endpoint) {
+                        return;
+                    }
+                    const bucket = state.textInfo[scope];
+                    if (!(bucket instanceof Map)) {
+                        return;
+                    }
+                    const existing = bucket.get(key);
+                    if (existing && existing.status !== 'error') {
+                        return;
+                    }
+                    if (existing && existing.status === 'error') {
+                        return;
+                    }
+                    bucket.set(key, { status: 'loading' });
+                    fetch(endpoint)
+                        .then(async (res) => {
+                            if (!res.ok) {
+                                const payload = await res.json().catch(() => ({}));
+                                const detail = payload.detail || res.statusText || 'Failed to inspect text content.';
+                                throw new Error(detail);
+                            }
+                            return res.json();
+                        })
+                        .then((payload) => {
+                            const hasText = Boolean(payload && payload.hasText);
+                            bucket.set(key, { status: 'ready', value: hasText });
+                            if (scope === 'inbox') {
+                                renderInboxTable();
+                            } else {
+                                renderStructureSourcesTable();
+                            }
+                        })
+                        .catch((error) => {
+                            bucket.set(key, { status: 'error', error: error.message || 'Failed to inspect text content.' });
+                            if (scope === 'inbox') {
+                                renderInboxTable();
+                            } else {
+                                renderStructureSourcesTable();
+                            }
+                        });
                 }
 
                 async function fetchConfig() {
@@ -557,7 +920,7 @@
                     }
                     const visibleItems = state.showSuccess ? state.inboxItems : state.inboxItems.filter((item) => item.status !== 'success');
                     if (!visibleItems.length) {
-                        inboxTableBody.innerHTML = '<tr><td colspan="6">Inbox is empty.</td></tr>';
+                        inboxTableBody.innerHTML = '<tr><td colspan="8">Inbox is empty.</td></tr>';
                         updateInboxProcessButton();
                         return;
                     }
@@ -570,9 +933,15 @@
                                 ? (item.error_message || item.transient_note || 'Processing failed.')
                                 : item.transient_note || item.metadata_preview || '';
                             const link = item.web_url ? `<a class="link" href="${item.web_url}" target="_blank" rel="noopener">${item.name}</a>` : item.name;
+                            const previewButton = `<button type="button" class="icon-button preview-btn" data-preview-id="${item.id}" data-preview-name="${escapeHtml(item.name || '')}" title="Preview PDF">👁️</button>`;
+                            const textInfo = state.textInfo.inbox.get(item.id);
+                            ensureTextInfo('inbox', item.id, `/api/inbox/text-info/${encodeURIComponent(item.id)}`);
+                            const textCell = renderTextBadge(textInfo);
                             return `
-                                <tr>
+                                <tr data-item-id="${item.id}">
+                                    <td>${previewButton}</td>
                                     <td><input type="checkbox" value="${item.id}" ${checked} /></td>
+                                    <td>${textCell}</td>
                                     <td>${link}</td>
                                     <td><span class="${statusClass}">${item.status}</span></td>
                                     <td>${processedAt}</td>
@@ -591,6 +960,20 @@
                                 state.selectedInboxIds.delete(checkbox.value);
                             }
                             updateInboxProcessButton();
+                        });
+                    });
+                    inboxTableBody.querySelectorAll('.preview-btn').forEach((button) => {
+                        button.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            const id = button.dataset.previewId;
+                            const item = state.inboxItems.find((entry) => entry.id === id);
+                            const title = button.dataset.previewName || (item ? item.name : 'Inbox file');
+                            if (!item) {
+                                setPreviewState('inbox', { loading: false, error: 'File unavailable.', objectUrl: null, title });
+                                return;
+                            }
+                            openPreview('inbox', `/api/inbox/preview/${encodeURIComponent(id)}`, title || 'Inbox file');
                         });
                     });
                     updateInboxProcessButton();
@@ -631,6 +1014,14 @@
                         const items = (data.items || []).map((item) => ({ ...item, transient_note: '' }));
                         state.inboxItems = items;
                         const presentIds = new Set(items.map((item) => item.id));
+                        const inboxTextMap = state.textInfo.inbox;
+                        if (inboxTextMap instanceof Map) {
+                            Array.from(inboxTextMap.keys()).forEach((id) => {
+                                if (!presentIds.has(id)) {
+                                    inboxTextMap.delete(id);
+                                }
+                            });
+                        }
                         state.processingQueue = state.processingQueue.filter((id) => presentIds.has(id));
                         state.processingTimers.forEach((entry, id) => {
                             if (!items.find((item) => item.id === id && item.status === 'processing')) {
@@ -737,13 +1128,177 @@
                     inboxProcessBtn.addEventListener('click', processSelectedInbox);
                 }
 
+                function normalizeFolderLabel(folder) {
+                    const value = (folder || '').trim();
+                    return value ? value : '/';
+                }
+
+                function renderStructureSourcesTable() {
+                    if (!structureSourcesTableBody) {
+                        return;
+                    }
+                    if (state.structureSourcesLoading) {
+                        structureSourcesTableBody.innerHTML = '<tr><td colspan="6">Loading sorted files…</td></tr>';
+                        if (structureSelectRoot) {
+                            structureSelectRoot.disabled = true;
+                        }
+                        if (structureAnalyze) {
+                            structureAnalyze.disabled = true;
+                        }
+                        return;
+                    }
+                    if (!Array.isArray(state.structureSources) || state.structureSources.length === 0) {
+                        structureSourcesTableBody.innerHTML = '<tr><td colspan="6">No root-level files found. Use the select button after placing files in the sorted root.</td></tr>';
+                        if (structureSelectRoot) {
+                            structureSelectRoot.disabled = true;
+                        }
+                        if (structureAnalyze) {
+                            structureAnalyze.disabled = true;
+                        }
+                        return;
+                    }
+                    if (structureSelectRoot) {
+                        structureSelectRoot.disabled = false;
+                    }
+
+                    const plan = state.structurePlan;
+                    const planSources = plan && plan.context && Array.isArray(plan.context.sources) ? plan.context.sources : [];
+                    const planSourceByPath = new Map();
+                    planSources.forEach((src) => {
+                        if (src && src.relative_path) {
+                            planSourceByPath.set(src.relative_path, src);
+                        }
+                    });
+                    const proposalBySourceId = new Map();
+                    if (plan && Array.isArray(plan.operations)) {
+                        plan.operations.forEach((op) => {
+                            if (op && op.action === 'copy_file' && op.source_id) {
+                                proposalBySourceId.set(op.source_id, {
+                                    folder: op.target_folder || '',
+                                    name: op.target_name || '',
+                                });
+                            }
+                        });
+                    }
+
+                    const rows = state.structureSources.map((source) => {
+                        const relpath = source.relativePath;
+                        const selected = state.selectedStructurePaths.has(relpath);
+                        const planSource = planSourceByPath.get(relpath);
+                        const proposal = planSource ? proposalBySourceId.get(planSource.id) : null;
+                        const hintFolder = planSource && planSource.hints ? planSource.hints.suggested_folder : '';
+                        const proposedFolder = proposal && proposal.folder ? proposal.folder : hintFolder || '';
+                        const proposedName = proposal && proposal.name ? proposal.name : planSource && planSource.hints ? planSource.hints.suggested_target_name : '';
+                        const classes = [];
+                        if (selected) {
+                            classes.push('selected');
+                        }
+                        if (proposal) {
+                            classes.push('planned');
+                        }
+                        const titleAttr = proposedName ? ` title="${escapeHtml(proposedName)}"` : '';
+                        const previewButton = `<button type="button" class="icon-button preview-btn" data-preview-path="${escapeHtml(relpath)}" data-preview-name="${escapeHtml(source.name)}" title="Preview PDF">👁️</button>`;
+                        const textInfo = state.textInfo.structure.get(relpath);
+                        ensureTextInfo('structure', relpath, `/api/structure/text-info?relative_path=${encodeURIComponent(relpath)}`);
+                        const textCell = renderTextBadge(textInfo);
+                        return `
+                            <tr data-relpath="${escapeHtml(relpath)}" class="${classes.join(' ')}">
+                                <td>${previewButton}</td>
+                                <td><input type="checkbox" data-relpath="${escapeHtml(relpath)}" ${selected ? 'checked' : ''} /></td>
+                                <td>${textCell}</td>
+                                <td>${escapeHtml(source.name)}</td>
+                                <td>${escapeHtml(normalizeFolderLabel(source.folder))}</td>
+                                <td${titleAttr}>${escapeHtml(proposedFolder ? proposedFolder : '—')}</td>
+                            </tr>
+                        `;
+                    });
+
+                    structureSourcesTableBody.innerHTML = rows.join('');
+                    if (structureAnalyze) {
+                        structureAnalyze.disabled = state.selectedStructurePaths.size === 0;
+                    }
+                    structureSourcesTableBody.querySelectorAll('.preview-btn').forEach((button) => {
+                        button.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            const relpath = button.dataset.previewPath;
+                            if (!relpath) {
+                                setPreviewState('structure', { loading: false, error: 'Unable to preview selection.', objectUrl: null });
+                                return;
+                            }
+                            const source = state.structureSources.find((entry) => entry.relativePath === relpath);
+                            const title = (button.dataset.previewName || (source ? source.name : 'Document')) || 'Document';
+                            openPreview('structure', `/api/structure/preview?relative_path=${encodeURIComponent(relpath)}`, title);
+                        });
+                    });
+                }
+
+                async function loadStructureSources() {
+                    if (!structureSourcesTableBody) {
+                        return;
+                    }
+                    state.structureSourcesLoading = true;
+                    renderStructureSourcesTable();
+                    try {
+                        const res = await fetch('/api/structure/sources?limit=200');
+                        if (!res.ok) {
+                            throw new Error('Failed to load sorted files');
+                        }
+                        const payload = await res.json();
+                        const sources = Array.isArray(payload.sources) ? payload.sources : [];
+                        const previousSelection = new Set(state.selectedStructurePaths);
+                        state.structureSources = sources
+                            .map((item) => ({
+                                relativePath: String(item.relative_path || item.name || '').trim(),
+                                name: String(item.name || item.relative_path || '').trim(),
+                                folder: String(item.folder || '').trim(),
+                            }))
+                            .filter((item) => item.relativePath);
+
+                        if (state.structureSources.length === 0) {
+                            state.selectedStructurePaths = new Set();
+                        } else if (previousSelection.size) {
+                            const retained = state.structureSources
+                                .map((item) => item.relativePath)
+                                .filter((path) => previousSelection.has(path));
+                            state.selectedStructurePaths = new Set(retained);
+                        } else {
+                            state.selectedStructurePaths = new Set();
+                        }
+                        const availablePaths = new Set(state.structureSources.map((item) => item.relativePath));
+                        const structureTextMap = state.textInfo.structure;
+                        if (structureTextMap instanceof Map) {
+                            Array.from(structureTextMap.keys()).forEach((path) => {
+                                if (!availablePaths.has(path)) {
+                                    structureTextMap.delete(path);
+                                }
+                            });
+                        }
+                    } catch (error) {
+                        console.error('Failed to load structure sources', error);
+                        state.structureSources = [];
+                        state.selectedStructurePaths = new Set();
+                        state.textInfo.structure = new Map();
+                    } finally {
+                        state.structureSourcesLoading = false;
+                        renderStructureSourcesTable();
+                    }
+                }
+
                 function renderStructurePlan(plan) {
                     if (!structureSummary) {
                         return;
                     }
+                    state.structurePlan = plan;
+                    if (structureSummaryPanel) {
+                        structureSummaryPanel.open = false;
+                    }
                     if (!plan) {
                         structureSummary.innerHTML = '<p>No plan has been generated yet.</p>';
-                        structureApply.disabled = true;
+                        if (structureExecute) {
+                            structureExecute.disabled = true;
+                        }
+                        renderStructureSourcesTable();
                         return;
                     }
                     const operations = Array.isArray(plan.operations) ? plan.operations : [];
@@ -785,7 +1340,10 @@
                         fragments.push('<p>No actions proposed.</p>');
                     }
                     structureSummary.innerHTML = fragments.join('');
-                    structureApply.disabled = operations.length === 0;
+                    if (structureExecute) {
+                        structureExecute.disabled = operations.length === 0;
+                    }
+                    renderStructureSourcesTable();
                 }
 
                 function renderStructureApplied(applied) {
@@ -868,50 +1426,63 @@
 
                 if (structureAnalyze) {
                     structureAnalyze.addEventListener('click', async () => {
+                        if (structureAnalyze.disabled) {
+                            return;
+                        }
+                        const selected = Array.from(state.selectedStructurePaths);
+                        if (!selected.length) {
+                            showStatus(structureStatus, 'Select at least one root-level file first.', 'warn');
+                            return;
+                        }
                         const previousInterval = structurePollIntervalMs || DEFAULT_STRUCTURE_POLL_MS;
                         setStructurePolling(2000);
                         pollStructureState();
                         structureAnalyze.disabled = true;
                         showStatus(structureStatus, 'Generating proposal...', 'info');
                         try {
-                            const res = await fetch('/api/structure/analyze', { method: 'POST' });
+                            const res = await fetch('/api/structure/analyze', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ relativePaths: selected }),
+                            });
                             const payload = await res.json().catch(() => ({}));
                             if (!res.ok) {
                                 throw new Error(payload.detail || 'Failed to generate proposal.');
                             }
                             renderStructurePlan(payload);
-                            showStatus(structureStatus, 'Proposal ready. Review before applying.', 'success');
+                            showStatus(structureStatus, 'Proposal ready. Review before executing.', 'success');
                         } catch (error) {
                             showStatus(structureStatus, error.message || 'Failed to generate proposal.', 'error');
                         } finally {
                             await loadStructureState();
                             setStructurePolling(previousInterval || DEFAULT_STRUCTURE_POLL_MS);
-                            structureAnalyze.disabled = false;
+                            renderStructureSourcesTable();
                         }
                     });
                 }
 
-                if (structureApply) {
-                    structureApply.addEventListener('click', async () => {
-                        if (structureApply.disabled) {
+                if (structureExecute) {
+                    structureExecute.addEventListener('click', async () => {
+                        if (structureExecute.disabled) {
                             return;
                         }
                         const previousInterval = structurePollIntervalMs || DEFAULT_STRUCTURE_POLL_MS;
                         setStructurePolling(2000);
                         pollStructureState();
-                        structureApply.disabled = true;
-                        showStatus(structureStatus, 'Applying structure plan...', 'info');
+                        structureExecute.disabled = true;
+                        showStatus(structureStatus, 'Executing proposed plan...', 'info');
                         try {
                             const res = await fetch('/api/structure/apply', { method: 'POST' });
                             const payload = await res.json().catch(() => ({}));
                             if (!res.ok) {
-                                throw new Error(payload.detail || 'Failed to apply plan.');
+                                throw new Error(payload.detail || 'Failed to execute plan.');
                             }
-                            showStatus(structureStatus, 'Structure plan applied.', 'success');
+                            showStatus(structureStatus, 'Structure plan executed.', 'success');
                         } catch (error) {
-                            showStatus(structureStatus, error.message || 'Failed to apply plan.', 'error');
+                            showStatus(structureStatus, error.message || 'Failed to execute plan.', 'error');
                         } finally {
                             await loadStructureState();
+                            await loadStructureSources();
                             setStructurePolling(previousInterval || DEFAULT_STRUCTURE_POLL_MS);
                         }
                     });
@@ -941,11 +1512,82 @@
                             showStatus(structureStatus, error.message || 'Failed to revert changes.', 'error');
                         } finally {
                             await loadStructureState();
+                            await loadStructureSources();
                             setStructurePolling(previousInterval || DEFAULT_STRUCTURE_POLL_MS);
                             structureRevert.disabled = false;
                         }
                     });
                 }
+
+                if (structureSelectRoot) {
+                    structureSelectRoot.addEventListener('click', () => {
+                        if (!Array.isArray(state.structureSources) || !state.structureSources.length) {
+                            return;
+                        }
+                        const rootPaths = state.structureSources
+                            .filter((item) => !item.folder)
+                            .map((item) => item.relativePath);
+                        const fallback = rootPaths.length ? rootPaths : state.structureSources.map((item) => item.relativePath);
+                        state.selectedStructurePaths = new Set(fallback);
+                        renderStructureSourcesTable();
+                    });
+                }
+
+                if (structureSourcesTableBody) {
+                    structureSourcesTableBody.addEventListener('change', (event) => {
+                        const checkbox = event.target;
+                        if (checkbox && checkbox.matches('input[type="checkbox"][data-relpath]')) {
+                            const relpath = checkbox.dataset.relpath;
+                            if (!relpath) {
+                                return;
+                            }
+                            if (checkbox.checked) {
+                                state.selectedStructurePaths.add(relpath);
+                            } else {
+                                state.selectedStructurePaths.delete(relpath);
+                            }
+                            renderStructureSourcesTable();
+                        }
+                    });
+                    structureSourcesTableBody.addEventListener('click', (event) => {
+                        if (event.target.closest('.preview-btn')) {
+                            return;
+                        }
+                        const row = event.target.closest('tr[data-relpath]');
+                        if (!row) {
+                            return;
+                        }
+                        if (event.target.matches('input[type="checkbox"]')) {
+                            return;
+                        }
+                        const relpath = row.dataset.relpath;
+                        if (!relpath) {
+                            return;
+                        }
+                        if (state.selectedStructurePaths.has(relpath)) {
+                            state.selectedStructurePaths.delete(relpath);
+                        } else {
+                            state.selectedStructurePaths.add(relpath);
+                        }
+                        renderStructureSourcesTable();
+                    });
+                }
+
+                renderPreviewPanel('inbox');
+                renderPreviewPanel('structure');
+
+                window.addEventListener('beforeunload', () => {
+                    ['inbox', 'structure'].forEach((scope) => {
+                        const preview = state.preview[scope];
+                        if (preview && preview.objectUrl) {
+                            try {
+                                URL.revokeObjectURL(preview.objectUrl);
+                            } catch (_err) {
+                                /* ignore */
+                            }
+                        }
+                    });
+                });
 
                 const regularInput = document.getElementById('ingest-regular-input');
                 const regularDrop = document.getElementById('ingest-regular-drop');
@@ -962,6 +1604,15 @@
                 const massSubmit = document.getElementById('ingest-mass-submit');
                 const massStatus = document.getElementById('ingest-mass-status');
                 const outputNameInput = document.getElementById('ingest-output-name');
+                const ingestAnalysisPanel = document.getElementById('ingest-analysis');
+                const ingestAnalysisText = document.getElementById('ingest-analysis-text');
+                const ingestAnalysisMeta = document.getElementById('ingest-analysis-meta');
+                const ingestAnalysisPreview = document.getElementById('ingest-analysis-preview');
+                const ingestAnalysisStatus = document.getElementById('ingest-analysis-status');
+                const ingestModeButtons = Array.from(document.querySelectorAll('.ingest-mode-button'));
+                const ingestModeText = document.getElementById('ingest-mode-text');
+                const ingestModeImage = document.getElementById('ingest-mode-image');
+                const ingestModeBoth = document.getElementById('ingest-mode-both');
 
                 const regularDefaultLabel = regularLabel ? regularLabel.textContent : 'Drop PDF here or click to select';
                 const oddDefaultLabel = oddLabel ? oddLabel.textContent : 'Drop odd pages PDF';
@@ -970,6 +1621,8 @@
                 let regularFile = null;
                 let oddFile = null;
                 let evenFile = null;
+                let currentIngestItem = null;
+                let ingestSelectedMode = null;
 
                 function isPdfFile(file) {
                     return file && file.type === 'application/pdf';
@@ -978,6 +1631,160 @@
                 function showIngestStatus(target, message, level = 'info') {
                     showStatus(target, message, level);
                 }
+
+                function resetIngestAnalysis() {
+                    currentIngestItem = null;
+                    ingestSelectedMode = null;
+                    if (ingestAnalysisPanel) {
+                        ingestAnalysisPanel.hidden = true;
+                        ingestAnalysisPanel.classList.remove('visible');
+                    }
+                    if (ingestAnalysisStatus) {
+                        ingestAnalysisStatus.textContent = '';
+                    }
+                    if (ingestAnalysisText) ingestAnalysisText.textContent = '';
+                    if (ingestAnalysisMeta) ingestAnalysisMeta.textContent = '';
+                    if (ingestAnalysisPreview) {
+                        ingestAnalysisPreview.textContent = '';
+                        ingestAnalysisPreview.hidden = true;
+                    }
+                    ingestModeButtons.forEach((btn) => {
+                        btn.classList.remove('primary');
+                        btn.classList.add('secondary');
+                    });
+                }
+
+                function setIngestModeHighlight(mode) {
+                    ingestSelectedMode = mode;
+                    ingestModeButtons.forEach((btn) => {
+                        const isActive = Boolean(mode && btn.dataset.mode === mode && !btn.disabled);
+                        btn.classList.toggle('primary', isActive);
+                        btn.classList.toggle('secondary', !isActive);
+                    });
+                }
+
+                function renderIngestAnalysis(result) {
+                    if (!ingestAnalysisPanel) {
+                        return;
+                    }
+                    if (!result) {
+                        resetIngestAnalysis();
+                        return;
+                    }
+                    currentIngestItem = result;
+                    const analysis = result.analysis || {};
+                    const textInfo = analysis.text || {};
+                    const metadataInfo = analysis.metadata || {};
+                    ingestAnalysisPanel.hidden = false;
+                    ingestAnalysisPanel.classList.add('visible');
+                    if (ingestAnalysisText) {
+                        ingestAnalysisText.textContent = textInfo.available
+                            ? `Readable text detected (${textInfo.chars} characters).`
+                            : 'No readable text detected.';
+                    }
+                    if (ingestAnalysisMeta) {
+                        const metaEntries = Object.entries(metadataInfo.fields || {});
+                        ingestAnalysisMeta.textContent = metadataInfo.available && metaEntries.length
+                            ? `Embedded metadata: ${metaEntries.slice(0, 4).map(([k, v]) => `${k}: ${v}`).join(' • ')}`
+                            : 'No embedded PDF metadata found.';
+                    }
+                    if (ingestAnalysisPreview) {
+                        if (textInfo.preview) {
+                            ingestAnalysisPreview.hidden = false;
+                            ingestAnalysisPreview.textContent = textInfo.preview;
+                        } else {
+                            ingestAnalysisPreview.hidden = true;
+                            ingestAnalysisPreview.textContent = '';
+                        }
+                    }
+                    const textAvailable = Boolean(textInfo.available);
+                    const hasItemReference = Boolean(result.item && result.item.itemId);
+                    if (ingestModeText) ingestModeText.disabled = !textAvailable || !hasItemReference;
+                    if (ingestModeBoth) ingestModeBoth.disabled = !textAvailable || !hasItemReference;
+                    if (ingestModeImage) ingestModeImage.disabled = !hasItemReference;
+                    let recommended = result.recommendedStrategy || (textAvailable ? 'text' : 'image');
+                    if ((recommended === 'text' || recommended === 'both') && !textAvailable) {
+                        recommended = 'image';
+                    }
+                    if (!hasItemReference) {
+                        setIngestModeHighlight(null);
+                        showIngestStatus(ingestAnalysisStatus, 'Processing options unavailable (missing item reference).', 'error');
+                        return;
+                    }
+                    setIngestModeHighlight(recommended);
+                    showIngestStatus(ingestAnalysisStatus, 'Choose how to generate metadata.', 'info');
+                }
+
+                async function processIngestMode(mode) {
+                    if (!currentIngestItem || !currentIngestItem.item) {
+                        showIngestStatus(ingestAnalysisStatus, 'Upload a PDF first.', 'error');
+                        return;
+                    }
+                    const item = currentIngestItem.item;
+                    if (!item.itemId) {
+                        showIngestStatus(ingestAnalysisStatus, 'Cannot process this upload (missing item id).', 'error');
+                        return;
+                    }
+                    const payload = {
+                        itemId: item.itemId,
+                        driveId: item.driveId,
+                        name: item.name,
+                        mode,
+                        downloadUrl: item.downloadUrl,
+                        webUrl: item.webUrl,
+                    };
+                    const previousDisabled = new Map();
+                    ingestModeButtons.forEach((btn) => {
+                        previousDisabled.set(btn, btn.disabled);
+                        if (!btn.disabled) {
+                            btn.disabled = true;
+                        }
+                    });
+                    setIngestModeHighlight(mode);
+                    showIngestStatus(ingestAnalysisStatus, 'Generating metadata…', 'info');
+                    try {
+                        const res = await fetch('/api/ingest/process', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload),
+                        });
+                        const responsePayload = await res.json().catch(() => ({}));
+                        if (!res.ok) {
+                            throw new Error(responsePayload.detail || 'Failed to generate metadata.');
+                        }
+                        const metadata = responsePayload.metadata || {};
+                        const preview =
+                            metadata.summary ||
+                            metadata.title ||
+                            (Object.keys(metadata).length ? JSON.stringify(metadata).slice(0, 160) : '');
+                        const successMessage = preview ? `Metadata created: ${preview}` : 'Metadata request completed.';
+                        showIngestStatus(ingestAnalysisStatus, successMessage, 'success');
+                        await loadInbox();
+                    } catch (error) {
+                        showIngestStatus(ingestAnalysisStatus, error.message || 'Metadata request failed.', 'error');
+                    } finally {
+                        ingestModeButtons.forEach((btn) => {
+                            const wasDisabled = previousDisabled.get(btn);
+                            if (typeof wasDisabled === 'boolean') {
+                                btn.disabled = wasDisabled;
+                            }
+                        });
+                        setIngestModeHighlight(mode);
+                    }
+                }
+
+                if (ingestModeButtons.length) {
+                    ingestModeButtons.forEach((button) => {
+                        button.addEventListener('click', () => {
+                            if (button.disabled) {
+                                return;
+                            }
+                            processIngestMode(button.dataset.mode);
+                        });
+                    });
+                }
+
+                resetIngestAnalysis();
 
                 function attachDropHandlers(dropzone, input, onFileSelected) {
                     if (!dropzone || !input) {
@@ -1008,6 +1815,7 @@
                 }
 
                 function setRegularFile(file) {
+                    resetIngestAnalysis();
                     if (!isPdfFile(file)) {
                         showIngestStatus(regularStatus, 'Please choose a PDF file.', 'error');
                         regularFile = null;
@@ -1082,6 +1890,15 @@
                                 throw new Error(payload.detail || 'Failed to upload PDF');
                             }
                             showIngestStatus(regularStatus, `Uploaded ${payload.filename}`, 'success');
+                            if (payload.analysis) {
+                                renderIngestAnalysis({
+                                    analysis: payload.analysis,
+                                    item: payload.item || {},
+                                    recommendedStrategy: payload.recommendedStrategy,
+                                });
+                            } else {
+                                renderIngestAnalysis(null);
+                            }
                             regularFile = null;
                             regularUpload.disabled = true;
                             if (regularLabel) regularLabel.textContent = regularDefaultLabel;
@@ -1240,6 +2057,7 @@
                         console.error(error);
                     }
                     await loadInbox();
+                    await loadStructureSources();
                     await loadStructureState();
                     setStructurePolling(DEFAULT_STRUCTURE_POLL_MS);
                 }

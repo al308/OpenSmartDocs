@@ -96,8 +96,16 @@ def test_regular_ingest_upload(monkeypatch, tmp_path):
         def upload_pdf_to_inbox(self, filename, content):
             uploaded["filename"] = filename
             uploaded["content"] = content
+            return {"id": "item123", "name": filename, "@microsoft.graph.downloadUrl": "https://download"}
 
     monkeypatch.setattr("onedrive_ollama_pipeline.admin_app._get_onedrive_client", DummyClient)
+    monkeypatch.setattr(
+        "onedrive_ollama_pipeline.admin_app.inspect_pdf_content",
+        lambda content: {
+            "text": {"available": True, "chars": 120, "preview": "Sample text"},
+            "metadata": {"available": True, "fields": {"Title": "Doc"}},
+        },
+    )
 
     client = TestClient(app)
     response = client.post(
@@ -107,6 +115,10 @@ def test_regular_ingest_upload(monkeypatch, tmp_path):
     assert response.status_code == 200
     data = response.json()
     assert data["filename"] == "My_Doc.pdf"
+    assert data["analysis"]["text"]["available"] is True
+    assert data["analysis"]["metadata"]["available"] is True
+    assert data["recommendedStrategy"] == "text"
+    assert data["item"]["itemId"] == "item123"
     assert uploaded["filename"] == "My_Doc.pdf"
     assert uploaded["content"] == b"%PDF-1.4"
 
@@ -170,6 +182,216 @@ def test_mass_scan_page_mismatch(monkeypatch, tmp_path):
     assert response.json()["detail"] == "Mismatch"
 
 
+def test_ingest_process(monkeypatch, tmp_path):
+    setup_env(monkeypatch, tmp_path)
+    created = {}
+
+    class DummyState:
+        def __init__(self):
+            self.success = []
+            self.failure = []
+
+        def record_success(self, **kwargs):
+            self.success.append(kwargs)
+
+        def record_failure(self, **kwargs):
+            self.failure.append(kwargs)
+
+    class DummyPipeline:
+        def __init__(self, settings):
+            self._settings = settings
+            self._state = DummyState()
+            created["pipeline"] = self
+
+        def _process_item(self, item, *, progress_callback=None, metadata_strategy="auto"):
+            created["mode"] = metadata_strategy
+            if progress_callback:
+                progress_callback("metadata")
+            return {"title": "ok"}
+
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app.Pipeline", DummyPipeline)
+
+    client = TestClient(app)
+    response = client.post(
+        "/api/ingest/process",
+        json={
+            "itemId": "item123",
+            "driveId": "drive",
+            "name": "file.pdf",
+            "mode": "text",
+            "downloadUrl": "https://download",
+        },
+    )
+    assert response.status_code == 200
+    data = response.json()
+    assert data["mode"] == "text"
+    assert data["metadata"]["title"] == "ok"
+    assert created["mode"] == "text"
+    assert created["pipeline"]._state.success[0]["item_id"] == "item123"
+
+
+def test_structure_sources_endpoint(monkeypatch, tmp_path):
+    setup_env(monkeypatch, tmp_path)
+
+    class DummyStructureService:
+        def list_sources(self, max_items=None):
+            return {
+                "sources": [
+                    {
+                        "id": "SRC001",
+                        "relative_path": "Doc.pdf",
+                        "name": "Doc.pdf",
+                        "folder": "",
+                    }
+                ]
+            }
+
+        def get_state(self):
+            return {"plan": None, "applied": None, "log": []}
+
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app._get_structure_service", lambda: DummyStructureService())
+
+    client = TestClient(app)
+    response = client.get("/api/structure/sources")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["sources"][0]["name"] == "Doc.pdf"
+
+
+def test_structure_analyze_accepts_selection(monkeypatch, tmp_path):
+    setup_env(monkeypatch, tmp_path)
+    captured = {}
+
+    class DummyStructureService:
+        def analyze(self, include_relative_paths=None):
+            captured["include"] = include_relative_paths
+            return {"plan": {"operations": []}}
+
+        def get_state(self):
+            return {"plan": None, "applied": None, "log": []}
+
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app._get_structure_service", lambda: DummyStructureService())
+
+    client = TestClient(app)
+    response = client.post("/api/structure/analyze", json={"relativePaths": ["Doc.pdf", "Other.pdf"]})
+    assert response.status_code == 200
+    assert captured["include"] == {"Doc.pdf", "Other.pdf"}
+
+
+def test_inbox_preview_endpoint(monkeypatch, tmp_path):
+    setup_env(monkeypatch, tmp_path)
+
+    class DummyItem:
+        def __init__(self, item_id: str, name: str):
+            self.item_id = item_id
+            self.name = name
+
+    class DummyClient:
+        def list_pdfs_in_inbox(self):
+            yield DummyItem("item-1", "sample.pdf")
+
+        def download_item(self, item):
+            assert item.item_id == "item-1"
+            return b"%PDF-1.4"
+
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app._get_onedrive_client", lambda: DummyClient())
+    monkeypatch.setattr(
+        "onedrive_ollama_pipeline.admin_app.inspect_pdf_content",
+        lambda content, **_kwargs: {"text": {"available": True, "chars": 600}},
+    )
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app", "_TEXT_INFO_CACHE", {})
+
+    client = TestClient(app)
+    response = client.get("/api/inbox/preview/item-1")
+    assert response.status_code == 200
+    assert response.headers["content-type"] == "application/pdf"
+    assert response.content.startswith(b"%PDF")
+
+
+def test_inbox_text_info_endpoint(monkeypatch, tmp_path):
+    setup_env(monkeypatch, tmp_path)
+
+    class DummyItem:
+        def __init__(self, item_id: str, name: str):
+            self.item_id = item_id
+            self.name = name
+
+    class DummyClient:
+        def list_pdfs_in_inbox(self):
+            yield DummyItem("item-1", "sample.pdf")
+
+        def download_item(self, item):
+            assert item.item_id == "item-1"
+            return b"%PDF-1.4"
+
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app._get_onedrive_client", lambda: DummyClient())
+    monkeypatch.setattr(
+        "onedrive_ollama_pipeline.admin_app.inspect_pdf_content",
+        lambda content, **_kwargs: {"text": {"available": True, "chars": 500}},
+    )
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app", "_TEXT_INFO_CACHE", {})
+
+    client = TestClient(app)
+    response = client.get("/api/inbox/text-info/item-1")
+    assert response.status_code == 200
+    assert response.json()["hasText"] is True
+
+
+def test_structure_preview_endpoint(monkeypatch, tmp_path):
+    setup_env(monkeypatch, tmp_path)
+
+    class DummyClient:
+        def download_sorted_file(self, relative_path: str):
+            class Entry:
+                name = "sorted.pdf"
+
+            assert relative_path == "sorted.pdf"
+            return Entry(), b"%PDF-1.6"
+
+        def list_pdfs_in_inbox(self):  # not used but keep interface consistent
+            return iter([])
+
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app._get_onedrive_client", lambda: DummyClient())
+    monkeypatch.setattr(
+        "onedrive_ollama_pipeline.admin_app.inspect_pdf_content",
+        lambda content, **_kwargs: {"text": {"available": False, "chars": 80}},
+    )
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app", "_TEXT_INFO_CACHE", {})
+
+    client = TestClient(app)
+    response = client.get("/api/structure/preview", params={"relative_path": "sorted.pdf"})
+    assert response.status_code == 200
+    assert response.headers["content-type"] == "application/pdf"
+    assert response.content.startswith(b"%PDF")
+
+
+def test_structure_text_info_endpoint(monkeypatch, tmp_path):
+    setup_env(monkeypatch, tmp_path)
+
+    class DummyClient:
+        def download_sorted_file(self, relative_path: str):
+            class Entry:
+                name = "sorted.pdf"
+
+            assert relative_path == "sorted.pdf"
+            return Entry(), b"%PDF-1.6"
+
+        def list_pdfs_in_inbox(self):  # unused
+            return iter([])
+
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app._get_onedrive_client", lambda: DummyClient())
+    monkeypatch.setattr(
+        "onedrive_ollama_pipeline.admin_app.inspect_pdf_content",
+        lambda content, **_kwargs: {"text": {"available": False, "chars": 50}},
+    )
+    monkeypatch.setattr("onedrive_ollama_pipeline.admin_app", "_TEXT_INFO_CACHE", {})
+
+    client = TestClient(app)
+    response = client.get("/api/structure/text-info", params={"relative_path": "sorted.pdf"})
+    assert response.status_code == 200
+    assert response.json()["hasText"] is False
+
+
 def test_ollama_connection_test(monkeypatch, tmp_path):
     _, _, config_path = setup_env(monkeypatch, tmp_path)
     config_data = json.loads(config_path.read_text(encoding='utf-8'))
@@ -194,4 +416,3 @@ def test_ollama_connection_test(monkeypatch, tmp_path):
     assert data['status'] == 'ok'
     assert len(data['results']) == 2
     assert calls == ['model', 'structure-model']
-

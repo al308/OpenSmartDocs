@@ -53,7 +53,7 @@ def test_request_metadata_returns_json():
     settings = OllamaSettings(base_url='http://localhost:1234/v1', model='test-model')
     ollama = OllamaClient(settings, client=client)
 
-    metadata = ollama.request_metadata(b'binary-image')
+    metadata = ollama.request_metadata(image_bytes=b'binary-image')
 
     assert metadata['title'] == 'Sample'
     call = completions.calls[0]
@@ -73,7 +73,50 @@ def test_request_metadata_invalid_json():
     ollama = OllamaClient(settings, client=client)
 
     with pytest.raises(RuntimeError):
-        ollama.request_metadata(b'binary-image')
+        ollama.request_metadata(image_bytes=b'binary-image')
+
+def test_request_metadata_requires_input():
+    completions = StubCompletions(lambda kwargs: kwargs)
+    client = FakeClient(completions)
+    settings = OllamaSettings(base_url='http://localhost:1234/v1', model='test-model')
+    ollama = OllamaClient(settings, client=client)
+
+    with pytest.raises(ValueError):
+        ollama.request_metadata()
+
+
+def test_request_metadata_with_text():
+    def generator(kwargs):
+        assert kwargs['messages'][1]['content'][1]['text'] == 'hello world'
+        metadata_json = json_module.dumps({'title': 'Sample'})
+        return {'choices': [{'message': {'content': metadata_json}}]}
+
+    completions = StubCompletions(generator)
+    client = FakeClient(completions)
+    settings = OllamaSettings(base_url='http://localhost:1234/v1', model='test-model')
+    ollama = OllamaClient(settings, client=client)
+
+    metadata = ollama.request_metadata(text='hello world')
+
+    assert metadata['title'] == 'Sample'
+
+
+def test_request_metadata_with_both():
+    def generator(kwargs):
+        content = kwargs['messages'][1]['content']
+        assert any(entry.get('type') == 'text' and entry.get('text') == 'hello world' for entry in content)
+        assert any(entry.get('type') == 'image_url' for entry in content)
+        metadata_json = json_module.dumps({'title': 'Combo'})
+        return {'choices': [{'message': {'content': metadata_json}}]}
+
+    completions = StubCompletions(generator)
+    client = FakeClient(completions)
+    settings = OllamaSettings(base_url='http://localhost:1234/v1', model='test-model')
+    ollama = OllamaClient(settings, client=client)
+
+    metadata = ollama.request_metadata(text='  hello world  ', image_bytes=b'data')
+
+    assert metadata['title'] == 'Combo'
 
 
 def test_ensure_ready_success():

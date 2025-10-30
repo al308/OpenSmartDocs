@@ -198,6 +198,32 @@ def test_download_item_without_direct_url(monkeypatch, tmp_path: Path):
     assert second_headers["Authorization"] == "Bearer token"
 
 
+def test_drive_item_from_payload_handles_remote():
+    payload = {
+        "id": "item-id",
+        "name": "doc.pdf",
+        "@microsoft.graph.downloadUrl": "https://download",
+        "parentReference": {"driveId": "drive-1"},
+    }
+    item = OneDriveClient.drive_item_from_payload(payload)
+    assert item.item_id == "item-id"
+    assert item.drive_id == "drive-1"
+    assert item.download_url == "https://download"
+
+    remote_payload = {
+        "remoteItem": {
+            "id": "remote-id",
+            "driveId": "drive-2",
+            "@microsoft.graph.downloadUrl": "https://remote",
+            "name": "remote.pdf",
+        }
+    }
+    remote_item = OneDriveClient.drive_item_from_payload(remote_payload)
+    assert remote_item.item_id == "remote-id"
+    assert remote_item.drive_id == "drive-2"
+    assert remote_item.download_url == "https://remote"
+
+
 def test_list_pdfs_in_inbox_missing_folder(monkeypatch, caplog, tmp_path: Path):
     monkeypatch.setattr(onedrive_module.OneDriveClient, "_create_app", lambda self: object())
     session = FakeSession()

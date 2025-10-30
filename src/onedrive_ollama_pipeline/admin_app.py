@@ -5,19 +5,21 @@ import io
 import json
 import re
 import sqlite3
+from hashlib import md5
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Literal, Optional
 
 import pikepdf
-from fastapi import FastAPI, HTTPException, File, Form, UploadFile
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, HTTPException, File, Form, UploadFile, Body
+from fastapi.responses import HTMLResponse, StreamingResponse
 from pydantic import BaseModel, Field, field_validator
 
 from .config import CONFIG_DEFAULTS, load_config_file, load_settings, save_config_file
 from .database import Database, get_database
 from .logging_utils import get_runtime_log_level, set_runtime_log_level
-from .onedrive_client import OneDriveClient
+from .onedrive_client import DriveItem, OneDriveClient
 from .pipeline import Pipeline
+from .pdf_processor import inspect_pdf_content
 from .state_store import StateStore
 from .structure_service import StructureService, StructureServiceError
 from .ollama_client import OllamaClient
@@ -26,6 +28,7 @@ app = FastAPI(title="OneDrive Ollama Pipeline Admin")
 
 _TEMPLATE_PATH = Path(__file__).resolve().parent / "static" / "admin.html"
 _ADMIN_TEMPLATE: Optional[str] = None
+_TEXT_INFO_CACHE: dict[str, tuple[str, bool]] = {}
 
 
 class ConfigResponse(BaseModel):
@@ -68,6 +71,26 @@ class InboxProcessRequest(BaseModel):
         if not value:
             raise ValueError("itemIds must not be empty")
         return value
+
+
+class IngestProcessRequest(BaseModel):
+    item_id: str = Field(alias="itemId")
+    drive_id: Optional[str] = Field(default=None, alias="driveId")
+    name: str
+    mode: Literal["auto", "text", "image", "both"] = "auto"
+    download_url: Optional[str] = Field(default=None, alias="downloadUrl")
+    web_url: Optional[str] = Field(default=None, alias="webUrl")
+
+    @field_validator("name")
+    def _name_not_empty(cls, value: str) -> str:
+        cleaned = value.strip()
+        if not cleaned:
+            raise ValueError("name must not be empty")
+        return cleaned
+
+
+class StructureAnalyzeRequest(BaseModel):
+    relative_paths: list[str] = Field(default_factory=list, alias="relativePaths")
 
 
 def _build_metadata_preview(metadata: Any) -> str:
@@ -131,6 +154,33 @@ def _combine_duplex_pdfs(odd_pdf: bytes, even_pdf: bytes) -> tuple[bytes, int]:
     combined.save(buffer)
     combined.close()
     return buffer.getvalue(), len(odd_pages) + len(even_pages)
+
+
+def _has_meaningful_text(pdf_bytes: bytes, *, min_chars: int = 200) -> bool:
+    try:
+        inspection = inspect_pdf_content(pdf_bytes, text_max_pages=3, text_max_chars=3000)
+    except Exception:
+        return False
+    text_section = inspection.get("text") or {}
+    if not isinstance(text_section, dict):
+        return False
+    available = bool(text_section.get("available"))
+    chars = int(text_section.get("chars") or 0)
+    return available and chars >= min_chars
+
+
+def _cache_text_info(cache_key: str, digest: str, has_text: bool) -> None:
+    _TEXT_INFO_CACHE[cache_key] = (digest, has_text)
+
+
+def _lookup_text_info(cache_key: str, digest: str) -> Optional[bool]:
+    cached = _TEXT_INFO_CACHE.get(cache_key)
+    if not cached:
+        return None
+    cached_digest, cached_value = cached
+    if cached_digest == digest:
+        return cached_value
+    return None
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -348,11 +398,123 @@ def api_structure_state() -> dict[str, Any]:
     return service.get_state()
 
 
-@app.post("/api/structure/analyze")
-def api_structure_analyze() -> dict[str, Any]:
+@app.get("/api/structure/sources")
+def api_structure_sources(limit: int = 200) -> dict[str, Any]:
     service = _get_structure_service()
+    safe_limit = max(1, min(limit, 2000))
+    return service.list_sources(max_items=safe_limit)
+
+
+@app.get("/api/inbox/preview/{item_id}")
+def api_inbox_preview(item_id: str) -> StreamingResponse:
+    client = _get_onedrive_client()
     try:
-        return service.analyze()
+        for item in client.list_pdfs_in_inbox():
+            if item.item_id == item_id:
+                try:
+                    content = client.download_item(item)
+                except Exception as exc:  # pragma: no cover - network failure
+                    raise HTTPException(status_code=500, detail=f"Failed to download inbox file: {exc}") from exc
+                digest = md5(content).hexdigest()
+                cache_key = f"inbox:{item.item_id}"
+                cached = _lookup_text_info(cache_key, digest)
+                if cached is None:
+                    result = _has_meaningful_text(content)
+                    _cache_text_info(cache_key, digest, result)
+                headers = {"Content-Disposition": f'inline; filename="{item.name}"'}
+                return StreamingResponse(io.BytesIO(content), media_type="application/pdf", headers=headers)
+    except HTTPException:
+        raise
+    except Exception as exc:  # pragma: no cover - network failure
+        raise HTTPException(status_code=500, detail=f"Failed to enumerate inbox files: {exc}") from exc
+    raise HTTPException(status_code=404, detail="Inbox file not found")
+
+
+@app.get("/api/inbox/text-info/{item_id}")
+def api_inbox_text_info(item_id: str) -> dict[str, bool]:
+    client = _get_onedrive_client()
+    try:
+        for item in client.list_pdfs_in_inbox():
+            if item.item_id != item_id:
+                continue
+            try:
+                content = client.download_item(item)
+            except Exception as exc:  # pragma: no cover - network failure
+                raise HTTPException(status_code=500, detail=f"Failed to download inbox file: {exc}") from exc
+            digest = md5(content).hexdigest()
+            cache_key = f"inbox:{item.item_id}"
+            cached = _lookup_text_info(cache_key, digest)
+            if cached is None:
+                cached = _has_meaningful_text(content)
+                _cache_text_info(cache_key, digest, cached)
+            return {"hasText": cached}
+    except HTTPException:
+        raise
+    except Exception as exc:  # pragma: no cover - network failure
+        raise HTTPException(status_code=500, detail=f"Failed to enumerate inbox files: {exc}") from exc
+    raise HTTPException(status_code=404, detail="Inbox file not found")
+
+
+@app.get("/api/structure/preview")
+def api_structure_preview(relative_path: str) -> StreamingResponse:
+    normalized = (relative_path or "").strip().strip("/")
+    if not normalized:
+        raise HTTPException(status_code=400, detail="relative_path is required")
+    if ".." in normalized.split("/"):
+        raise HTTPException(status_code=400, detail="Invalid relative_path")
+    client = _get_onedrive_client()
+    try:
+        entry, content = client.download_sorted_file(normalized)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except HTTPException:
+        raise
+    except Exception as exc:  # pragma: no cover - network failure
+        raise HTTPException(status_code=500, detail=f"Failed to download sorted file: {exc}") from exc
+    cache_key = f"structure:{entry.item_id or normalized}"
+    digest = md5(content).hexdigest()
+    cached = _lookup_text_info(cache_key, digest)
+    if cached is None:
+        cached = _has_meaningful_text(content)
+        _cache_text_info(cache_key, digest, cached)
+    filename = entry.name if getattr(entry, "name", None) else Path(normalized).name
+    headers = {"Content-Disposition": f'inline; filename="{filename}"'}
+    return StreamingResponse(io.BytesIO(content), media_type="application/pdf", headers=headers)
+
+
+@app.get("/api/structure/text-info")
+def api_structure_text_info(relative_path: str) -> dict[str, bool]:
+    normalized = (relative_path or "").strip().strip("/")
+    if not normalized:
+        raise HTTPException(status_code=400, detail="relative_path is required")
+    if ".." in normalized.split("/"):
+        raise HTTPException(status_code=400, detail="Invalid relative_path")
+    client = _get_onedrive_client()
+    try:
+        entry, content = client.download_sorted_file(normalized)
+    except RuntimeError as exc:
+        raise HTTPException(status_code=404, detail=str(exc)) from exc
+    except HTTPException:
+        raise
+    except Exception as exc:  # pragma: no cover - network failure
+        raise HTTPException(status_code=500, detail=f"Failed to download sorted file: {exc}") from exc
+    cache_key = f"structure:{entry.item_id or normalized}"
+    digest = md5(content).hexdigest()
+    cached = _lookup_text_info(cache_key, digest)
+    if cached is None:
+        cached = _has_meaningful_text(content)
+        _cache_text_info(cache_key, digest, cached)
+    return {"hasText": cached}
+
+
+@app.post("/api/structure/analyze")
+def api_structure_analyze(request: StructureAnalyzeRequest | None = Body(default=None)) -> dict[str, Any]:
+    service = _get_structure_service()
+    include_paths: Optional[set[str]] = None
+    if request and request.relative_paths:
+        include_paths = {path for path in request.relative_paths if path}
+    try:
+        return service.analyze(include_paths)
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except StructureServiceError as exc:
@@ -455,15 +617,85 @@ async def api_ingest_upload(file: UploadFile = File(...)) -> dict[str, Any]:
     if not content:
         raise HTTPException(status_code=400, detail="Uploaded file is empty")
 
+    inspection = inspect_pdf_content(content)
+
     client = _get_onedrive_client()
     try:
-        client.upload_pdf_to_inbox(filename, content)
+        upload_info = client.upload_pdf_to_inbox(filename, content)
     except HTTPException:
         raise
     except Exception as exc:  # pragma: no cover - network errors
         raise HTTPException(status_code=500, detail=f"Failed to upload PDF: {exc}") from exc
 
-    return {"status": "ok", "filename": filename}
+    drive_item: Optional[DriveItem] = None
+    if isinstance(upload_info, dict):
+        try:
+            drive_item = OneDriveClient.drive_item_from_payload(upload_info)
+        except Exception:
+            drive_item = None
+
+    recommended_strategy = "text" if inspection.get("text", {}).get("available") else "image"
+
+    return {
+        "status": "ok",
+        "filename": filename,
+        "analysis": inspection,
+        "recommendedStrategy": recommended_strategy,
+        "item": {
+            "itemId": (drive_item.item_id if drive_item else None),
+            "driveId": (drive_item.drive_id if drive_item else None),
+            "name": (drive_item.name if drive_item else filename),
+            "downloadUrl": (drive_item.download_url if drive_item else None),
+            "webUrl": (drive_item.web_url if drive_item else None),
+        },
+    }
+
+
+@app.post("/api/ingest/process")
+def api_ingest_process(request: IngestProcessRequest) -> dict[str, Any]:
+    settings = load_settings()
+    pipeline = Pipeline(settings)
+    state = pipeline._state
+    drive_item = DriveItem(
+        item_id=request.item_id,
+        drive_id=request.drive_id,
+        name=request.name,
+        download_url=request.download_url,
+        web_url=request.web_url,
+    )
+
+    progress: list[str] = []
+
+    def _progress(stage: str) -> None:
+        progress.append(stage)
+
+    try:
+        metadata = pipeline._process_item(
+            drive_item,
+            progress_callback=_progress,
+            metadata_strategy=request.mode,
+        )
+        state.record_success(
+            item_id=drive_item.item_id,
+            filename=drive_item.name,
+            model=settings.ollama.model,
+            metadata=metadata,
+        )
+        return {
+            "status": "ok",
+            "itemId": drive_item.item_id,
+            "mode": request.mode,
+            "metadata": metadata,
+            "progress": progress,
+        }
+    except Exception as exc:
+        state.record_failure(
+            item_id=drive_item.item_id,
+            filename=drive_item.name,
+            model=settings.ollama.model,
+            error=str(exc),
+        )
+        raise HTTPException(status_code=500, detail=f"Processing failed: {exc}") from exc
 
 
 @app.post("/api/ingest/mass-scan")

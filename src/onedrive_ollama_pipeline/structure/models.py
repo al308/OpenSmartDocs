@@ -94,6 +94,7 @@ class StructureSource:
         year = self.document_year()
         doc_type = str(self.metadata.get("document_type") or "").lower()
         doc_type_ascii = doc_type.encode("ascii", "ignore").decode()
+        folder: Optional[str] = None
 
         def append_year(base: str, allow_year: bool = True) -> str:
             if allow_year and year:
@@ -101,26 +102,28 @@ class StructureSource:
             return base
 
         if keywords & constants.TAX_KEYWORDS or "tax" in doc_type or "steuer" in doc_type:
-            return append_year("Finance/Taxes")
-        if keywords & constants.INSURANCE_KEYWORDS or "insurance" in doc_type or "versicherung" in doc_type:
-            return append_year("Finance/Insurance")
-        if keywords & constants.INCOME_KEYWORDS or "payroll" in doc_type or "income" in doc_type or "gehalt" in doc_type:
-            return append_year("Finance/Income")
-        if keywords & constants.UTILITY_KEYWORDS or "utility" in doc_type or "energy" in doc_type or "rechnung" in doc_type:
-            return append_year("Finance/Utilities")
-        if "government" in doc_type or "burgeramt" in doc_type_ascii or "official" in doc_type:
-            return append_year("Civic/Government")
-        if "consent" in doc_type or "agreement" in doc_type:
-            return append_year("Finance/Agreements")
-        if "medical" in doc_type or "patient" in doc_type or "health" in doc_type:
-            return append_year("Health/Records")
-        if keywords & constants.MANUAL_KEYWORDS:
-            return append_year("Manuals/Reference", allow_year=False)
-        if keywords & constants.REFERENCE_KEYWORDS or doc_type.startswith("reference"):
-            return append_year("Reference/Correspondence")
-        if year:
-            return append_year("General")
-        return "General"
+            folder = append_year("Finance/Taxes")
+        elif keywords & constants.INSURANCE_KEYWORDS or "insurance" in doc_type or "versicherung" in doc_type:
+            folder = append_year("Finance/Insurance")
+        elif keywords & constants.INCOME_KEYWORDS or "payroll" in doc_type or "income" in doc_type or "gehalt" in doc_type:
+            folder = append_year("Finance/Income")
+        elif keywords & constants.UTILITY_KEYWORDS or "utility" in doc_type or "energy" in doc_type or "rechnung" in doc_type:
+            folder = append_year("Finance/Utilities")
+        elif "government" in doc_type or "burgeramt" in doc_type_ascii or "official" in doc_type:
+            folder = append_year("Civic/Government")
+        elif "consent" in doc_type or "agreement" in doc_type:
+            folder = append_year("Finance/Agreements")
+        elif "medical" in doc_type or "patient" in doc_type or "health" in doc_type:
+            folder = append_year("Health/Records")
+        elif keywords & constants.MANUAL_KEYWORDS:
+            folder = append_year("Manuals/Reference", allow_year=False)
+        elif keywords & constants.REFERENCE_KEYWORDS or doc_type.startswith("reference"):
+            folder = append_year("Reference/Correspondence")
+        elif year:
+            folder = append_year("General")
+        else:
+            folder = "General"
+        return self._localize_folder_path(folder)
 
     def _sanitize_title(self, value: str) -> str:
         cleaned = re.sub(r"[^\w\s-]", " ", value).strip()
@@ -141,6 +144,7 @@ class StructureSource:
             if actor_clean and actor_clean.lower() not in title.lower():
                 title = f"{title} - {actor_clean}" if title else actor_clean
         extension = self.extension or Path(self.name).suffix
+        title = self._localize_title(title)
         return f"{prefix} {title}{extension}"
 
     def default_justification(self, folder: str) -> str:
@@ -372,12 +376,60 @@ class StructureSource:
         cleaned = re.sub(r"\s+", " ", cleaned)
         return cleaned
 
+    def _localize_folder_path(self, folder: Optional[str]) -> Optional[str]:
+        if not folder:
+            return folder
+        locale = (self.locale or "").lower()
+        if not locale.startswith("de"):
+            return folder
+        segment_map = {
+            "Finance": "Finanzen",
+            "Taxes": "Steuern",
+            "Insurance": "Versicherungen",
+            "Income": "Einkommen",
+            "Utilities": "Versorgung",
+            "Agreements": "Vereinbarungen",
+            "Civic": "Verwaltung",
+            "Government": "Behoerden",
+            "Health": "Gesundheit",
+            "Records": "Unterlagen",
+            "Manuals": "Handbuecher",
+            "Reference": "Referenz",
+            "Correspondence": "Korrespondenz",
+            "General": "Allgemein",
+        }
+        localized_segments = [
+            segment_map.get(segment, segment) for segment in folder.split("/")
+        ]
+        return "/".join(localized_segments)
+
+    def _localize_title(self, title: str) -> str:
+        locale = (self.locale or "").lower()
+        if not locale.startswith("de"):
+            return title
+        replacements = {
+            "Invoice": "Rechnung",
+            "Receipt": "Beleg",
+            "Statement": "Abrechnung",
+            "Consent": "Einverstaendnis",
+            "Agreement": "Vereinbarung",
+            "Letter": "Schreiben",
+            "Report": "Bericht",
+            "Notice": "Mitteilung",
+            "Certificate": "Bescheinigung",
+        }
+        for english, german in replacements.items():
+            pattern = re.compile(rf"\b{english}\b", re.IGNORECASE)
+            title = pattern.sub(german, title)
+        return title
+
 
 @dataclass
 class StructureContext:
     sources: list[StructureSource]
     existing_folders: set[str]
     folder_examples: Dict[str, list[str]]
+    locale: str = "auto"
 
     @property
     def snapshot(self) -> Dict[str, Any]:
@@ -402,6 +454,7 @@ class StructureContext:
             ],
             "existing_folders": sorted(self.existing_folders),
             "folder_examples": self.folder_examples,
+            "configuration": {"locale": self.locale},
         }
 
 

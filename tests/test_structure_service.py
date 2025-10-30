@@ -54,7 +54,7 @@ class StubOnedrive:
         self.deleted: list[str] = []
         self.moves: list[tuple[str, str, Optional[str]]] = []
 
-    def walk_sorted_tree(self):
+    def walk_sorted_tree(self, **_kwargs):
         return list(self.tree)
 
     def ensure_sorted_subfolder(self, path: str):
@@ -100,7 +100,7 @@ class FailingOnedrive(StubOnedrive):
         super().__init__(tree=[])
         self._error = error
 
-    def walk_sorted_tree(self):
+    def walk_sorted_tree(self, **_kwargs):
         raise self._error
 
 
@@ -221,7 +221,7 @@ def test_structure_source_actor_included_in_title():
     target = source.suggested_target_name()
     assert target.startswith("2025-02-01")
     assert "ACME" in target
-    assert "Invoice" in target
+    assert "Rechnung" in target
 
 
 def test_structure_source_government_folder():
@@ -235,7 +235,7 @@ def test_structure_source_government_folder():
         },
         locale="de",
     )
-    assert source.suggested_folder() == "Civic/Government/2024"
+    assert source.suggested_folder() == "Verwaltung/Behoerden/2024"
 
 
 def test_analyze_without_sources(tmp_path):
@@ -256,6 +256,46 @@ def test_analyze_without_sources(tmp_path):
     state = cache.read()
     assert state["plan"]["summary"] == plan["summary"]
     assert service._ollama.calls == []  # LLM not invoked when there are no sources
+
+
+def test_analyze_with_selected_sources(tmp_path):
+    settings = build_settings(tmp_path)
+    cache = StructureCache(tmp_path / "structure_state.json")
+    onedrive = StubOnedrive(
+        tree=[
+            SortedTreeEntry(
+                path="alpha.pdf",
+                item_id="file-alpha",
+                drive_id=None,
+                name="alpha.pdf",
+                is_folder=False,
+                download_url="https://download/alpha",
+                web_url=None,
+                base_path="https://graph.microsoft.com/v1.0/me/drive",
+            ),
+            SortedTreeEntry(
+                path="beta.pdf",
+                item_id="file-beta",
+                drive_id=None,
+                name="beta.pdf",
+                is_folder=False,
+                download_url="https://download/beta",
+                web_url=None,
+                base_path="https://graph.microsoft.com/v1.0/me/drive",
+            ),
+        ]
+    )
+    ollama = StubOllama({"summary": "ok", "operations": []})
+    service = StructureService(
+        settings=settings,
+        cache=cache,
+        onedrive_client=onedrive,
+        ollama_client=ollama,
+    )
+
+    plan = service.analyze(include_relative_paths={"beta.pdf"})
+    paths = [source["relative_path"] for source in plan["context"]["sources"]]
+    assert paths == ["beta.pdf"]
 
 
 def test_apply_and_revert_flow(tmp_path):

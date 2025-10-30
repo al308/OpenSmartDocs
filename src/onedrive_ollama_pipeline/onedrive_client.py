@@ -129,6 +129,47 @@ class OneDriveClient:
         token = self._get_access_token()
         return {"Authorization": f"Bearer {token}"}
 
+    # ---------- Helpers for id normalization ----------
+
+    @staticmethod
+    def _extract_drive_id(base_path: str) -> Optional[str]:
+        marker = "/drives/"
+        if marker in base_path:
+            return base_path.split(marker, 1)[1].split("/", 1)[0]
+        return None
+
+    @staticmethod
+    def _normalize_item_id_for_base(base_path: str, item_id: str) -> str:
+        """
+        For /drives/{driveId}/items/{id}, Graph expects the drive-scoped id (the part right of '!').
+        For /me/drive/items/{id} or /users/{uid}/drive/items/{id}, the full id is fine.
+        """
+        if "/drives/" in base_path and "!" in item_id:
+            return item_id.split("!", 1)[1]
+        return item_id
+
+    @staticmethod
+    def drive_item_from_payload(payload: dict[str, Any]) -> DriveItem:
+        """Convert a Graph DriveItem payload into a DriveItem dataclass."""
+        remote = payload.get("remoteItem") or {}
+        parent_ref = payload.get("parentReference") or remote.get("parentReference") or {}
+        drive_id = payload.get("parentReference", {}).get("driveId") or remote.get("driveId") or parent_ref.get("driveId")
+        download_url = payload.get("@microsoft.graph.downloadUrl") or remote.get("@microsoft.graph.downloadUrl")
+        web_url = payload.get("webUrl") or remote.get("webUrl")
+        name = payload.get("name") or remote.get("name") or parent_ref.get("name") or ""
+        item_id = payload.get("id") or remote.get("id") or parent_ref.get("id")
+        if not item_id:
+            raise ValueError("Drive item payload missing id")
+        return DriveItem(
+            item_id=item_id,
+            drive_id=drive_id,
+            name=name or item_id,
+            download_url=download_url,
+            web_url=web_url,
+        )
+
+    # ---------- Listing & Downloading ----------
+
     def list_pdfs_in_inbox(self) -> Iterable[DriveItem]:
         """Yield PDF files stored inside the configured inbox folder."""
         folder = self._normalize_folder_path(self._settings.inbox_folder)
@@ -206,11 +247,15 @@ class OneDriveClient:
             return response.content
 
         headers = self._auth_headers()
-        candidate_urls = []
+        candidate_urls: list[str] = []
         default_base = self._drive_base_path()
+        # Default (same drive context as client)
         candidate_urls.append(f"{default_base}/items/{item.item_id}/content")
+        # If we have a drive id, ensure we use the normalized (drive-scoped) id
         if item.drive_id:
-            candidate_urls.append(f"{self.GRAPH_BASE_URL}/drives/{item.drive_id}/items/{item.item_id}/content")
+            base = f"{self.GRAPH_BASE_URL}/drives/{item.drive_id}"
+            normalized_id = self._normalize_item_id_for_base(base, item.item_id)
+            candidate_urls.append(f"{base}/items/{normalized_id}/content")
 
         last_error: Optional[requests.HTTPError] = None
         for url in candidate_urls:
@@ -228,6 +273,8 @@ class OneDriveClient:
         if last_error:
             raise last_error
         raise RuntimeError(f"No download URL resolved for item {item.item_id}")
+
+    # ---------- Uploading ----------
 
     def upload_pdf_to_inbox(self, filename: str, content: bytes) -> dict:
         """Upload a PDF into the configured inbox folder, replacing any existing file."""
@@ -250,19 +297,71 @@ class OneDriveClient:
         response.raise_for_status()
         return response.json()
 
+    # ---------- Moving (Inbox -> Sorted, and within Sorted) ----------
+
     def move_to_sorted(self, item: DriveItem) -> dict:
         """Move an existing item to the sorted folder using the Graph API."""
-        folder = self._normalize_folder_path(self._settings.sorted_folder)
         headers = self._auth_headers()
-        base_path, folder_id = self._resolve_folder_reference(folder, headers)
-        url = f"{base_path}/items/{item.item_id}"
-        if folder_id == "root":
-            payload = {"parentReference": {"path": "/drive/root"}}
+
+        # Resolve destination (sorted root or subfolder per config)
+        folder = self._normalize_folder_path(self._settings.sorted_folder)
+        dest_base, dest_folder_id = self._resolve_folder_reference(folder, headers)
+
+        # Build parentReference payload for destination
+        payload: dict[str, Any] = {}
+        if dest_folder_id == "root":
+            payload["parentReference"] = {"path": "/drive/root"}
         else:
-            payload = {"parentReference": {"id": folder_id}}
-        response = self._session.patch(url, headers=headers, data=json.dumps(payload))
+            dest_drive_id = self._extract_drive_id(dest_base)
+            if dest_drive_id:
+                payload["parentReference"] = {"driveId": dest_drive_id, "id": dest_folder_id}
+            else:
+                payload["parentReference"] = {"id": dest_folder_id}
+
+        # Address the SOURCE item correctly based on its drive
+        if item.drive_id:
+            item_base = f"{self.GRAPH_BASE_URL}/drives/{item.drive_id}"
+        else:
+            item_base = self._drive_base_path()
+
+        normalized_id = self._normalize_item_id_for_base(item_base, item.item_id)
+        url = f"{item_base}/items/{normalized_id}"
+        response = self._session.patch(url, headers=headers, json=payload)
         response.raise_for_status()
         return response.json()
+
+    def move_sorted_item(self, source_relative_path: str, target_folder: str, target_name: Optional[str] = None) -> dict:
+        """Move an existing item under the sorted root into a different subfolder."""
+        source_entry = self.resolve_sorted_item(source_relative_path)
+        headers = self._auth_headers()
+
+        normalized_folder = self._normalize_relative_path(target_folder)
+        sorted_root = self._normalize_folder_path(self._settings.sorted_folder)
+        target_path = "/".join(part for part in [sorted_root, normalized_folder] if part)
+
+        dest_base, dest_folder_id = self._ensure_folder_reference(target_path, headers)
+        payload: dict[str, Any] = {}
+
+        if dest_folder_id == "root":
+            payload["parentReference"] = {"path": "/drive/root"}
+        else:
+            dest_drive_id = self._extract_drive_id(dest_base)
+            if dest_drive_id:
+                payload["parentReference"] = {"driveId": dest_drive_id, "id": dest_folder_id}
+            else:
+                payload["parentReference"] = {"id": dest_folder_id}
+
+        if target_name:
+            payload["name"] = target_name
+
+        item_base = source_entry.base_path or self._drive_base_path()
+        normalized_id = self._normalize_item_id_for_base(item_base, source_entry.item_id)
+        url = f"{item_base}/items/{normalized_id}"
+        response = self._session.patch(url, headers=headers, json=payload)
+        response.raise_for_status()
+        return response.json()
+
+    # ---------- Tree walking & resolving ----------
 
     def _ensure_folder_reference(self, folder: str, headers: dict[str, str]) -> Tuple[str, str]:
         """
@@ -352,7 +451,7 @@ class OneDriveClient:
                 current_id = match["id"]
         return current_base, current_id
 
-    def walk_sorted_tree(self) -> Iterable[SortedTreeEntry]:
+    def walk_sorted_tree(self, *, max_entries: Optional[int] = None, root_only: bool = False) -> Iterable[SortedTreeEntry]:
         """
         Yield every item (recursively) stored under the configured sorted folder.
 
@@ -363,6 +462,7 @@ class OneDriveClient:
         base_path, folder_id = self._ensure_folder_reference(folder, headers)
         stack: list[tuple[str, str, str]] = [("", folder_id, base_path)]
         select_fields = "id,name,folder,parentReference,remoteItem,file,webUrl,@microsoft.graph.downloadUrl"
+        yielded = 0
         while stack:
             current_path, current_id, current_base = stack.pop()
             if current_id == "root":
@@ -397,7 +497,12 @@ class OneDriveClient:
                         base_path=current_base,
                     )
                     yield entry
+                    yielded += 1
+                    if max_entries is not None and yielded >= max_entries:
+                        return
                     if folder_info:
+                        if root_only:
+                            continue
                         if remote:
                             remote_parent = remote.get("parentReference", {})
                             child_drive_id = remote.get("driveId") or remote_parent.get("driveId")
@@ -530,49 +635,16 @@ class OneDriveClient:
             base = f"{self.GRAPH_BASE_URL}/drives/{entry.drive_id}"
         else:
             base = entry.base_path
-        url = f"{base}/items/{entry.item_id}"
+        normalized_id = self._normalize_item_id_for_base(base, entry.item_id)
+        url = f"{base}/items/{normalized_id}"
         response = self._session.delete(url, headers=headers)
         if response.status_code == 404:
             return
         if response.status_code not in (200, 202, 204):
             response.raise_for_status()
 
-    def move_sorted_item(self, source_relative_path: str, target_folder: str, target_name: Optional[str] = None) -> dict:
-        """Move an existing item under the sorted root into a different subfolder."""
-        source_entry = self.resolve_sorted_item(source_relative_path)
-        headers = self._auth_headers()
+    # ---------- Utilities ----------
 
-        normalized_folder = self._normalize_relative_path(target_folder)
-        sorted_root = self._normalize_folder_path(self._settings.sorted_folder)
-        target_path = "/".join(part for part in [sorted_root, normalized_folder] if part)
-
-        dest_base, dest_folder_id = self._ensure_folder_reference(target_path, headers)
-        payload: dict[str, Any] = {}
-
-        if dest_folder_id == "root":
-            payload["parentReference"] = {"path": "/drive/root"}
-        else:
-            dest_drive_id = self._extract_drive_id(dest_base)
-            if dest_drive_id:
-                payload["parentReference"] = {"driveId": dest_drive_id, "id": dest_folder_id}
-            else:
-                payload["parentReference"] = {"id": dest_folder_id}
-
-        if target_name:
-            payload["name"] = target_name
-
-        item_base = source_entry.base_path or self._drive_base_path()
-        url = f"{item_base}/items/{source_entry.item_id}"
-        response = self._session.patch(url, headers=headers, data=json.dumps(payload))
-        response.raise_for_status()
-        return response.json()
-
-    @staticmethod
-    def _extract_drive_id(base_path: str) -> Optional[str]:
-        marker = "/drives/"
-        if marker in base_path:
-            return base_path.split(marker, 1)[1].split("/", 1)[0]
-        return None
     @staticmethod
     def _find_child_with_name(payload: dict, name: str) -> Optional[dict]:
         target = name.lower()

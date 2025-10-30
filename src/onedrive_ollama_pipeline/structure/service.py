@@ -4,7 +4,7 @@ from __future__ import annotations
 import logging
 import uuid
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, Iterable, Optional
 
 from ..config import PipelineSettings, load_settings
 from ..database import Database, get_database
@@ -64,9 +64,23 @@ class StructureService:
             "log": state.get("log", []),
         }
 
-    def analyze(self) -> Dict[str, Any]:
+    def list_sources(self, *, max_items: int | None = None) -> Dict[str, Any]:
+        """Return the current structure context snapshot without invoking the LLM."""
+        context = self._collect_context(limit=max_items, root_only=True)
+        snapshot = context.snapshot
+        if max_items is not None and isinstance(snapshot.get("sources"), list):
+            limit = max(1, max_items)
+            snapshot["sources"] = snapshot["sources"][:limit]
+        return snapshot
+
+    def analyze(self, include_relative_paths: Optional[Iterable[str]] = None, *, max_items: Optional[int] = None) -> Dict[str, Any]:
+        include_set: Optional[set[str]] = None
+        if include_relative_paths:
+            include_set = {self._normalized_relative(path) for path in include_relative_paths if path}
+        if include_set and max_items is None:
+            max_items = len(include_set)
         try:
-            context = self._collect_context()
+            context = self._collect_context(include_set, limit=max_items)
         except Exception as exc:
             message = f"Failed to read sorted folder: {exc}"
             LOGGER.exception("Structure context collection failed: %s", exc)
@@ -256,12 +270,27 @@ class StructureService:
     # Internal helpers                                                   #
     # ------------------------------------------------------------------ #
 
-    def _collect_context(self) -> StructureContext:
+    def _collect_context(
+        self,
+        include_relative_paths: Optional[set[str]] = None,
+        limit: Optional[int] = None,
+        root_only: bool = False,
+    ) -> StructureContext:
         metadata_lookup = self._load_metadata()
-        entries = list(self._onedrive.walk_sorted_tree())
+        walk_limit = limit if root_only else None
+        entries = self._onedrive.walk_sorted_tree(max_entries=walk_limit, root_only=root_only)
         sources: list[StructureSource] = []
         existing_folders: set[str] = set()
         folder_examples: Dict[str, list[str]] = {}
+        include_filter = None
+        if include_relative_paths:
+            include_filter = {self._normalized_relative(path) for path in include_relative_paths if path}
+        if limit is not None:
+            max_sources = max(1, limit)
+        else:
+            max_sources = constants.MAX_SOURCES_IN_PROMPT
+        if not root_only and max_sources is not None:
+            max_sources = min(max_sources, constants.MAX_SOURCES_IN_PROMPT)
 
         for entry in entries:
             if entry.is_folder:
@@ -277,6 +306,10 @@ class StructureService:
             if "/" in entry.path:
                 continue  # Only root-level files considered for now
 
+            normalized_path = self._normalized_relative(entry.path)
+            if include_filter is not None and normalized_path not in include_filter:
+                continue
+
             source_id = f"SRC{len(sources) + 1:03d}"
             metadata = metadata_lookup.get(entry.name) or metadata_lookup.get(entry.name.lower()) or {}
             sources.append(
@@ -289,10 +322,20 @@ class StructureService:
                 )
             )
 
+            if max_sources is not None and len(sources) >= max_sources:
+                break
+
+        if root_only and limit is not None:
+            trimmed_sources = sources[:limit]
+        elif root_only:
+            trimmed_sources = list(sources)
+        else:
+            trimmed_sources = sources[: constants.MAX_SOURCES_IN_PROMPT]
         return StructureContext(
-            sources=sources[: constants.MAX_SOURCES_IN_PROMPT],
+            sources=trimmed_sources,
             existing_folders=existing_folders,
             folder_examples=folder_examples,
+            locale=self._structure_locale,
         )
 
     def _load_metadata(self) -> Dict[str, Any]:

@@ -17,6 +17,24 @@ def build_prompt(context: StructureContext) -> str:
     folders = sorted(context.existing_folders)
     type_counts: dict[str, int] = {}
     year_counts: dict[str, int] = {}
+    locale = context.locale or "auto"
+    locale_lower = locale.lower()
+    guidelines_text = STRUCTURE_GUIDELINES_TEXT
+    language_directives: list[str] = []
+    if locale_lower.startswith("de"):
+        language_directives.extend(
+            [
+                "- Use German wording for folder names and filenames (e.g., 'Finanzen/Steuern', 'Handbuecher/Referenz').",
+                "- Translate common document terms such as 'Invoice', 'Statement', or 'Report' into German equivalents within titles.",
+                "- If hints or existing folders appear in English, translate them into the German structure instead of copying them verbatim.",
+            ]
+        )
+    elif locale_lower not in ("", "auto"):
+        language_directives.append(
+            f"- Use {locale} for folder names and filenames, translating provided hints as needed."
+        )
+    if language_directives:
+        guidelines_text = guidelines_text.rstrip() + "\n" + "\n".join(language_directives)
 
     for src in sources:
         doc_type = src.metadata.get("document_type")
@@ -33,6 +51,7 @@ def build_prompt(context: StructureContext) -> str:
         "folder_examples": context.folder_examples,
         "required_source_ids": [src.source_id for src in sources],
         "coverage_rule": "Provide at least one copy_file operation for every source_id listed.",
+        "configuration": {"locale": locale},
     }
     sources_block = [
         {
@@ -47,6 +66,7 @@ def build_prompt(context: StructureContext) -> str:
                 "current_folder": src.folder or "/",
                 "suggested_folder": src.suggested_folder(),
                 "suggested_target_name": src.suggested_target_name(),
+                "locale": locale,
             },
         }
         for src in sources
@@ -59,7 +79,7 @@ def build_prompt(context: StructureContext) -> str:
 
     return STRUCTURE_PROMPT_TEMPLATE.format(
         schema_json=schema_json,
-        guidelines_text=STRUCTURE_GUIDELINES_TEXT,
+        guidelines_text=guidelines_text,
         summary_json=summary_json,
         existing_folders=folders_json,
         sources_json=sources_json,

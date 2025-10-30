@@ -80,17 +80,28 @@ class OllamaClient:
         encoded = base64.b64encode(image_bytes).decode("ascii")
         return f"data:image/png;base64,{encoded}"
 
-    def request_metadata(self, image_bytes: bytes) -> dict:
-        """Send the first page image to the model and return JSON metadata."""
-        payload = {
-            "role": "user",
-            "content": [
-                {"type": "text", "text": METADATA_USER_PROMPT},
+    def request_metadata(self, *, image_bytes: Optional[bytes] = None, text: Optional[str] = None) -> dict:
+        """Send PDF-derived content to the model and return JSON metadata."""
+        normalized_text = text.strip() if isinstance(text, str) else None
+        if image_bytes is None and not normalized_text:
+            raise ValueError("Provide 'image_bytes', 'text', or both.")
+
+        content: list[dict[str, Any]] = [
+            {"type": "text", "text": METADATA_USER_PROMPT},
+        ]
+        if normalized_text:
+            content.append({"type": "text", "text": normalized_text})
+        if image_bytes is not None:
+            content.append(
                 {
                     "type": "image_url",
                     "image_url": {"url": self._image_to_data_url(image_bytes)},
-                },
-            ],
+                }
+            )
+
+        payload = {
+            "role": "user",
+            "content": content,
         }
         messages = [
             {"role": "system", "content": self._settings.metadata_prompt},
@@ -98,8 +109,15 @@ class OllamaClient:
         ]
         payload_preview = json.dumps({"messages": messages}, ensure_ascii=False)
         approx_tokens = max(1, (len(payload_preview) + 3) // 4)
+        input_tags = []
+        if normalized_text:
+            input_tags.append("text")
+        if image_bytes is not None:
+            input_tags.append("image")
+        descriptor = "+".join(input_tags) if input_tags else "unknown"
         _LOGGER.info(
-            "Metadata prompt size: %d chars (≈%d tokens)",
+            "Metadata prompt size (%s): %d chars (≈%d tokens)",
+            descriptor,
             len(payload_preview),
             approx_tokens,
         )

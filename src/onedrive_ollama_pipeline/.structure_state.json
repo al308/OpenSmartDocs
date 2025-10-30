@@ -1,1494 +1,1418 @@
 {
   "log": [
     {
-      "timestamp": "2025-10-29T10:28:36.499729+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_22_40 PM.pdf' to '2025/General/2025-10-27 Dein neues Girokonto bei der DKB.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:28:39.601818+00:00",
-      "level": "info",
-      "message": "Ensured folder '2023/Taxes' exists."
-    },
-    {
-      "timestamp": "2025-10-29T10:28:46.379465+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_24_36 PM.pdf' to '2023/Taxes/2023-01-01 Ihre Jahressteuerbescheinigung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:28:52.489369+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_25_34 PM.pdf' to '2025/General/2025-10-27 Mikrobiologischer LABORBERICHT.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:28:55.402071+00:00",
-      "level": "info",
-      "message": "Ensured folder '2020/General' exists."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:01.606291+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_26_43 PM.pdf' to '2020/General/2020-09-22 Endbefundbericht Stoffwechsellabor.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:07.794067+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_32_14 PM.pdf' to '2023/Taxes/2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:09.749792+00:00",
-      "level": "info",
-      "message": "Ensured folder '2025/Insurance' exists."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:15.562056+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_33_44 PM.pdf' to '2025/Insurance/2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:18.178271+00:00",
-      "level": "info",
-      "message": "Ensured folder '2022/Insurance' exists."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:22.618604+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_34_20 PM.pdf' to '2022/Insurance/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:24.653767+00:00",
-      "level": "info",
-      "message": "Ensured folder '2022/Utilities' exists."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:30.175328+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_35_43 PM.pdf' to '2022/Utilities/2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:33.075653+00:00",
-      "level": "info",
-      "message": "Ensured folder '2023/Insurance' exists."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:42.565972+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_38_06 PM.pdf' to '2023/Insurance/2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:49.736008+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_42_48 PM.pdf' to '2025/Insurance/2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:52.703622+00:00",
-      "level": "info",
-      "message": "Ensured folder '2022/Finance' exists."
-    },
-    {
-      "timestamp": "2025-10-29T10:29:59.668535+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_36_47 AM.pdf' to '2022/Finance/2022-06-14 Rechnung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:30:05.539179+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_37_28 AM.pdf' to '2025/Insurance/2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:30:07.758250+00:00",
-      "level": "info",
-      "message": "Ensured folder '2025/Utilities' exists."
-    },
-    {
-      "timestamp": "2025-10-29T10:30:15.661997+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_38_46 AM.pdf' to '2025/Utilities/2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:30:22.359744+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_39_34 AM.pdf' to '2024/Taxes/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:30:28.301790+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_40_02 AM.pdf' to '2022/Insurance/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T10:30:34.689716+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_40_29 AM.pdf' to '2025/Insurance/2025-10-28 ACHTUNG NEUE BANKVERBINDUNG.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T14:48:34.895480+00:00",
-      "level": "info",
-      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
-    },
-    {
-      "timestamp": "2025-10-29T14:48:40.078680+00:00",
-      "level": "warning",
-      "message": "Generated fallback operations for 51 source(s)."
-    },
-    {
-      "timestamp": "2025-10-29T14:48:51.090406+00:00",
-      "level": "warning",
-      "message": "Sanity check warning: Most operations are valid, but several issues exist: duplicate filenames in same folders may cause overwrites, some folder categories (like 'Finance') are inconsistently used, and one folder ('2002/Income') appears misclassified for a pension letter that should likely be under 'Insurance'."
-    },
-    {
-      "timestamp": "2025-10-29T14:48:51.100560+00:00",
-      "level": "info",
-      "message": "Generated structure plan with 72 operation(s)."
-    },
-    {
-      "timestamp": "2025-10-29T15:06:35.842776+00:00",
-      "level": "info",
-      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
-    },
-    {
-      "timestamp": "2025-10-29T15:06:38.470992+00:00",
-      "level": "warning",
-      "message": "Generated fallback operations for 51 source(s)."
-    },
-    {
-      "timestamp": "2025-10-29T15:06:50.410084+00:00",
-      "level": "warning",
-      "message": "Sanity check warning: Most operations are valid, but there are duplicate filenames in the same folder and potential misclassifications. Some files may overwrite each other during copy."
-    },
-    {
-      "timestamp": "2025-10-29T15:06:50.412275+00:00",
-      "level": "info",
-      "message": "Generated structure plan with 72 operation(s)."
-    },
-    {
-      "timestamp": "2025-10-29T15:07:32.626352+00:00",
-      "level": "info",
-      "message": "Ensured folder 'General/2021' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:07:38.368875+00:00",
-      "level": "info",
-      "message": "Copied 'Corona-PCR-21.10.2021.pdf' to 'General/2021/2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:07:41.012716+00:00",
-      "level": "info",
-      "message": "Ensured folder 'General/2022' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:07:47.894909+00:00",
-      "level": "info",
-      "message": "Copied 'HOLLAND-BSN Kopie.pdf' to 'General/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:07:53.831870+00:00",
-      "level": "info",
-      "message": "Copied 'HOLLAND-BSN.pdf' to 'General/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:07:56.596332+00:00",
-      "level": "info",
-      "message": "Ensured folder 'General/2025' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:00.334735+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-23 02_25_32 PM.pdf' to 'General/2025/2025-10-23 Product Safety and Regulatory Information.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:05.346065+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-23 08_27_09 PM.pdf' to 'General/2025/2025-10-23 MacBook Keyboard and Dock Screenshot.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:10.299308+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-23 09_28_25 PM.pdf' to 'General/2025/2025-10-23 Green Castle Wall with Stone Texture.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:14.230471+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Taxes/2024' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:19.944003+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:25.960712+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:31.413678+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 07_28_54 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:36.635903+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 07_32_33 AM.pdf' to 'General/2025/2025-10-24 Blank Lined Notebook Page.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:42.006346+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 08_45_18 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:46.773424+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 09_57_24 AM.pdf' to 'General/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:51.381972+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 11_16_56 AM.pdf' to 'General/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:08:54.555604+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Insurance/2024' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:07.246562+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_13_56 PM.pdf' to 'Finance/Insurance/2024/2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:11.451934+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Household/Utilities/2024' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:16.675111+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_14_37 PM.pdf' to 'Household/Utilities/2024/2024-11-30 Rechnung R2411093.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:19.110520+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Taxes/2025' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:26.506236+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_15_11 PM.pdf' to 'Finance/Taxes/2025/2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:36.123474+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_18_11 PM.pdf' to 'General/2025/2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:38.793861+00:00",
-      "level": "info",
-      "message": "Ensured folder 'General/2011' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:48.340479+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_20_12 PM.pdf' to 'General/2011/2011-02-04 Bauantragsplanung - Kellergeschoss.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:52.976793+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_21_12 PM.pdf' to 'General/2025/2025-10-27 Ansicht von innen Maßstab 1 15.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:09:59.378837+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_22_40 PM.pdf' to 'General/2025/2025-10-27 Dein neues Girokonto bei der DKB.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:02.770158+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Taxes/2023' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:09.850057+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_24_36 PM.pdf' to 'Finance/Taxes/2023/2023-01-01 Ihre Jahressteuerbescheinigung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:15.940509+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_25_34 PM.pdf' to 'General/2025/2025-10-27 Mikrobiologischer LABORBERICHT.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:18.432265+00:00",
-      "level": "info",
-      "message": "Ensured folder 'General/2020' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:24.139435+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_26_43 PM.pdf' to 'General/2020/2020-09-22 Endbefundbericht Stoffwechsellabor.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:31.151715+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_32_14 PM.pdf' to 'Finance/Taxes/2023/2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:33.898289+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Insurance/2025' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:40.440607+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_33_44 PM.pdf' to 'Finance/Insurance/2025/2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:42.890975+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Insurance/2022' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:48.304105+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_34_20 PM.pdf' to 'Finance/Insurance/2022/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:50.845403+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Household/Utilities/2022' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:10:57.523337+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_35_43 PM.pdf' to 'Household/Utilities/2022/2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:00.247320+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Insurance/2023' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:12.280207+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_38_06 PM.pdf' to 'Finance/Insurance/2023/2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:21.270026+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_42_48 PM.pdf' to 'Finance/Insurance/2025/2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:26.292584+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Reference/Documents/2022' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:32.071865+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_36_47 AM.pdf' to 'Reference/Documents/2022/2022-06-14 Rechnung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:38.992248+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_37_28 AM.pdf' to 'Finance/Insurance/2025/2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:41.787879+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Household/Utilities/2025' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:49.867255+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_38_46 AM.pdf' to 'Household/Utilities/2025/2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:11:57.751312+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_39_34 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:04.506012+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_40_02 AM.pdf' to 'Finance/Insurance/2022/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:11.481496+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-28 09_40_29 AM.pdf' to 'Finance/Insurance/2025/2025-10-28 ACHTUNG NEUE BANKVERBINDUNG.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:14.789705+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Insurance/2026' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:21.201976+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 02_00_42 PM.pdf' to 'Finance/Insurance/2026/2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:24.395575+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Insurance/2050' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:31.529263+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_31_30 AM.pdf' to 'Finance/Insurance/2050/2050-06-01 Ihre Renteninformation.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:35.538222+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Income/2002' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:43.043953+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_32_05 AM.pdf' to 'Finance/Income/2002/2002-08-01 Renteninformation 2025.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:45.982722+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Reference/Documents/2025' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:12:57.098464+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_33_22 AM.pdf' to 'Reference/Documents/2025/2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:02.652453+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_34_17 AM.pdf' to 'Reference/Documents/2025/2025-10-29 Einverständniserklärung des Anlagenbetreibers.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:08.510990+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_35_18 AM.pdf' to 'Reference/Documents/2025/2025-08-20 Rechnung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:11.466008+00:00",
-      "level": "info",
-      "message": "Ensured folder 'Finance/Insurance/2021' exists."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:17.653800+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_37_20 AM.pdf' to 'Finance/Insurance/2021/2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:24.237101+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_37_45 AM.pdf' to 'Finance/Insurance/2022/2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:29.503653+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_38_22 AM.pdf' to 'General/2022/2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:35.238014+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_38_47 AM.pdf' to 'Household/Utilities/2025/2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:41.022481+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_39_31 AM.pdf' to 'Household/Utilities/2025/2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:48.857936+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_40_29 AM.pdf' to 'Reference/Documents/2022/2022-07-28 Anmeldebestätigung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:13:57.925590+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_41_18 AM.pdf' to 'Reference/Documents/2022/2022-07-28 Anmeldebestätigung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:14:05.719145+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_41_54 AM.pdf' to 'Reference/Documents/2022/2022-07-28 Anmeldebestätigung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:14:14.759766+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_42_28 AM.pdf' to 'Reference/Documents/2022/2022-07-28 Anmeldebestätigung.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:14:22.375289+00:00",
-      "level": "info",
-      "message": "Copied 'Scan vom 2025-10-29 11_43_07 AM.pdf' to 'Finance/Insurance/2025/2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm.pdf'."
-    },
-    {
-      "timestamp": "2025-10-29T15:14:27.133210+00:00",
-      "level": "error",
-      "message": "Failed to move 'Corona-PCR-21.10.2021.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s6f672a6b1a9f43bab31116a35df5c69f"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:29.936926+00:00",
-      "level": "error",
-      "message": "Failed to move 'HOLLAND-BSN Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s4f0b67e98bda4cb5aaa8d8f4a0f08084"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:32.265466+00:00",
-      "level": "error",
-      "message": "Failed to move 'HOLLAND-BSN.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s7de39c5ac8a24347a7ad57c22d0ea2da"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:34.648467+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-23 02_25_32 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s63902efd7d514dfcb9b822d8b3fa0d7c"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:37.020989+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-23 08_27_09 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9c282fa07c684e22ac6e86660c4f64b6"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:40.646686+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-23 09_28_25 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s75125510116f4b6fba166348096b0f1b"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:43.267366+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se829e04d106646a98e34eca50910b044"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:45.911517+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s5ed64000b3df4869af6b5859acf1c932"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:48.369353+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 07_28_54 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s388fd6d7415e49c997c58494e8a0145b"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:50.724372+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 07_32_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa70591baaf1d4b38becd05c3742726a1"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:53.291235+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 08_45_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sdcd1f63bec0f433d9f467ea304688988"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:55.635479+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 09_57_24 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s30b0dbaa6a8e41f79dc671929c57ad92"
-    },
-    {
-      "timestamp": "2025-10-29T15:14:58.170174+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 11_16_56 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sb5cf871160ab47a18ff264cbc4ab2e44"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:00.222035+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_13_56 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se06717b8e37540a48b39161120f231d7"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:02.154196+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_14_37 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa1692041613d4685a9ef4c6f74bb587a"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:04.512720+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_15_11 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s124e47be52624273bc44a8ed34387aff"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:06.699391+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_18_11 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s1dcad8ffa02746fbb0fa123b9c3b04ae"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:08.747139+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_20_12 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se0762b20e96f4479baae5cb6ecc4561b"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:10.823135+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_21_12 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9a893d99e6c949189b14f74827676944"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:12.842329+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_22_40 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s13d43b15826e44fd81c1c15a84b60dbb"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:15.144850+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_24_36 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa487cf434cb448eb8d219a60fd76450d"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:17.451130+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_25_34 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s787e3c0308c9484796ab565226eda140"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:20.023858+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_26_43 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sae78c10d003648ee9de1dbb2e23f0e46"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:21.957862+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_32_14 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sded26c55d7684ce9b2722e96ecda1653"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:24.881003+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_33_44 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s1734426a0ddf485ca500eb12ceb14f58"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:27.486720+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_34_20 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sbc1e2d4273614732bafcb4821f74cc0a"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:29.637859+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_35_43 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s4375025f23f24a3b97ae76228bb03c64"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:32.096524+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_38_06 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9dc0487fc45f452da600384cf974c02a"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:34.448802+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_42_48 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s3750069c217e40109c654d9ae5f0009b"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:36.853888+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-28 09_36_47 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s24d1224c32b944448c4fe29955241116"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:39.237983+00:00",
-      "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-28 09_37_28 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!saa772f6bfd5a4258925de83939729601"
-    },
-    {
-      "timestamp": "2025-10-29T15:15:42.130053+00:00",
+      "timestamp": "2025-10-29T16:56:31.694217+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-28 09_38_46 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sae000b7f325546e9ae27443bc9d74b5f"
     },
     {
-      "timestamp": "2025-10-29T15:15:44.691975+00:00",
+      "timestamp": "2025-10-29T16:56:39.936676+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_39_34 AM.pdf' to 'Finanzen/Steuern/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:56:42.460333+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-28 09_39_34 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s53b06608f49b41a4a812ee0fb9fe04de"
     },
     {
-      "timestamp": "2025-10-29T15:15:46.838419+00:00",
+      "timestamp": "2025-10-29T16:56:48.947786+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_40_02 AM.pdf' to 'Finanzen/Versicherungen/2022/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:56:50.838433+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-28 09_40_02 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sbcafce66d97f40e88ee4183109301d40"
     },
     {
-      "timestamp": "2025-10-29T15:15:48.776713+00:00",
+      "timestamp": "2025-10-29T16:56:56.646462+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_40_29 AM.pdf' to 'Finanzen/Versicherungen/2025/2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:56:59.355591+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-28 09_40_29 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9dbf8b9716f34eb08fcff15f35aa053f"
     },
     {
-      "timestamp": "2025-10-29T15:15:51.275616+00:00",
+      "timestamp": "2025-10-29T16:57:02.505155+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2026' exists."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:08.813868+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 02_00_42 PM.pdf' to 'Finanzen/Versicherungen/2026/2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:11.088319+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 02_00_42 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!saa12e7509c284f7cb14f42c31c69ec55"
     },
     {
-      "timestamp": "2025-10-29T15:15:53.716695+00:00",
+      "timestamp": "2025-10-29T16:57:14.488840+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2050' exists."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:21.306167+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_31_30 AM.pdf' to 'Finanzen/Versicherungen/2050/2050-06-01 Ihre Renteninformation - Deutsche.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:23.534461+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_31_30 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa28628f6415a49f88ee54bf6cf08caa3"
     },
     {
-      "timestamp": "2025-10-29T15:15:56.260228+00:00",
+      "timestamp": "2025-10-29T16:57:27.826551+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Einkommen/2002' exists."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:35.289240+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_32_05 AM.pdf' to 'Finanzen/Einkommen/2002/2002-08-01 Renteninformation 2025 - 01 08 2002.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:38.327577+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_32_05 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sb64f767bd53f4b0bb07d1d2a33943cc4"
     },
     {
-      "timestamp": "2025-10-29T15:15:59.182141+00:00",
+      "timestamp": "2025-10-29T16:57:41.480050+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Referenz/Korrespondenz/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:48.163527+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_33_22 AM.pdf' to 'Referenz/Korrespondenz/2025/2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:50.339467+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_33_22 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s0579cdefa301403b914669199ebc2a56"
     },
     {
-      "timestamp": "2025-10-29T15:16:01.792723+00:00",
+      "timestamp": "2025-10-29T16:57:56.607776+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_34_17 AM.pdf' to 'Finanzen/Vereinbarungen/2025/2025-10-29 Einverständniserklärung des Anlagenbetreibers - evd.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:57:59.200134+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_34_17 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s70a41aaa9cc54ed5a0e20147441d9b54"
     },
     {
-      "timestamp": "2025-10-29T15:16:04.556063+00:00",
+      "timestamp": "2025-10-29T16:58:06.067418+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_35_18 AM.pdf' to 'Referenz/Korrespondenz/2025/2025-08-20 Rechnung - Janning.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:58:08.500691+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_35_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s4308a4ae91b54089b28e4f242a0b83b0"
     },
     {
-      "timestamp": "2025-10-29T15:16:07.034999+00:00",
+      "timestamp": "2025-10-29T16:58:12.145147+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2021' exists."
+    },
+    {
+      "timestamp": "2025-10-29T16:58:17.542449+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_37_20 AM.pdf' to 'Finanzen/Versicherungen/2021/2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - January.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:58:19.594702+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_37_20 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sd3e06ee09d244441816a728ce17b6042"
     },
     {
-      "timestamp": "2025-10-29T15:16:11.007749+00:00",
+      "timestamp": "2025-10-29T16:58:25.924505+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_37_45 AM.pdf' to 'Finanzen/Versicherungen/2022/2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - 01 10 2021.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:58:29.091093+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_37_45 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa00c6f675aa94af4bb763da6ca726067"
     },
     {
-      "timestamp": "2025-10-29T15:16:14.442845+00:00",
+      "timestamp": "2025-10-29T16:58:31.861312+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Allgemein/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T16:58:36.730728+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_38_22 AM.pdf' to 'Allgemein/2022/2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:58:39.375787+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_38_22 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sc873c51691324bb787e52a29210a605a"
     },
     {
-      "timestamp": "2025-10-29T15:16:16.699174+00:00",
+      "timestamp": "2025-10-29T16:58:45.705153+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_38_47 AM.pdf' to 'Finanzen/Versorgung/2025/2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:58:47.983920+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_38_47 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sf1eeb368257b445fb18e1d0a43193bca"
     },
     {
-      "timestamp": "2025-10-29T15:16:18.994818+00:00",
+      "timestamp": "2025-10-29T16:58:54.044694+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_39_31 AM.pdf' to 'Finanzen/Versorgung/2025/2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:58:56.152538+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_39_31 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se9dccbd6dc03462d857a4620522fae57"
     },
     {
-      "timestamp": "2025-10-29T15:16:21.549009+00:00",
+      "timestamp": "2025-10-29T16:59:03.200558+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_40_29 AM.pdf' to 'Referenz/Korrespondenz/2022/2022-07-28 Anmeldebestätigung - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:59:05.588867+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_40_29 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s58a5c27d3b2447a7af648fd47f333e59"
     },
     {
-      "timestamp": "2025-10-29T15:16:24.173568+00:00",
+      "timestamp": "2025-10-29T16:59:13.335198+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_41_18 AM.pdf' to 'Referenz/Korrespondenz/2022/2022-07-28 Anmeldebestätigung - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:59:15.637258+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_41_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sfae331edd6fb4c4f84e21e72c97ae8c9"
     },
     {
-      "timestamp": "2025-10-29T15:16:26.880573+00:00",
+      "timestamp": "2025-10-29T16:59:23.732326+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_41_54 AM.pdf' to 'Verwaltung/Behoerden/2022/2022-07-28 Anmeldebestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:59:25.698451+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_41_54 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa92ddd21d737462c885765ee3b3e550f"
     },
     {
-      "timestamp": "2025-10-29T15:16:29.105273+00:00",
+      "timestamp": "2025-10-29T16:59:34.673617+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_42_28 AM.pdf' to 'Referenz/Korrespondenz/2022/2022-07-28 Anmeldebestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:59:37.259742+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_42_28 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s35d96b2137ba4d40a9893bfd3656df6d"
     },
     {
-      "timestamp": "2025-10-29T15:16:31.389615+00:00",
+      "timestamp": "2025-10-29T16:59:43.544302+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_43_07 AM.pdf' to 'Finanzen/Versicherungen/2025/2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm - BARMER.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T16:59:46.221213+00:00",
       "level": "error",
       "message": "Failed to move 'Scan vom 2025-10-29 11_43_07 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!seeb454fc0c144850915dd7d07c0ccf66"
     },
     {
-      "timestamp": "2025-10-29T15:38:35.922215+00:00",
+      "timestamp": "2025-10-29T20:17:26.940114+00:00",
       "level": "info",
       "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
     },
     {
-      "timestamp": "2025-10-29T15:38:39.783066+00:00",
+      "timestamp": "2025-10-29T20:17:30.939272+00:00",
       "level": "warning",
       "message": "Generated fallback operations for 51 source(s)."
     },
     {
-      "timestamp": "2025-10-29T15:39:13.391649+00:00",
+      "timestamp": "2025-10-29T20:17:36.912775+00:00",
       "level": "warning",
-      "message": "Sanity check warning: Most operations are valid, but there are duplicate filenames in the same folder and potential misclassifications. Some files are copied to folders that may not logically match their content (e.g., marketing letters in Insurance). Also, multiple files share identical names in the same folder, which may cause overwrites or confusion."
+      "message": "Sanity check warning: Most operations are valid, but there are duplicate filenames in the same folder and potential misclassification of some documents. Also, folder 'Referenz' was not mentioned in the summary but is used in operations."
     },
     {
-      "timestamp": "2025-10-29T15:39:13.395314+00:00",
+      "timestamp": "2025-10-29T20:17:36.919291+00:00",
       "level": "info",
       "message": "Generated structure plan with 75 operation(s)."
     },
     {
-      "timestamp": "2025-10-29T15:40:16.366679+00:00",
+      "timestamp": "2025-10-29T20:18:43.644653+00:00",
       "level": "info",
-      "message": "Ensured folder 'Health/Records/2021' exists."
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
     },
     {
-      "timestamp": "2025-10-29T15:40:21.386287+00:00",
-      "level": "info",
-      "message": "Copied 'Corona-PCR-21.10.2021.pdf' to 'Health/Records/2021/2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf'."
+      "timestamp": "2025-10-29T20:18:45.895326+00:00",
+      "level": "warning",
+      "message": "Generated fallback operations for 51 source(s)."
     },
     {
-      "timestamp": "2025-10-29T15:40:26.421792+00:00",
+      "timestamp": "2025-10-29T20:18:52.510184+00:00",
+      "level": "warning",
+      "message": "Sanity check warning: Most operations are valid, but there are duplicate file copies to the same target folder with identical filenames, which may cause overwrites or conflicts. Also, some folders like 'Referenz/Korrespondenz' were not mentioned in the summary but are used in operations."
+    },
+    {
+      "timestamp": "2025-10-29T20:18:52.515966+00:00",
+      "level": "info",
+      "message": "Generated structure plan with 75 operation(s)."
+    },
+    {
+      "timestamp": "2025-10-29T20:21:53.087506+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Gesundheit/Unterlagen/2021' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:21:58.137640+00:00",
+      "level": "info",
+      "message": "Copied 'Corona-PCR-21.10.2021.pdf' to 'Gesundheit/Unterlagen/2021/2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:22:03.464749+00:00",
       "level": "error",
-      "message": "Failed to move 'Corona-PCR-21.10.2021.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s6f672a6b1a9f43bab31116a35df5c69f"
+      "message": "Failed to move 'Corona-PCR-21.10.2021.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s6f672a6b1a9f43bab31116a35df5c69f"
     },
     {
-      "timestamp": "2025-10-29T15:40:30.433397+00:00",
+      "timestamp": "2025-10-29T20:22:06.781952+00:00",
       "level": "info",
-      "message": "Ensured folder 'Civic/Government/2022' exists."
+      "message": "Ensured folder 'Verwaltung/Behoerden/2022' exists."
     },
     {
-      "timestamp": "2025-10-29T15:40:37.153852+00:00",
+      "timestamp": "2025-10-29T20:22:12.986545+00:00",
       "level": "info",
-      "message": "Copied 'HOLLAND-BSN Kopie.pdf' to 'Civic/Government/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf'."
+      "message": "Copied 'HOLLAND-BSN Kopie.pdf' to 'Verwaltung/Behoerden/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:40:39.119514+00:00",
+      "timestamp": "2025-10-29T20:22:15.054520+00:00",
       "level": "error",
-      "message": "Failed to move 'HOLLAND-BSN Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s4f0b67e98bda4cb5aaa8d8f4a0f08084"
+      "message": "Failed to move 'HOLLAND-BSN Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s4f0b67e98bda4cb5aaa8d8f4a0f08084"
     },
     {
-      "timestamp": "2025-10-29T15:40:52.717538+00:00",
+      "timestamp": "2025-10-29T20:22:23.534464+00:00",
       "level": "info",
-      "message": "Copied 'HOLLAND-BSN.pdf' to 'Civic/Government/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf'."
+      "message": "Copied 'HOLLAND-BSN.pdf' to 'Verwaltung/Behoerden/2022/2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:40:54.783576+00:00",
+      "timestamp": "2025-10-29T20:22:25.421598+00:00",
       "level": "error",
-      "message": "Failed to move 'HOLLAND-BSN.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s7de39c5ac8a24347a7ad57c22d0ea2da"
+      "message": "Failed to move 'HOLLAND-BSN.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s7de39c5ac8a24347a7ad57c22d0ea2da"
     },
     {
-      "timestamp": "2025-10-29T15:40:57.965344+00:00",
+      "timestamp": "2025-10-29T20:22:28.605777+00:00",
       "level": "info",
-      "message": "Ensured folder 'General/2025' exists."
+      "message": "Ensured folder 'Allgemein/2025' exists."
     },
     {
-      "timestamp": "2025-10-29T15:41:03.267056+00:00",
+      "timestamp": "2025-10-29T20:22:33.271184+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-23 02_25_32 PM.pdf' to 'General/2025/2025-10-23 Product Safety and Regulatory Information - small.pdf'."
+      "message": "Copied 'Scan vom 2025-10-23 02_25_32 PM.pdf' to 'Allgemein/2025/2025-10-23 Product Safety and Regulatory Information - small.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:41:06.085123+00:00",
+      "timestamp": "2025-10-29T20:22:35.292974+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-23 02_25_32 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s63902efd7d514dfcb9b822d8b3fa0d7c"
+      "message": "Failed to move 'Scan vom 2025-10-23 02_25_32 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s63902efd7d514dfcb9b822d8b3fa0d7c"
     },
     {
-      "timestamp": "2025-10-29T15:41:12.245500+00:00",
+      "timestamp": "2025-10-29T20:22:40.846828+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-23 08_27_09 PM.pdf' to 'General/2025/2025-10-23 MacBook Keyboard and Dock Screenshot.pdf'."
+      "message": "Copied 'Scan vom 2025-10-23 08_27_09 PM.pdf' to 'Allgemein/2025/2025-10-23 MacBook Keyboard and Dock Screenshot.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:41:15.000080+00:00",
+      "timestamp": "2025-10-29T20:22:43.500605+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-23 08_27_09 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s9c282fa07c684e22ac6e86660c4f64b6"
+      "message": "Failed to move 'Scan vom 2025-10-23 08_27_09 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s9c282fa07c684e22ac6e86660c4f64b6"
     },
     {
-      "timestamp": "2025-10-29T15:41:20.164272+00:00",
+      "timestamp": "2025-10-29T20:22:48.247569+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-23 09_28_25 PM.pdf' to 'General/2025/2025-10-23 Green Castle Wall with Stone Texture.pdf'."
+      "message": "Copied 'Scan vom 2025-10-23 09_28_25 PM.pdf' to 'Allgemein/2025/2025-10-23 Green Castle Wall with Stone Texture.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:41:23.763087+00:00",
+      "timestamp": "2025-10-29T20:22:50.653757+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-23 09_28_25 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s75125510116f4b6fba166348096b0f1b"
+      "message": "Failed to move 'Scan vom 2025-10-23 09_28_25 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s75125510116f4b6fba166348096b0f1b"
     },
     {
-      "timestamp": "2025-10-29T15:41:28.525356+00:00",
+      "timestamp": "2025-10-29T20:22:54.816900+00:00",
       "level": "info",
-      "message": "Ensured folder 'Finance/Taxes/2024' exists."
+      "message": "Ensured folder 'Finanzen/Steuern/2024' exists."
     },
     {
-      "timestamp": "2025-10-29T15:41:33.856499+00:00",
+      "timestamp": "2025-10-29T20:22:59.737120+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to 'Finanzen/Steuern/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:41:36.035535+00:00",
+      "timestamp": "2025-10-29T20:23:01.920421+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se829e04d106646a98e34eca50910b044"
+      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM Kopie.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/se829e04d106646a98e34eca50910b044"
     },
     {
-      "timestamp": "2025-10-29T15:41:41.668517+00:00",
+      "timestamp": "2025-10-29T20:23:08.427428+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+      "message": "Copied 'Scan vom 2025-10-24 07_24_33 AM.pdf' to 'Finanzen/Steuern/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:41:43.824664+00:00",
+      "timestamp": "2025-10-29T20:23:10.648292+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s5ed64000b3df4869af6b5859acf1c932"
+      "message": "Failed to move 'Scan vom 2025-10-24 07_24_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s5ed64000b3df4869af6b5859acf1c932"
     },
     {
-      "timestamp": "2025-10-29T15:41:49.653826+00:00",
+      "timestamp": "2025-10-29T20:23:16.072612+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 07_28_54 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+      "message": "Copied 'Scan vom 2025-10-24 07_28_54 AM.pdf' to 'Finanzen/Steuern/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:41:51.759440+00:00",
+      "timestamp": "2025-10-29T20:23:18.206683+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 07_28_54 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s388fd6d7415e49c997c58494e8a0145b"
+      "message": "Failed to move 'Scan vom 2025-10-24 07_28_54 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s388fd6d7415e49c997c58494e8a0145b"
     },
     {
-      "timestamp": "2025-10-29T15:41:56.863533+00:00",
+      "timestamp": "2025-10-29T20:23:22.708783+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 07_32_33 AM.pdf' to 'General/2025/2025-10-24 Blank Lined Notebook Page.pdf'."
+      "message": "Copied 'Scan vom 2025-10-24 07_32_33 AM.pdf' to 'Allgemein/2025/2025-10-24 Blank Lined Notebook Page.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:41:59.420882+00:00",
+      "timestamp": "2025-10-29T20:23:24.808259+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 07_32_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa70591baaf1d4b38becd05c3742726a1"
+      "message": "Failed to move 'Scan vom 2025-10-24 07_32_33 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sa70591baaf1d4b38becd05c3742726a1"
     },
     {
-      "timestamp": "2025-10-29T15:42:15.561001+00:00",
+      "timestamp": "2025-10-29T20:23:29.540761+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 08_45_18 AM.pdf' to 'Finance/Taxes/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+      "message": "Copied 'Scan vom 2025-10-24 08_45_18 AM.pdf' to 'Finanzen/Steuern/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:42:18.019646+00:00",
+      "timestamp": "2025-10-29T20:23:31.503115+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 08_45_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sdcd1f63bec0f433d9f467ea304688988"
+      "message": "Failed to move 'Scan vom 2025-10-24 08_45_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sdcd1f63bec0f433d9f467ea304688988"
     },
     {
-      "timestamp": "2025-10-29T15:42:22.100553+00:00",
+      "timestamp": "2025-10-29T20:23:34.533104+00:00",
       "level": "info",
-      "message": "Ensured folder 'Finance/Agreements/2025' exists."
+      "message": "Ensured folder 'Finanzen/Vereinbarungen/2025' exists."
     },
     {
-      "timestamp": "2025-10-29T15:42:28.668169+00:00",
+      "timestamp": "2025-10-29T20:23:39.820005+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 09_57_24 AM.pdf' to 'Finance/Agreements/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf'."
+      "message": "Copied 'Scan vom 2025-10-24 09_57_24 AM.pdf' to 'Finanzen/Vereinbarungen/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:42:32.373765+00:00",
+      "timestamp": "2025-10-29T20:23:42.153845+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 09_57_24 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s30b0dbaa6a8e41f79dc671929c57ad92"
+      "message": "Failed to move 'Scan vom 2025-10-24 09_57_24 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s30b0dbaa6a8e41f79dc671929c57ad92"
     },
     {
-      "timestamp": "2025-10-29T15:42:38.371005+00:00",
+      "timestamp": "2025-10-29T20:23:47.194310+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-24 11_16_56 AM.pdf' to 'Finance/Agreements/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf'."
+      "message": "Copied 'Scan vom 2025-10-24 11_16_56 AM.pdf' to 'Finanzen/Vereinbarungen/2025/2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:42:40.973200+00:00",
+      "timestamp": "2025-10-29T20:23:49.733878+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-24 11_16_56 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sb5cf871160ab47a18ff264cbc4ab2e44"
+      "message": "Failed to move 'Scan vom 2025-10-24 11_16_56 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sb5cf871160ab47a18ff264cbc4ab2e44"
     },
     {
-      "timestamp": "2025-10-29T15:42:45.098467+00:00",
+      "timestamp": "2025-10-29T20:23:53.337234+00:00",
       "level": "info",
-      "message": "Ensured folder 'Finance/Insurance/2024' exists."
+      "message": "Ensured folder 'Finanzen/Versicherungen/2024' exists."
     },
     {
-      "timestamp": "2025-10-29T15:42:57.539348+00:00",
+      "timestamp": "2025-10-29T20:24:06.228115+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_13_56 PM.pdf' to 'Finance/Insurance/2024/2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf'."
+      "message": "Copied 'Scan vom 2025-10-27 04_13_56 PM.pdf' to 'Finanzen/Versicherungen/2024/2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:43:01.044520+00:00",
+      "timestamp": "2025-10-29T20:24:08.746534+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_13_56 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!se06717b8e37540a48b39161120f231d7"
+      "message": "Failed to move 'Scan vom 2025-10-27 04_13_56 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/se06717b8e37540a48b39161120f231d7"
     },
     {
-      "timestamp": "2025-10-29T15:43:04.663184+00:00",
+      "timestamp": "2025-10-29T20:24:11.752733+00:00",
       "level": "info",
-      "message": "Ensured folder 'Finance/Utilities/2024' exists."
+      "message": "Ensured folder 'Finanzen/Versorgung/2024' exists."
     },
     {
-      "timestamp": "2025-10-29T15:43:10.769941+00:00",
+      "timestamp": "2025-10-29T20:24:18.323160+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_14_37 PM.pdf' to 'Finance/Utilities/2024/2024-11-30 Rechnung R2411093 - Jan.pdf'."
+      "message": "Copied 'Scan vom 2025-10-27 04_14_37 PM.pdf' to 'Finanzen/Versorgung/2024/2024-11-30 Rechnung R2411093 - Jan.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:43:13.171379+00:00",
+      "timestamp": "2025-10-29T20:24:20.349025+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_14_37 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!sa1692041613d4685a9ef4c6f74bb587a"
+      "message": "Failed to move 'Scan vom 2025-10-27 04_14_37 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sa1692041613d4685a9ef4c6f74bb587a"
     },
     {
-      "timestamp": "2025-10-29T15:43:16.496525+00:00",
+      "timestamp": "2025-10-29T20:24:23.107208+00:00",
       "level": "info",
-      "message": "Ensured folder 'Finance/Taxes/2025' exists."
+      "message": "Ensured folder 'Finanzen/Steuern/2025' exists."
     },
     {
-      "timestamp": "2025-10-29T15:43:24.068305+00:00",
+      "timestamp": "2025-10-29T20:24:29.485092+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_15_11 PM.pdf' to 'Finance/Taxes/2025/2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf'."
+      "message": "Copied 'Scan vom 2025-10-27 04_15_11 PM.pdf' to 'Finanzen/Steuern/2025/2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf'."
     },
     {
-      "timestamp": "2025-10-29T15:43:26.960253+00:00",
+      "timestamp": "2025-10-29T20:24:31.851127+00:00",
       "level": "error",
-      "message": "Failed to move 'Scan vom 2025-10-27 04_15_11 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/4E6D58DA4E105FB3!s124e47be52624273bc44a8ed34387aff"
+      "message": "Failed to move 'Scan vom 2025-10-27 04_15_11 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s124e47be52624273bc44a8ed34387aff"
     },
     {
-      "timestamp": "2025-10-29T15:43:36.459274+00:00",
+      "timestamp": "2025-10-29T20:24:41.466818+00:00",
       "level": "info",
-      "message": "Copied 'Scan vom 2025-10-27 04_18_11 PM.pdf' to 'General/2025/2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf'."
+      "message": "Copied 'Scan vom 2025-10-27 04_18_11 PM.pdf' to 'Allgemein/2025/2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:24:43.693452+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_18_11 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s1dcad8ffa02746fbb0fa123b9c3b04ae"
+    },
+    {
+      "timestamp": "2025-10-29T20:24:46.851077+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Allgemein/2011' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:24:56.212844+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_20_12 PM.pdf' to 'Allgemein/2011/2011-02-04 Bauantragsplanung - Kellergeschoss.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:24:58.544258+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_20_12 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/se0762b20e96f4479baae5cb6ecc4561b"
+    },
+    {
+      "timestamp": "2025-10-29T20:25:02.902182+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_21_12 PM.pdf' to 'Allgemein/2025/2025-10-27 Ansicht von innen Maßstab 1 15.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:25:05.152403+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_21_12 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s9a893d99e6c949189b14f74827676944"
+    },
+    {
+      "timestamp": "2025-10-29T20:25:10.855915+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_22_40 PM.pdf' to 'Allgemein/2025/2025-10-27 Dein neues Girokonto bei der DKB.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:25:13.156956+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_22_40 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s13d43b15826e44fd81c1c15a84b60dbb"
+    },
+    {
+      "timestamp": "2025-10-29T20:25:16.832751+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Steuern/2023' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:25:24.104025+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_24_36 PM.pdf' to 'Finanzen/Steuern/2023/2023-01-01 Ihre Jahressteuerbescheinigung - January.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:25:26.465317+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_24_36 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sa487cf434cb448eb8d219a60fd76450d"
+    },
+    {
+      "timestamp": "2025-10-29T20:25:29.058479+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Gesundheit/Unterlagen/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:25:35.126074+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_25_34 PM.pdf' to 'Gesundheit/Unterlagen/2025/2025-10-27 Mikrobiologischer LABORBERICHT.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:25:37.686076+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_25_34 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s787e3c0308c9484796ab565226eda140"
+    },
+    {
+      "timestamp": "2025-10-29T20:25:41.064346+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Gesundheit/Unterlagen/2020' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:25:48.130081+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_26_43 PM.pdf' to 'Gesundheit/Unterlagen/2020/2020-09-22 Endbefundbericht Stoffwechsellabor - UniversitätsKlinikum.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:25:50.790298+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_26_43 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sae78c10d003648ee9de1dbb2e23f0e46"
+    },
+    {
+      "timestamp": "2025-10-29T20:25:58.078392+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_32_14 PM.pdf' to 'Finanzen/Steuern/2023/2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:00.043065+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_32_14 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sded26c55d7684ce9b2722e96ecda1653"
+    },
+    {
+      "timestamp": "2025-10-29T20:26:03.797208+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:10.065602+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_33_44 PM.pdf' to 'Finanzen/Versicherungen/2025/2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:12.428384+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_33_44 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s1734426a0ddf485ca500eb12ceb14f58"
+    },
+    {
+      "timestamp": "2025-10-29T20:26:15.269694+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:20.080345+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_34_20 PM.pdf' to 'Finanzen/Versicherungen/2022/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:22.242377+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_34_20 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sbc1e2d4273614732bafcb4821f74cc0a"
+    },
+    {
+      "timestamp": "2025-10-29T20:26:25.653494+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versorgung/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:33.393485+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_35_43 PM.pdf' to 'Finanzen/Versorgung/2022/2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:36.903975+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_35_43 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s4375025f23f24a3b97ae76228bb03c64"
+    },
+    {
+      "timestamp": "2025-10-29T20:26:40.322593+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2023' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:51.823770+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_38_06 PM.pdf' to 'Finanzen/Versicherungen/2023/2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik - ALTE.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:26:53.947854+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_38_06 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s9dc0487fc45f452da600384cf974c02a"
+    },
+    {
+      "timestamp": "2025-10-29T20:27:00.846518+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-27 04_42_48 PM.pdf' to 'Finanzen/Versicherungen/2025/2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:27:02.845448+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-27 04_42_48 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s3750069c217e40109c654d9ae5f0009b"
+    },
+    {
+      "timestamp": "2025-10-29T20:27:10.205681+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Referenz/Korrespondenz/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:27:15.377765+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_36_47 AM.pdf' to 'Referenz/Korrespondenz/2022/2022-06-14 Rechnung - Neubeck.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:27:17.544109+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_36_47 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s24d1224c32b944448c4fe29955241116"
+    },
+    {
+      "timestamp": "2025-10-29T20:27:24.284859+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_37_28 AM.pdf' to 'Finanzen/Versicherungen/2025/2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393 - HUK-COBURG.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:27:29.541124+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_37_28 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/saa772f6bfd5a4258925de83939729601"
+    },
+    {
+      "timestamp": "2025-10-29T20:27:34.521593+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versorgung/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:27:44.149388+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_38_46 AM.pdf' to 'Finanzen/Versorgung/2025/2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte - Telekom.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:27:46.135147+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_38_46 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sae000b7f325546e9ae27443bc9d74b5f"
+    },
+    {
+      "timestamp": "2025-10-29T20:27:53.737845+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_39_34 AM.pdf' to 'Finanzen/Steuern/2024/2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:27:56.394316+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_39_34 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s53b06608f49b41a4a812ee0fb9fe04de"
+    },
+    {
+      "timestamp": "2025-10-29T20:28:01.004622+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_40_02 AM.pdf' to 'Finanzen/Versicherungen/2022/2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:28:03.650212+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_40_02 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sbcafce66d97f40e88ee4183109301d40"
+    },
+    {
+      "timestamp": "2025-10-29T20:28:10.262533+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-28 09_40_29 AM.pdf' to 'Finanzen/Versicherungen/2025/2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:28:12.462185+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-28 09_40_29 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s9dbf8b9716f34eb08fcff15f35aa053f"
+    },
+    {
+      "timestamp": "2025-10-29T20:28:15.757833+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2026' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:28:21.476849+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 02_00_42 PM.pdf' to 'Finanzen/Versicherungen/2026/2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:28:24.152011+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 02_00_42 PM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/saa12e7509c284f7cb14f42c31c69ec55"
+    },
+    {
+      "timestamp": "2025-10-29T20:28:26.707907+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2050' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:28:32.916057+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_31_30 AM.pdf' to 'Finanzen/Versicherungen/2050/2050-06-01 Ihre Renteninformation - Deutsche.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:28:34.934689+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_31_30 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sa28628f6415a49f88ee54bf6cf08caa3"
+    },
+    {
+      "timestamp": "2025-10-29T20:28:38.321819+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Einkommen/2002' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:28:44.363514+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_32_05 AM.pdf' to 'Finanzen/Einkommen/2002/2002-08-01 Renteninformation 2025 - 01 08 2002.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:28:46.670417+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_32_05 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sb64f767bd53f4b0bb07d1d2a33943cc4"
+    },
+    {
+      "timestamp": "2025-10-29T20:28:49.613478+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Referenz/Korrespondenz/2025' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:00.626160+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_33_22 AM.pdf' to 'Referenz/Korrespondenz/2025/2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:03.150429+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_33_22 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s0579cdefa301403b914669199ebc2a56"
+    },
+    {
+      "timestamp": "2025-10-29T20:29:08.530116+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_34_17 AM.pdf' to 'Finanzen/Vereinbarungen/2025/2025-10-29 Einverständniserklärung des Anlagenbetreibers - evd.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:10.505692+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_34_17 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s70a41aaa9cc54ed5a0e20147441d9b54"
+    },
+    {
+      "timestamp": "2025-10-29T20:29:16.503815+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_35_18 AM.pdf' to 'Referenz/Korrespondenz/2025/2025-08-20 Rechnung - Janning.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:18.742166+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_35_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s4308a4ae91b54089b28e4f242a0b83b0"
+    },
+    {
+      "timestamp": "2025-10-29T20:29:21.841096+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Finanzen/Versicherungen/2021' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:27.781183+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_37_20 AM.pdf' to 'Finanzen/Versicherungen/2021/2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - January.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:29.821738+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_37_20 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sd3e06ee09d244441816a728ce17b6042"
+    },
+    {
+      "timestamp": "2025-10-29T20:29:35.152709+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_37_45 AM.pdf' to 'Finanzen/Versicherungen/2022/2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - 01 10 2021.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:37.131158+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_37_45 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sa00c6f675aa94af4bb763da6ca726067"
+    },
+    {
+      "timestamp": "2025-10-29T20:29:39.313754+00:00",
+      "level": "info",
+      "message": "Ensured folder 'Allgemein/2022' exists."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:44.054728+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_38_22 AM.pdf' to 'Allgemein/2022/2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:46.424002+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_38_22 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sc873c51691324bb787e52a29210a605a"
+    },
+    {
+      "timestamp": "2025-10-29T20:29:51.573313+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_38_47 AM.pdf' to 'Finanzen/Versorgung/2025/2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:29:53.614475+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_38_47 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sf1eeb368257b445fb18e1d0a43193bca"
+    },
+    {
+      "timestamp": "2025-10-29T20:29:58.499064+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_39_31 AM.pdf' to 'Finanzen/Versorgung/2025/2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:30:00.579777+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_39_31 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/se9dccbd6dc03462d857a4620522fae57"
+    },
+    {
+      "timestamp": "2025-10-29T20:30:07.507881+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_40_29 AM.pdf' to 'Referenz/Korrespondenz/2022/2022-07-28 Anmeldebestätigung - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:30:09.799455+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_40_29 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s58a5c27d3b2447a7af648fd47f333e59"
+    },
+    {
+      "timestamp": "2025-10-29T20:30:18.059923+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_41_18 AM.pdf' to 'Referenz/Korrespondenz/2022/2022-07-28 Anmeldebestätigung - the.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:30:20.876424+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_41_18 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sfae331edd6fb4c4f84e21e72c97ae8c9"
+    },
+    {
+      "timestamp": "2025-10-29T20:30:28.608617+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_41_54 AM.pdf' to 'Verwaltung/Behoerden/2022/2022-07-28 Anmeldebestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:30:30.958920+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_41_54 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/sa92ddd21d737462c885765ee3b3e550f"
+    },
+    {
+      "timestamp": "2025-10-29T20:30:42.737120+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_42_28 AM.pdf' to 'Referenz/Korrespondenz/2022/2022-07-28 Anmeldebestätigung.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:30:45.352322+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_42_28 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/s35d96b2137ba4d40a9893bfd3656df6d"
+    },
+    {
+      "timestamp": "2025-10-29T20:30:51.322328+00:00",
+      "level": "info",
+      "message": "Copied 'Scan vom 2025-10-29 11_43_07 AM.pdf' to 'Finanzen/Versicherungen/2025/2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm - BARMER.pdf'."
+    },
+    {
+      "timestamp": "2025-10-29T20:30:53.989535+00:00",
+      "level": "error",
+      "message": "Failed to move 'Scan vom 2025-10-29 11_43_07 AM.pdf' to '_done': 400 Client Error: Bad Request for url: https://graph.microsoft.com/v1.0/drives/4E6D58DA4E105FB3/items/seeb454fc0c144850915dd7d07c0ccf66"
+    },
+    {
+      "timestamp": "2025-10-29T21:24:50.352399+00:00",
+      "level": "info",
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
+    },
+    {
+      "timestamp": "2025-10-29T21:24:54.008465+00:00",
+      "level": "warning",
+      "message": "Generated fallback operations for 52 source(s)."
+    },
+    {
+      "timestamp": "2025-10-29T21:25:01.385606+00:00",
+      "level": "warning",
+      "message": "Sanity check warning: Most operations are valid, but there are duplicate file copies to the same target folder with identical names, which may cause overwrites or conflicts. Also, one folder creation is redundant as it already exists."
+    },
+    {
+      "timestamp": "2025-10-29T21:25:01.392200+00:00",
+      "level": "info",
+      "message": "Generated structure plan with 53 operation(s)."
+    },
+    {
+      "timestamp": "2025-10-30T05:50:31.316726+00:00",
+      "level": "info",
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
+    },
+    {
+      "timestamp": "2025-10-30T05:51:44.396152+00:00",
+      "level": "warning",
+      "message": "Attempted to repair structure plan output."
+    },
+    {
+      "timestamp": "2025-10-30T05:51:44.397726+00:00",
+      "level": "error",
+      "message": "Model returned empty response (model=qwen3-vl:235b-cloud endpoint=http://localhost:11434/v1)."
+    },
+    {
+      "timestamp": "2025-10-30T05:51:44.400220+00:00",
+      "level": "error",
+      "message": "Failed to interpret structure plan: Structure model returned invalid JSON"
+    },
+    {
+      "timestamp": "2025-10-30T05:52:12.672313+00:00",
+      "level": "info",
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
+    },
+    {
+      "timestamp": "2025-10-30T05:53:18.811381+00:00",
+      "level": "warning",
+      "message": "Attempted to repair structure plan output."
+    },
+    {
+      "timestamp": "2025-10-30T05:53:18.814832+00:00",
+      "level": "error",
+      "message": "Model returned empty response (model=qwen3-vl:235b-cloud endpoint=http://localhost:11434/v1)."
+    },
+    {
+      "timestamp": "2025-10-30T05:53:18.818125+00:00",
+      "level": "error",
+      "message": "Failed to interpret structure plan: Structure model returned invalid JSON"
+    },
+    {
+      "timestamp": "2025-10-30T05:54:41.759871+00:00",
+      "level": "info",
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
+    },
+    {
+      "timestamp": "2025-10-30T05:55:47.907744+00:00",
+      "level": "warning",
+      "message": "Attempted to repair structure plan output."
+    },
+    {
+      "timestamp": "2025-10-30T05:55:47.911110+00:00",
+      "level": "error",
+      "message": "Model returned empty response (model=qwen3-vl:235b-cloud endpoint=http://localhost:11434/v1)."
+    },
+    {
+      "timestamp": "2025-10-30T05:55:47.915453+00:00",
+      "level": "error",
+      "message": "Failed to interpret structure plan: Structure model returned invalid JSON"
+    },
+    {
+      "timestamp": "2025-10-30T07:46:37.986596+00:00",
+      "level": "error",
+      "message": "Failed to interpret structure plan after repair attempts: cannot access local variable 'prompt_payload' where it is not associated with a value"
+    },
+    {
+      "timestamp": "2025-10-30T07:52:22.040924+00:00",
+      "level": "info",
+      "message": "Structure prompt preview (model qwen3-vl:235b-cloud): Respond only with JSON that matches the following JSON Schema:\n\n{\n  \"$defs\": {\n    \"StructureOperationModel\": {\n      \"properties\": {\n        \"action\": {\n          \"enum\": [\n            \"create_folder…"
+    },
+    {
+      "timestamp": "2025-10-30T07:53:21.927896+00:00",
+      "level": "warning",
+      "message": "Attempted to repair structure plan output."
+    },
+    {
+      "timestamp": "2025-10-30T07:53:21.931166+00:00",
+      "level": "error",
+      "message": "Model returned empty response (model=qwen3-vl:235b-cloud endpoint=http://localhost:11434/v1)."
+    },
+    {
+      "timestamp": "2025-10-30T07:53:21.935483+00:00",
+      "level": "error",
+      "message": "Failed to interpret structure plan: Structure model returned invalid JSON"
     }
   ],
   "plan": {
-    "plan_id": "961319ec-6f19-4d39-8cb0-a571448c5746",
-    "generated_at": "2025-10-29T15:38:39.729704+00:00",
+    "plan_id": "47456ab6-eed0-42d1-aa96-c50e9c9e8b00",
+    "generated_at": "2025-10-29T21:24:53.999372+00:00",
     "model": "qwen3-vl:235b-cloud",
-    "summary": "Organizing 51 documents into structured folders by type and year, following filing guidelines. Creating necessary category and year subfolders, renaming files with date prefixes and key actors, and ensuring every source_id is covered by at least one copy_file operation. (Sanity check: Most operations are valid, but there are duplicate filenames in the same folder and potential misclassifications. Some files are copied to folders that may not logically match their content (e.g., marketing letters in Insurance). Also, multiple files share identical names in the same folder, which may cause overwrites or confusion.)",
+    "summary": "Organizing 52 source documents into German-labeled folders by category and year, ensuring each file is renamed with a YYYY-MM-DD prefix and placed in the appropriate folder based on document type and metadata. No files are moved; only copies are made into newly created or existing folders. (Sanity check: Most operations are valid, but there are duplicate file copies to the same target folder with identical names, which may cause overwrites or conflicts. Also, one folder creation is redundant as it already exists.)",
     "operations": [
       {
         "action": "create_folder",
-        "path": "Health/Records/2021",
-        "justification": "Create folder for Medical Test Result based on heuristics."
+        "path": "Verwaltung/Behoerden/2025",
+        "justification": "Create folder for Official Notice / Fire Safety Certificate based on heuristics."
       },
       {
         "action": "copy_file",
         "source_id": "SRC001",
-        "target_folder": "Health/Records/2021",
-        "target_name": "2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf",
-        "justification": "Ensure medical test result from 2021 is filed under 'Health/Records/2021' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Civic/Government/2022",
-        "justification": "Create folder for Official Government Letter based on heuristics."
+        "target_folder": "Verwaltung/Behoerden/2025",
+        "target_name": "2025-10-25 Feuerstättenbescheid nach 14a SchfHwG.pdf",
+        "justification": "Ensure official notice / fire safety certificate from 2025 is filed under 'Verwaltung/Behoerden/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC002",
-        "target_folder": "Civic/Government/2022",
-        "target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf",
-        "justification": "Ensure official government letter from 2022 is filed under 'Civic/Government/2022' with date-prefixed name."
+        "target_folder": "Gesundheit/Unterlagen/2021",
+        "target_name": "2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf",
+        "justification": "Ensure medical test result from 2021 is filed under 'Gesundheit/Unterlagen/2021' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC003",
-        "target_folder": "Civic/Government/2022",
+        "target_folder": "Verwaltung/Behoerden/2022",
         "target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf",
-        "justification": "Ensure official letter from 2022 is filed under 'Civic/Government/2022' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "General/2025",
-        "justification": "Create folder for Product Packaging Label based on heuristics."
+        "justification": "Ensure official government letter from 2022 is filed under 'Verwaltung/Behoerden/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC004",
-        "target_folder": "General/2025",
-        "target_name": "2025-10-23 Product Safety and Regulatory Information - small.pdf",
-        "justification": "Ensure product packaging label from 2025 is filed under 'General/2025' with date-prefixed name."
+        "target_folder": "Verwaltung/Behoerden/2022",
+        "target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf",
+        "justification": "Ensure official letter from 2022 is filed under 'Verwaltung/Behoerden/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC005",
-        "target_folder": "General/2025",
-        "target_name": "2025-10-23 MacBook Keyboard and Dock Screenshot.pdf",
-        "justification": "Ensure image from 2025 is filed under 'General/2025' with date-prefixed name."
+        "target_folder": "Allgemein/2025",
+        "target_name": "2025-10-23 Product Safety and Regulatory Information - small.pdf",
+        "justification": "Ensure product packaging label from 2025 is filed under 'Allgemein/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC006",
-        "target_folder": "General/2025",
-        "target_name": "2025-10-23 Green Castle Wall with Stone Texture.pdf",
-        "justification": "Ensure image from 2025 is filed under 'General/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Taxes/2024",
-        "justification": "Create folder for Insurance Premium Invoice based on heuristics."
+        "target_folder": "Allgemein/2025",
+        "target_name": "2025-10-23 MacBook Keyboard and Dock Screenshot.pdf",
+        "justification": "Ensure image from 2025 is filed under 'Allgemein/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC007",
-        "target_folder": "Finance/Taxes/2024",
-        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
-        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+        "target_folder": "Allgemein/2025",
+        "target_name": "2025-10-23 Green Castle Wall with Stone Texture.pdf",
+        "justification": "Ensure image from 2025 is filed under 'Allgemein/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC008",
-        "target_folder": "Finance/Taxes/2024",
+        "target_folder": "Finanzen/Steuern/2024",
         "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
-        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finanzen/Steuern/2024' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC009",
-        "target_folder": "Finance/Taxes/2024",
+        "target_folder": "Finanzen/Steuern/2024",
         "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
-        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finanzen/Steuern/2024' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC010",
-        "target_folder": "General/2025",
-        "target_name": "2025-10-24 Blank Lined Notebook Page.pdf",
-        "justification": "Ensure notebook page from 2025 is filed under 'General/2025' with date-prefixed name."
+        "target_folder": "Finanzen/Steuern/2024",
+        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finanzen/Steuern/2024' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC011",
-        "target_folder": "Finance/Taxes/2024",
-        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
-        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Agreements/2025",
-        "justification": "Create folder for Consent Declaration / Agreement Form based on heuristics."
+        "target_folder": "Allgemein/2025",
+        "target_name": "2025-10-24 Blank Lined Notebook Page.pdf",
+        "justification": "Ensure notebook page from 2025 is filed under 'Allgemein/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC012",
-        "target_folder": "Finance/Agreements/2025",
-        "target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf",
-        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finance/Agreements/2025' with date-prefixed name."
+        "target_folder": "Finanzen/Steuern/2024",
+        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finanzen/Steuern/2024' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC013",
-        "target_folder": "Finance/Agreements/2025",
+        "target_folder": "Finanzen/Vereinbarungen/2025",
         "target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf",
-        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finance/Agreements/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Insurance/2024",
-        "justification": "Create folder for Insurance Policy Amendment Notice based on heuristics."
+        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finanzen/Vereinbarungen/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC014",
-        "target_folder": "Finance/Insurance/2024",
-        "target_name": "2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf",
-        "justification": "Ensure insurance policy amendment notice from 2024 is filed under 'Finance/Insurance/2024' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Utilities/2024",
-        "justification": "Create folder for Invoice based on heuristics."
+        "target_folder": "Finanzen/Vereinbarungen/2025",
+        "target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf",
+        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finanzen/Vereinbarungen/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC015",
-        "target_folder": "Finance/Utilities/2024",
-        "target_name": "2024-11-30 Rechnung R2411093 - Jan.pdf",
-        "justification": "Ensure invoice from 2024 is filed under 'Finance/Utilities/2024' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Taxes/2025",
-        "justification": "Create folder for Official Notice / Tax Assessment based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2024",
+        "target_name": "2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf",
+        "justification": "Ensure insurance policy amendment notice from 2024 is filed under 'Finanzen/Versicherungen/2024' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC016",
-        "target_folder": "Finance/Taxes/2025",
-        "target_name": "2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf",
-        "justification": "Ensure official notice / tax assessment from 2025 is filed under 'Finance/Taxes/2025' with date-prefixed name."
+        "target_folder": "Finanzen/Versorgung/2024",
+        "target_name": "2024-11-30 Rechnung R2411093 - Jan.pdf",
+        "justification": "Ensure invoice from 2024 is filed under 'Finanzen/Versorgung/2024' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC017",
-        "target_folder": "General/2025",
-        "target_name": "2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf",
-        "justification": "Ensure offer / quotation from 2025 is filed under 'General/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "General/2011",
-        "justification": "Create folder for Architectural Plan based on heuristics."
+        "target_folder": "Finanzen/Steuern/2025",
+        "target_name": "2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf",
+        "justification": "Ensure official notice / tax assessment from 2025 is filed under 'Finanzen/Steuern/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC018",
-        "target_folder": "General/2011",
-        "target_name": "2011-02-04 Bauantragsplanung - Kellergeschoss.pdf",
-        "justification": "Ensure architectural plan from 2011 is filed under 'General/2011' with date-prefixed name."
+        "target_folder": "Allgemein/2025",
+        "target_name": "2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf",
+        "justification": "Ensure offer / quotation from 2025 is filed under 'Allgemein/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC019",
-        "target_folder": "General/2025",
-        "target_name": "2025-10-27 Ansicht von innen Maßstab 1 15.pdf",
-        "justification": "Ensure architectural drawing from 2025 is filed under 'General/2025' with date-prefixed name."
+        "target_folder": "Allgemein/2011",
+        "target_name": "2011-02-04 Bauantragsplanung - Kellergeschoss.pdf",
+        "justification": "Ensure architectural plan from 2011 is filed under 'Allgemein/2011' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC020",
-        "target_folder": "General/2025",
-        "target_name": "2025-10-27 Dein neues Girokonto bei der DKB.pdf",
-        "justification": "Ensure banking welcome letter from 2025 is filed under 'General/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Taxes/2023",
-        "justification": "Create folder for Tax Certificate based on heuristics."
+        "target_folder": "Allgemein/2025",
+        "target_name": "2025-10-27 Ansicht von innen Maßstab 1 15.pdf",
+        "justification": "Ensure architectural drawing from 2025 is filed under 'Allgemein/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC021",
-        "target_folder": "Finance/Taxes/2023",
-        "target_name": "2023-01-01 Ihre Jahressteuerbescheinigung - January.pdf",
-        "justification": "Ensure tax certificate from 2023 is filed under 'Finance/Taxes/2023' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Health/Records/2025",
-        "justification": "Create folder for Medical Laboratory Report based on heuristics."
+        "target_folder": "Allgemein/2025",
+        "target_name": "2025-10-27 Dein neues Girokonto bei der DKB.pdf",
+        "justification": "Ensure banking welcome letter from 2025 is filed under 'Allgemein/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC022",
-        "target_folder": "Health/Records/2025",
-        "target_name": "2025-10-27 Mikrobiologischer LABORBERICHT.pdf",
-        "justification": "Ensure medical laboratory report from 2025 is filed under 'Health/Records/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Health/Records/2020",
-        "justification": "Create folder for Medical Laboratory Report based on heuristics."
+        "target_folder": "Finanzen/Steuern/2023",
+        "target_name": "2023-01-01 Ihre Jahressteuerbescheinigung - January.pdf",
+        "justification": "Ensure tax certificate from 2023 is filed under 'Finanzen/Steuern/2023' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC023",
-        "target_folder": "Health/Records/2020",
-        "target_name": "2020-09-22 Endbefundbericht Stoffwechsellabor - UniversitätsKlinikum.pdf",
-        "justification": "Ensure medical laboratory report from 2020 is filed under 'Health/Records/2020' with date-prefixed name."
+        "target_folder": "Gesundheit/Unterlagen/2025",
+        "target_name": "2025-10-27 Mikrobiologischer LABORBERICHT.pdf",
+        "justification": "Ensure medical laboratory report from 2025 is filed under 'Gesundheit/Unterlagen/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC024",
-        "target_folder": "Finance/Taxes/2023",
-        "target_name": "2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
-        "justification": "Ensure insurance premium invoice from 2023 is filed under 'Finance/Taxes/2023' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Insurance/2025",
-        "justification": "Create folder for Insurance Premium Adjustment Notice based on heuristics."
+        "target_folder": "Gesundheit/Unterlagen/2020",
+        "target_name": "2020-09-22 Endbefundbericht Stoffwechsellabor - UniversitätsKlinikum.pdf",
+        "justification": "Ensure medical laboratory report from 2020 is filed under 'Gesundheit/Unterlagen/2020' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC025",
-        "target_folder": "Finance/Insurance/2025",
-        "target_name": "2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung - Baloise.pdf",
-        "justification": "Ensure insurance premium adjustment notice from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Insurance/2022",
-        "justification": "Create folder for Official Letter based on heuristics."
+        "target_folder": "Finanzen/Steuern/2023",
+        "target_name": "2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2023 is filed under 'Finanzen/Steuern/2023' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC026",
-        "target_folder": "Finance/Insurance/2022",
-        "target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf",
-        "justification": "Ensure official letter from 2022 is filed under 'Finance/Insurance/2022' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Utilities/2022",
-        "justification": "Create folder for Utility Bill based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2025",
+        "target_name": "2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium adjustment notice from 2025 is filed under 'Finanzen/Versicherungen/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC027",
-        "target_folder": "Finance/Utilities/2022",
-        "target_name": "2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf",
-        "justification": "Ensure utility bill from 2022 is filed under 'Finance/Utilities/2022' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Insurance/2023",
-        "justification": "Create folder for Insurance Notification Letter based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2022",
+        "target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf",
+        "justification": "Ensure official letter from 2022 is filed under 'Finanzen/Versicherungen/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC028",
-        "target_folder": "Finance/Insurance/2023",
-        "target_name": "2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik - ALTE.pdf",
-        "justification": "Ensure insurance notification letter from 2023 is filed under 'Finance/Insurance/2023' with date-prefixed name."
+        "target_folder": "Finanzen/Versorgung/2022",
+        "target_name": "2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf",
+        "justification": "Ensure utility bill from 2022 is filed under 'Finanzen/Versorgung/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC029",
-        "target_folder": "Finance/Insurance/2025",
-        "target_name": "2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf",
-        "justification": "Ensure official letter / notification from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Reference/Correspondence/2022",
-        "justification": "Create folder for Invoice based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2023",
+        "target_name": "2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik - ALTE.pdf",
+        "justification": "Ensure insurance notification letter from 2023 is filed under 'Finanzen/Versicherungen/2023' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC030",
-        "target_folder": "Reference/Correspondence/2022",
-        "target_name": "2022-06-14 Rechnung - Neubeck.pdf",
-        "justification": "Ensure invoice from 2022 is filed under 'Reference/Correspondence/2022' with date-prefixed name."
+        "target_folder": "Finanzen/Versicherungen/2025",
+        "target_name": "2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf",
+        "justification": "Ensure official letter / notification from 2025 is filed under 'Finanzen/Versicherungen/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC031",
-        "target_folder": "Finance/Insurance/2025",
-        "target_name": "2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393 - HUK-COBURG.pdf",
-        "justification": "Ensure insurance confirmation letter from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Utilities/2025",
-        "justification": "Create folder for Customer Service Letter based on heuristics."
+        "target_folder": "Referenz/Korrespondenz/2022",
+        "target_name": "2022-06-14 Rechnung - Neubeck.pdf",
+        "justification": "Ensure invoice from 2022 is filed under 'Referenz/Korrespondenz/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC032",
-        "target_folder": "Finance/Utilities/2025",
-        "target_name": "2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte - Telekom.pdf",
-        "justification": "Ensure customer service letter from 2025 is filed under 'Finance/Utilities/2025' with date-prefixed name."
+        "target_folder": "Finanzen/Versicherungen/2025",
+        "target_name": "2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393 - HUK-COBURG.pdf",
+        "justification": "Ensure insurance confirmation letter from 2025 is filed under 'Finanzen/Versicherungen/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC033",
-        "target_folder": "Finance/Taxes/2024",
-        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
-        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finance/Taxes/2024' with date-prefixed name."
+        "target_folder": "Finanzen/Versorgung/2025",
+        "target_name": "2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte - Telekom.pdf",
+        "justification": "Ensure customer service letter from 2025 is filed under 'Finanzen/Versorgung/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC034",
-        "target_folder": "Finance/Insurance/2022",
-        "target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf",
-        "justification": "Ensure official letter from 2022 is filed under 'Finance/Insurance/2022' with date-prefixed name."
+        "target_folder": "Finanzen/Steuern/2024",
+        "target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf",
+        "justification": "Ensure insurance premium invoice from 2024 is filed under 'Finanzen/Steuern/2024' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC035",
-        "target_folder": "Finance/Insurance/2025",
-        "target_name": "2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf",
-        "justification": "Ensure official notification letter from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Insurance/2026",
-        "justification": "Create folder for Insurance Policy Amendment based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2022",
+        "target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf",
+        "justification": "Ensure official letter from 2022 is filed under 'Finanzen/Versicherungen/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC036",
-        "target_folder": "Finance/Insurance/2026",
-        "target_name": "2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf",
-        "justification": "Ensure insurance policy amendment from 2026 is filed under 'Finance/Insurance/2026' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Insurance/2050",
-        "justification": "Create folder for Pension Information Letter based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2025",
+        "target_name": "2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf",
+        "justification": "Ensure official notification letter from 2025 is filed under 'Finanzen/Versicherungen/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC037",
-        "target_folder": "Finance/Insurance/2050",
-        "target_name": "2050-06-01 Ihre Renteninformation - Deutsche.pdf",
-        "justification": "Ensure pension information letter from 2050 is filed under 'Finance/Insurance/2050' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Income/2002",
-        "justification": "Create folder for Pension Information Letter based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2026",
+        "target_name": "2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf",
+        "justification": "Ensure insurance policy amendment from 2026 is filed under 'Finanzen/Versicherungen/2026' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC038",
-        "target_folder": "Finance/Income/2002",
-        "target_name": "2002-08-01 Renteninformation 2025 - 01 08 2002.pdf",
-        "justification": "Ensure pension information letter from 2002 is filed under 'Finance/Income/2002' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Reference/Correspondence/2025",
-        "justification": "Create folder for Order Confirmation based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2050",
+        "target_name": "2050-06-01 Ihre Renteninformation - Deutsche.pdf",
+        "justification": "Ensure pension information letter from 2050 is filed under 'Finanzen/Versicherungen/2050' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC039",
-        "target_folder": "Reference/Correspondence/2025",
-        "target_name": "2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf",
-        "justification": "Ensure order confirmation from 2025 is filed under 'Reference/Correspondence/2025' with date-prefixed name."
+        "target_folder": "Finanzen/Einkommen/2002",
+        "target_name": "2002-08-01 Renteninformation 2025 - 01 08 2002.pdf",
+        "justification": "Ensure pension information letter from 2002 is filed under 'Finanzen/Einkommen/2002' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC040",
-        "target_folder": "Finance/Agreements/2025",
-        "target_name": "2025-10-29 Einverständniserklärung des Anlagenbetreibers - evd.pdf",
-        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finance/Agreements/2025' with date-prefixed name."
+        "target_folder": "Referenz/Korrespondenz/2025",
+        "target_name": "2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf",
+        "justification": "Ensure order confirmation from 2025 is filed under 'Referenz/Korrespondenz/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC041",
-        "target_folder": "Reference/Correspondence/2025",
-        "target_name": "2025-08-20 Rechnung - Janning.pdf",
-        "justification": "Ensure invoice from 2025 is filed under 'Reference/Correspondence/2025' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "Finance/Insurance/2021",
-        "justification": "Create folder for Social Security Certificate based on heuristics."
+        "target_folder": "Finanzen/Vereinbarungen/2025",
+        "target_name": "2025-10-29 Einverständniserklärung des Anlagenbetreibers - evd.pdf",
+        "justification": "Ensure consent declaration / agreement form from 2025 is filed under 'Finanzen/Vereinbarungen/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC042",
-        "target_folder": "Finance/Insurance/2021",
-        "target_name": "2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - January.pdf",
-        "justification": "Ensure social security certificate from 2021 is filed under 'Finance/Insurance/2021' with date-prefixed name."
+        "target_folder": "Referenz/Korrespondenz/2025",
+        "target_name": "2025-08-20 Rechnung - Janning.pdf",
+        "justification": "Ensure invoice from 2025 is filed under 'Referenz/Korrespondenz/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC043",
-        "target_folder": "Finance/Insurance/2022",
-        "target_name": "2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - 01 10 2021.pdf",
-        "justification": "Ensure social security certificate from 2022 is filed under 'Finance/Insurance/2022' with date-prefixed name."
-      },
-      {
-        "action": "create_folder",
-        "path": "General/2022",
-        "justification": "Create folder for Customer Service Letter based on heuristics."
+        "target_folder": "Finanzen/Versicherungen/2021",
+        "target_name": "2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - January.pdf",
+        "justification": "Ensure social security certificate from 2021 is filed under 'Finanzen/Versicherungen/2021' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC044",
-        "target_folder": "General/2022",
-        "target_name": "2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf",
-        "justification": "Ensure customer service letter from 2022 is filed under 'General/2022' with date-prefixed name."
+        "target_folder": "Finanzen/Versicherungen/2022",
+        "target_name": "2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - 01 10 2021.pdf",
+        "justification": "Ensure social security certificate from 2022 is filed under 'Finanzen/Versicherungen/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC045",
-        "target_folder": "Finance/Utilities/2025",
-        "target_name": "2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf",
-        "justification": "Ensure customer letter / access credentials notice from 2025 is filed under 'Finance/Utilities/2025' with date-prefixed name."
+        "target_folder": "Allgemein/2022",
+        "target_name": "2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf",
+        "justification": "Ensure customer service letter from 2022 is filed under 'Allgemein/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC046",
-        "target_folder": "Finance/Utilities/2025",
-        "target_name": "2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf",
-        "justification": "Ensure customer information letter from 2025 is filed under 'Finance/Utilities/2025' with date-prefixed name."
+        "target_folder": "Finanzen/Versorgung/2025",
+        "target_name": "2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf",
+        "justification": "Ensure customer letter / access credentials notice from 2025 is filed under 'Finanzen/Versorgung/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC047",
-        "target_folder": "Reference/Correspondence/2022",
-        "target_name": "2022-07-28 Anmeldebestätigung - the.pdf",
-        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Reference/Correspondence/2022' with date-prefixed name."
+        "target_folder": "Finanzen/Versorgung/2025",
+        "target_name": "2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf",
+        "justification": "Ensure customer information letter from 2025 is filed under 'Finanzen/Versorgung/2025' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC048",
-        "target_folder": "Reference/Correspondence/2022",
+        "target_folder": "Referenz/Korrespondenz/2022",
         "target_name": "2022-07-28 Anmeldebestätigung - the.pdf",
-        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Reference/Correspondence/2022' with date-prefixed name."
+        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Referenz/Korrespondenz/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC049",
-        "target_folder": "Civic/Government/2022",
-        "target_name": "2022-07-28 Anmeldebestätigung.pdf",
-        "justification": "Ensure official registration confirmation from 2022 is filed under 'Civic/Government/2022' with date-prefixed name."
+        "target_folder": "Referenz/Korrespondenz/2022",
+        "target_name": "2022-07-28 Anmeldebestätigung - the.pdf",
+        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Referenz/Korrespondenz/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC050",
-        "target_folder": "Reference/Correspondence/2022",
+        "target_folder": "Verwaltung/Behoerden/2022",
         "target_name": "2022-07-28 Anmeldebestätigung.pdf",
-        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Reference/Correspondence/2022' with date-prefixed name."
+        "justification": "Ensure official registration confirmation from 2022 is filed under 'Verwaltung/Behoerden/2022' with date-prefixed name."
       },
       {
         "action": "copy_file",
         "source_id": "SRC051",
-        "target_folder": "Finance/Insurance/2025",
+        "target_folder": "Referenz/Korrespondenz/2022",
+        "target_name": "2022-07-28 Anmeldebestätigung.pdf",
+        "justification": "Ensure residence registration confirmation from 2022 is filed under 'Referenz/Korrespondenz/2022' with date-prefixed name."
+      },
+      {
+        "action": "copy_file",
+        "source_id": "SRC052",
+        "target_folder": "Finanzen/Versicherungen/2025",
         "target_name": "2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm - BARMER.pdf",
-        "justification": "Ensure marketing letter / insurance promotion from 2025 is filed under 'Finance/Insurance/2025' with date-prefixed name."
+        "justification": "Ensure marketing letter / insurance promotion from 2025 is filed under 'Finanzen/Versicherungen/2025' with date-prefixed name."
       }
     ],
     "context": {
       "sources": [
         {
           "id": "SRC001",
+          "relative_path": "020620017_Feuerst_ttenbescheid_202510250833260281.pdf",
+          "name": "020620017_Feuerst_ttenbescheid_202510250833260281.pdf",
+          "folder": "",
+          "extension": ".pdf",
+          "metadata": {
+            "title": "Feuerstättenbescheid nach §14a SchfHwG",
+            "author": "Daniel Gaschler, Bezirksschornsteinfeger",
+            "document_type": "Official Notice / Fire Safety Certificate",
+            "summary": "Official fire safety notice issued to property owners Alexander and Jennifer Lemken for their residence at Sophie-Scholl-Str. 17, Dormagen. Specifies mandatory chimney and flue cleaning schedules (Feb–Apr and Sep–Nov annually) for fireplace inserts in the ground floor living room, in compliance with KÜO regulations. Fees apply; enforcement by certified chimney sweep required.",
+            "tags": [
+              "Feuerstättenbescheid",
+              "Schornsteinfeger",
+              "KÜO",
+              "SchfHwG",
+              "Chimney Cleaning",
+              "Fire Safety",
+              "Dormagen",
+              "Legal Notice",
+              "Property Owner Responsibility"
+            ],
+            "language": "de"
+          },
+          "hints": {
+            "document_date": "2025-10-25",
+            "document_year": "2025",
+            "document_type": "Official Notice / Fire Safety Certificate",
+            "suggested_folder": "Verwaltung/Behoerden/2025",
+            "suggested_target_name": "2025-10-25 Feuerstättenbescheid nach 14a SchfHwG.pdf"
+          }
+        },
+        {
+          "id": "SRC002",
           "relative_path": "Corona-PCR-21.10.2021.pdf",
           "name": "Corona-PCR-21.10.2021.pdf",
           "folder": "",
@@ -1514,12 +1438,12 @@
             "document_date": "2021-10-21",
             "document_year": "2021",
             "document_type": "Medical Test Result",
-            "suggested_folder": "Health/Records/2021",
+            "suggested_folder": "Gesundheit/Unterlagen/2021",
             "suggested_target_name": "2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf"
           }
         },
         {
-          "id": "SRC002",
+          "id": "SRC003",
           "relative_path": "HOLLAND-BSN Kopie.pdf",
           "name": "HOLLAND-BSN Kopie.pdf",
           "folder": "",
@@ -1544,12 +1468,12 @@
             "document_date": "2022-01-18",
             "document_year": "2022",
             "document_type": "Official Government Letter",
-            "suggested_folder": "Civic/Government/2022",
+            "suggested_folder": "Verwaltung/Behoerden/2022",
             "suggested_target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf"
           }
         },
         {
-          "id": "SRC003",
+          "id": "SRC004",
           "relative_path": "HOLLAND-BSN.pdf",
           "name": "HOLLAND-BSN.pdf",
           "folder": "",
@@ -1575,12 +1499,12 @@
             "document_date": "2022-01-18",
             "document_year": "2022",
             "document_type": "Official Letter",
-            "suggested_folder": "Civic/Government/2022",
+            "suggested_folder": "Verwaltung/Behoerden/2022",
             "suggested_target_name": "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf"
           }
         },
         {
-          "id": "SRC004",
+          "id": "SRC005",
           "relative_path": "Scan vom 2025-10-23 02_25_32 PM.pdf",
           "name": "Scan vom 2025-10-23 02_25_32 PM.pdf",
           "folder": "",
@@ -1607,12 +1531,12 @@
             "document_date": "2025-10-23",
             "document_year": "2025",
             "document_type": "Product Packaging Label",
-            "suggested_folder": "General/2025",
+            "suggested_folder": "Allgemein/2025",
             "suggested_target_name": "2025-10-23 Product Safety and Regulatory Information - small.pdf"
           }
         },
         {
-          "id": "SRC005",
+          "id": "SRC006",
           "relative_path": "Scan vom 2025-10-23 08_27_09 PM.pdf",
           "name": "Scan vom 2025-10-23 08_27_09 PM.pdf",
           "folder": "",
@@ -1639,12 +1563,12 @@
             "document_date": "2025-10-23",
             "document_year": "2025",
             "document_type": "Image",
-            "suggested_folder": "General/2025",
+            "suggested_folder": "Allgemein/2025",
             "suggested_target_name": "2025-10-23 MacBook Keyboard and Dock Screenshot.pdf"
           }
         },
         {
-          "id": "SRC006",
+          "id": "SRC007",
           "relative_path": "Scan vom 2025-10-23 09_28_25 PM.pdf",
           "name": "Scan vom 2025-10-23 09_28_25 PM.pdf",
           "folder": "",
@@ -1670,12 +1594,12 @@
             "document_date": "2025-10-23",
             "document_year": "2025",
             "document_type": "Image",
-            "suggested_folder": "General/2025",
+            "suggested_folder": "Allgemein/2025",
             "suggested_target_name": "2025-10-23 Green Castle Wall with Stone Texture.pdf"
           }
         },
         {
-          "id": "SRC007",
+          "id": "SRC008",
           "relative_path": "Scan vom 2025-10-24 07_24_33 AM Kopie.pdf",
           "name": "Scan vom 2025-10-24 07_24_33 AM Kopie.pdf",
           "folder": "",
@@ -1700,12 +1624,12 @@
             "document_date": "2024-01-01",
             "document_year": "2024",
             "document_type": "Insurance Premium Invoice",
-            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_folder": "Finanzen/Steuern/2024",
             "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
           }
         },
         {
-          "id": "SRC008",
+          "id": "SRC009",
           "relative_path": "Scan vom 2025-10-24 07_24_33 AM.pdf",
           "name": "Scan vom 2025-10-24 07_24_33 AM.pdf",
           "folder": "",
@@ -1730,12 +1654,12 @@
             "document_date": "2024-01-01",
             "document_year": "2024",
             "document_type": "Insurance Premium Invoice",
-            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_folder": "Finanzen/Steuern/2024",
             "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
           }
         },
         {
-          "id": "SRC009",
+          "id": "SRC010",
           "relative_path": "Scan vom 2025-10-24 07_28_54 AM.pdf",
           "name": "Scan vom 2025-10-24 07_28_54 AM.pdf",
           "folder": "",
@@ -1760,12 +1684,12 @@
             "document_date": "2024-01-01",
             "document_year": "2024",
             "document_type": "Insurance Premium Invoice",
-            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_folder": "Finanzen/Steuern/2024",
             "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
           }
         },
         {
-          "id": "SRC010",
+          "id": "SRC011",
           "relative_path": "Scan vom 2025-10-24 07_32_33 AM.pdf",
           "name": "Scan vom 2025-10-24 07_32_33 AM.pdf",
           "folder": "",
@@ -1788,12 +1712,12 @@
             "document_date": "2025-10-24",
             "document_year": "2025",
             "document_type": "Notebook Page",
-            "suggested_folder": "General/2025",
+            "suggested_folder": "Allgemein/2025",
             "suggested_target_name": "2025-10-24 Blank Lined Notebook Page.pdf"
           }
         },
         {
-          "id": "SRC011",
+          "id": "SRC012",
           "relative_path": "Scan vom 2025-10-24 08_45_18 AM.pdf",
           "name": "Scan vom 2025-10-24 08_45_18 AM.pdf",
           "folder": "",
@@ -1818,12 +1742,12 @@
             "document_date": "2024-01-01",
             "document_year": "2024",
             "document_type": "Insurance Premium Invoice",
-            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_folder": "Finanzen/Steuern/2024",
             "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
           }
         },
         {
-          "id": "SRC012",
+          "id": "SRC013",
           "relative_path": "Scan vom 2025-10-24 09_57_24 AM.pdf",
           "name": "Scan vom 2025-10-24 09_57_24 AM.pdf",
           "folder": "",
@@ -1849,12 +1773,12 @@
             "document_date": "2025-10-24",
             "document_year": "2025",
             "document_type": "Consent Declaration / Agreement Form",
-            "suggested_folder": "Finance/Agreements/2025",
+            "suggested_folder": "Finanzen/Vereinbarungen/2025",
             "suggested_target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf"
           }
         },
         {
-          "id": "SRC013",
+          "id": "SRC014",
           "relative_path": "Scan vom 2025-10-24 11_16_56 AM.pdf",
           "name": "Scan vom 2025-10-24 11_16_56 AM.pdf",
           "folder": "",
@@ -1882,12 +1806,12 @@
             "document_date": "2025-10-24",
             "document_year": "2025",
             "document_type": "Consent Declaration / Agreement Form",
-            "suggested_folder": "Finance/Agreements/2025",
+            "suggested_folder": "Finanzen/Vereinbarungen/2025",
             "suggested_target_name": "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf"
           }
         },
         {
-          "id": "SRC014",
+          "id": "SRC015",
           "relative_path": "Scan vom 2025-10-27 04_13_56 PM.pdf",
           "name": "Scan vom 2025-10-27 04_13_56 PM.pdf",
           "folder": "",
@@ -1913,12 +1837,12 @@
             "document_date": "2024-11-01",
             "document_year": "2024",
             "document_type": "Insurance Policy Amendment Notice",
-            "suggested_folder": "Finance/Insurance/2024",
+            "suggested_folder": "Finanzen/Versicherungen/2024",
             "suggested_target_name": "2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf"
           }
         },
         {
-          "id": "SRC015",
+          "id": "SRC016",
           "relative_path": "Scan vom 2025-10-27 04_14_37 PM.pdf",
           "name": "Scan vom 2025-10-27 04_14_37 PM.pdf",
           "folder": "",
@@ -1945,12 +1869,12 @@
             "document_date": "2024-11-30",
             "document_year": "2024",
             "document_type": "Invoice",
-            "suggested_folder": "Finance/Utilities/2024",
+            "suggested_folder": "Finanzen/Versorgung/2024",
             "suggested_target_name": "2024-11-30 Rechnung R2411093 - Jan.pdf"
           }
         },
         {
-          "id": "SRC016",
+          "id": "SRC017",
           "relative_path": "Scan vom 2025-10-27 04_15_11 PM.pdf",
           "name": "Scan vom 2025-10-27 04_15_11 PM.pdf",
           "folder": "",
@@ -1978,12 +1902,12 @@
             "document_date": "2025-10-27",
             "document_year": "2025",
             "document_type": "Official Notice / Tax Assessment",
-            "suggested_folder": "Finance/Taxes/2025",
+            "suggested_folder": "Finanzen/Steuern/2025",
             "suggested_target_name": "2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf"
           }
         },
         {
-          "id": "SRC017",
+          "id": "SRC018",
           "relative_path": "Scan vom 2025-10-27 04_18_11 PM.pdf",
           "name": "Scan vom 2025-10-27 04_18_11 PM.pdf",
           "folder": "",
@@ -2008,12 +1932,12 @@
             "document_date": "2025-05-13",
             "document_year": "2025",
             "document_type": "Offer / Quotation",
-            "suggested_folder": "General/2025",
+            "suggested_folder": "Allgemein/2025",
             "suggested_target_name": "2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf"
           }
         },
         {
-          "id": "SRC018",
+          "id": "SRC019",
           "relative_path": "Scan vom 2025-10-27 04_20_12 PM.pdf",
           "name": "Scan vom 2025-10-27 04_20_12 PM.pdf",
           "folder": "",
@@ -2040,12 +1964,12 @@
             "document_date": "2011-02-04",
             "document_year": "2011",
             "document_type": "Architectural Plan",
-            "suggested_folder": "General/2011",
+            "suggested_folder": "Allgemein/2011",
             "suggested_target_name": "2011-02-04 Bauantragsplanung - Kellergeschoss.pdf"
           }
         },
         {
-          "id": "SRC019",
+          "id": "SRC020",
           "relative_path": "Scan vom 2025-10-27 04_21_12 PM.pdf",
           "name": "Scan vom 2025-10-27 04_21_12 PM.pdf",
           "folder": "",
@@ -2069,12 +1993,12 @@
             "document_date": "2025-10-27",
             "document_year": "2025",
             "document_type": "Architectural Drawing",
-            "suggested_folder": "General/2025",
+            "suggested_folder": "Allgemein/2025",
             "suggested_target_name": "2025-10-27 Ansicht von innen Maßstab 1 15.pdf"
           }
         },
         {
-          "id": "SRC020",
+          "id": "SRC021",
           "relative_path": "Scan vom 2025-10-27 04_22_40 PM.pdf",
           "name": "Scan vom 2025-10-27 04_22_40 PM.pdf",
           "folder": "",
@@ -2100,12 +2024,12 @@
             "document_date": "2025-10-27",
             "document_year": "2025",
             "document_type": "Banking Welcome Letter",
-            "suggested_folder": "General/2025",
+            "suggested_folder": "Allgemein/2025",
             "suggested_target_name": "2025-10-27 Dein neues Girokonto bei der DKB.pdf"
           }
         },
         {
-          "id": "SRC021",
+          "id": "SRC022",
           "relative_path": "Scan vom 2025-10-27 04_24_36 PM.pdf",
           "name": "Scan vom 2025-10-27 04_24_36 PM.pdf",
           "folder": "",
@@ -2129,12 +2053,12 @@
             "document_date": "2023-01-01",
             "document_year": "2023",
             "document_type": "Tax Certificate",
-            "suggested_folder": "Finance/Taxes/2023",
+            "suggested_folder": "Finanzen/Steuern/2023",
             "suggested_target_name": "2023-01-01 Ihre Jahressteuerbescheinigung - January.pdf"
           }
         },
         {
-          "id": "SRC022",
+          "id": "SRC023",
           "relative_path": "Scan vom 2025-10-27 04_25_34 PM.pdf",
           "name": "Scan vom 2025-10-27 04_25_34 PM.pdf",
           "folder": "",
@@ -2160,12 +2084,12 @@
             "document_date": "2025-10-27",
             "document_year": "2025",
             "document_type": "Medical Laboratory Report",
-            "suggested_folder": "Health/Records/2025",
+            "suggested_folder": "Gesundheit/Unterlagen/2025",
             "suggested_target_name": "2025-10-27 Mikrobiologischer LABORBERICHT.pdf"
           }
         },
         {
-          "id": "SRC023",
+          "id": "SRC024",
           "relative_path": "Scan vom 2025-10-27 04_26_43 PM.pdf",
           "name": "Scan vom 2025-10-27 04_26_43 PM.pdf",
           "folder": "",
@@ -2190,12 +2114,12 @@
             "document_date": "2020-09-22",
             "document_year": "2020",
             "document_type": "Medical Laboratory Report",
-            "suggested_folder": "Health/Records/2020",
+            "suggested_folder": "Gesundheit/Unterlagen/2020",
             "suggested_target_name": "2020-09-22 Endbefundbericht Stoffwechsellabor - UniversitätsKlinikum.pdf"
           }
         },
         {
-          "id": "SRC024",
+          "id": "SRC025",
           "relative_path": "Scan vom 2025-10-27 04_32_14 PM.pdf",
           "name": "Scan vom 2025-10-27 04_32_14 PM.pdf",
           "folder": "",
@@ -2219,12 +2143,12 @@
             "document_date": "2023-01-01",
             "document_year": "2023",
             "document_type": "Insurance Premium Invoice",
-            "suggested_folder": "Finance/Taxes/2023",
+            "suggested_folder": "Finanzen/Steuern/2023",
             "suggested_target_name": "2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
           }
         },
         {
-          "id": "SRC025",
+          "id": "SRC026",
           "relative_path": "Scan vom 2025-10-27 04_33_44 PM.pdf",
           "name": "Scan vom 2025-10-27 04_33_44 PM.pdf",
           "folder": "",
@@ -2250,12 +2174,12 @@
             "document_date": "2025-10-27",
             "document_year": "2025",
             "document_type": "Insurance Premium Adjustment Notice",
-            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_folder": "Finanzen/Versicherungen/2025",
             "suggested_target_name": "2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung - Baloise.pdf"
           }
         },
         {
-          "id": "SRC026",
+          "id": "SRC027",
           "relative_path": "Scan vom 2025-10-27 04_34_20 PM.pdf",
           "name": "Scan vom 2025-10-27 04_34_20 PM.pdf",
           "folder": "",
@@ -2279,12 +2203,12 @@
             "document_date": "2022-07-22",
             "document_year": "2022",
             "document_type": "Official Letter",
-            "suggested_folder": "Finance/Insurance/2022",
+            "suggested_folder": "Finanzen/Versicherungen/2022",
             "suggested_target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf"
           }
         },
         {
-          "id": "SRC027",
+          "id": "SRC028",
           "relative_path": "Scan vom 2025-10-27 04_35_43 PM.pdf",
           "name": "Scan vom 2025-10-27 04_35_43 PM.pdf",
           "folder": "",
@@ -2309,12 +2233,12 @@
             "document_date": "2022-06-05",
             "document_year": "2022",
             "document_type": "Utility Bill",
-            "suggested_folder": "Finance/Utilities/2022",
+            "suggested_folder": "Finanzen/Versorgung/2022",
             "suggested_target_name": "2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf"
           }
         },
         {
-          "id": "SRC028",
+          "id": "SRC029",
           "relative_path": "Scan vom 2025-10-27 04_38_06 PM.pdf",
           "name": "Scan vom 2025-10-27 04_38_06 PM.pdf",
           "folder": "",
@@ -2340,12 +2264,12 @@
             "document_date": "2023-11-01",
             "document_year": "2023",
             "document_type": "Insurance Notification Letter",
-            "suggested_folder": "Finance/Insurance/2023",
+            "suggested_folder": "Finanzen/Versicherungen/2023",
             "suggested_target_name": "2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik - ALTE.pdf"
           }
         },
         {
-          "id": "SRC029",
+          "id": "SRC030",
           "relative_path": "Scan vom 2025-10-27 04_42_48 PM.pdf",
           "name": "Scan vom 2025-10-27 04_42_48 PM.pdf",
           "folder": "",
@@ -2370,12 +2294,12 @@
             "document_date": "2025-10-27",
             "document_year": "2025",
             "document_type": "Official Letter / Notification",
-            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_folder": "Finanzen/Versicherungen/2025",
             "suggested_target_name": "2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf"
           }
         },
         {
-          "id": "SRC030",
+          "id": "SRC031",
           "relative_path": "Scan vom 2025-10-28 09_36_47 AM.pdf",
           "name": "Scan vom 2025-10-28 09_36_47 AM.pdf",
           "folder": "",
@@ -2399,12 +2323,12 @@
             "document_date": "2022-06-14",
             "document_year": "2022",
             "document_type": "Invoice",
-            "suggested_folder": "Reference/Correspondence/2022",
+            "suggested_folder": "Referenz/Korrespondenz/2022",
             "suggested_target_name": "2022-06-14 Rechnung - Neubeck.pdf"
           }
         },
         {
-          "id": "SRC031",
+          "id": "SRC032",
           "relative_path": "Scan vom 2025-10-28 09_37_28 AM.pdf",
           "name": "Scan vom 2025-10-28 09_37_28 AM.pdf",
           "folder": "",
@@ -2428,12 +2352,12 @@
             "document_date": "2025-10-28",
             "document_year": "2025",
             "document_type": "Insurance Confirmation Letter",
-            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_folder": "Finanzen/Versicherungen/2025",
             "suggested_target_name": "2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393 - HUK-COBURG.pdf"
           }
         },
         {
-          "id": "SRC032",
+          "id": "SRC033",
           "relative_path": "Scan vom 2025-10-28 09_38_46 AM.pdf",
           "name": "Scan vom 2025-10-28 09_38_46 AM.pdf",
           "folder": "",
@@ -2458,12 +2382,12 @@
             "document_date": "2025-10-28",
             "document_year": "2025",
             "document_type": "Customer Service Letter",
-            "suggested_folder": "Finance/Utilities/2025",
+            "suggested_folder": "Finanzen/Versorgung/2025",
             "suggested_target_name": "2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte - Telekom.pdf"
           }
         },
         {
-          "id": "SRC033",
+          "id": "SRC034",
           "relative_path": "Scan vom 2025-10-28 09_39_34 AM.pdf",
           "name": "Scan vom 2025-10-28 09_39_34 AM.pdf",
           "folder": "",
@@ -2488,12 +2412,12 @@
             "document_date": "2024-01-01",
             "document_year": "2024",
             "document_type": "Insurance Premium Invoice",
-            "suggested_folder": "Finance/Taxes/2024",
+            "suggested_folder": "Finanzen/Steuern/2024",
             "suggested_target_name": "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
           }
         },
         {
-          "id": "SRC034",
+          "id": "SRC035",
           "relative_path": "Scan vom 2025-10-28 09_40_02 AM.pdf",
           "name": "Scan vom 2025-10-28 09_40_02 AM.pdf",
           "folder": "",
@@ -2517,12 +2441,12 @@
             "document_date": "2022-07-22",
             "document_year": "2022",
             "document_type": "Official Letter",
-            "suggested_folder": "Finance/Insurance/2022",
+            "suggested_folder": "Finanzen/Versicherungen/2022",
             "suggested_target_name": "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf"
           }
         },
         {
-          "id": "SRC035",
+          "id": "SRC036",
           "relative_path": "Scan vom 2025-10-28 09_40_29 AM.pdf",
           "name": "Scan vom 2025-10-28 09_40_29 AM.pdf",
           "folder": "",
@@ -2546,12 +2470,12 @@
             "document_date": "2025-10-28",
             "document_year": "2025",
             "document_type": "Official Notification Letter",
-            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_folder": "Finanzen/Versicherungen/2025",
             "suggested_target_name": "2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf"
           }
         },
         {
-          "id": "SRC036",
+          "id": "SRC037",
           "relative_path": "Scan vom 2025-10-29 02_00_42 PM.pdf",
           "name": "Scan vom 2025-10-29 02_00_42 PM.pdf",
           "folder": "",
@@ -2576,12 +2500,12 @@
             "document_date": "2026-01-01",
             "document_year": "2026",
             "document_type": "Insurance Policy Amendment",
-            "suggested_folder": "Finance/Insurance/2026",
+            "suggested_folder": "Finanzen/Versicherungen/2026",
             "suggested_target_name": "2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf"
           }
         },
         {
-          "id": "SRC037",
+          "id": "SRC038",
           "relative_path": "Scan vom 2025-10-29 11_31_30 AM.pdf",
           "name": "Scan vom 2025-10-29 11_31_30 AM.pdf",
           "folder": "",
@@ -2607,12 +2531,12 @@
             "document_date": "2050-06-01",
             "document_year": "2050",
             "document_type": "Pension Information Letter",
-            "suggested_folder": "Finance/Insurance/2050",
+            "suggested_folder": "Finanzen/Versicherungen/2050",
             "suggested_target_name": "2050-06-01 Ihre Renteninformation - Deutsche.pdf"
           }
         },
         {
-          "id": "SRC038",
+          "id": "SRC039",
           "relative_path": "Scan vom 2025-10-29 11_32_05 AM.pdf",
           "name": "Scan vom 2025-10-29 11_32_05 AM.pdf",
           "folder": "",
@@ -2637,12 +2561,12 @@
             "document_date": "2002-08-01",
             "document_year": "2002",
             "document_type": "Pension Information Letter",
-            "suggested_folder": "Finance/Income/2002",
+            "suggested_folder": "Finanzen/Einkommen/2002",
             "suggested_target_name": "2002-08-01 Renteninformation 2025 - 01 08 2002.pdf"
           }
         },
         {
-          "id": "SRC039",
+          "id": "SRC040",
           "relative_path": "Scan vom 2025-10-29 11_33_22 AM.pdf",
           "name": "Scan vom 2025-10-29 11_33_22 AM.pdf",
           "folder": "",
@@ -2667,12 +2591,12 @@
             "document_date": "2025-10-29",
             "document_year": "2025",
             "document_type": "Order Confirmation",
-            "suggested_folder": "Reference/Correspondence/2025",
+            "suggested_folder": "Referenz/Korrespondenz/2025",
             "suggested_target_name": "2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf"
           }
         },
         {
-          "id": "SRC040",
+          "id": "SRC041",
           "relative_path": "Scan vom 2025-10-29 11_34_17 AM.pdf",
           "name": "Scan vom 2025-10-29 11_34_17 AM.pdf",
           "folder": "",
@@ -2697,12 +2621,12 @@
             "document_date": "2025-10-29",
             "document_year": "2025",
             "document_type": "Consent Declaration / Agreement Form",
-            "suggested_folder": "Finance/Agreements/2025",
+            "suggested_folder": "Finanzen/Vereinbarungen/2025",
             "suggested_target_name": "2025-10-29 Einverständniserklärung des Anlagenbetreibers - evd.pdf"
           }
         },
         {
-          "id": "SRC041",
+          "id": "SRC042",
           "relative_path": "Scan vom 2025-10-29 11_35_18 AM.pdf",
           "name": "Scan vom 2025-10-29 11_35_18 AM.pdf",
           "folder": "",
@@ -2727,12 +2651,12 @@
             "document_date": "2025-08-20",
             "document_year": "2025",
             "document_type": "Invoice",
-            "suggested_folder": "Reference/Correspondence/2025",
+            "suggested_folder": "Referenz/Korrespondenz/2025",
             "suggested_target_name": "2025-08-20 Rechnung - Janning.pdf"
           }
         },
         {
-          "id": "SRC042",
+          "id": "SRC043",
           "relative_path": "Scan vom 2025-10-29 11_37_20 AM.pdf",
           "name": "Scan vom 2025-10-29 11_37_20 AM.pdf",
           "folder": "",
@@ -2759,12 +2683,12 @@
             "document_date": "2021-01-01",
             "document_year": "2021",
             "document_type": "Social Security Certificate",
-            "suggested_folder": "Finance/Insurance/2021",
+            "suggested_folder": "Finanzen/Versicherungen/2021",
             "suggested_target_name": "2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - January.pdf"
           }
         },
         {
-          "id": "SRC043",
+          "id": "SRC044",
           "relative_path": "Scan vom 2025-10-29 11_37_45 AM.pdf",
           "name": "Scan vom 2025-10-29 11_37_45 AM.pdf",
           "folder": "",
@@ -2791,12 +2715,12 @@
             "document_date": "2022-01-24",
             "document_year": "2022",
             "document_type": "Social Security Certificate",
-            "suggested_folder": "Finance/Insurance/2022",
+            "suggested_folder": "Finanzen/Versicherungen/2022",
             "suggested_target_name": "2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - 01 10 2021.pdf"
           }
         },
         {
-          "id": "SRC044",
+          "id": "SRC045",
           "relative_path": "Scan vom 2025-10-29 11_38_22 AM.pdf",
           "name": "Scan vom 2025-10-29 11_38_22 AM.pdf",
           "folder": "",
@@ -2821,12 +2745,12 @@
             "document_date": "2022-07-23",
             "document_year": "2022",
             "document_type": "Customer Service Letter",
-            "suggested_folder": "General/2022",
+            "suggested_folder": "Allgemein/2022",
             "suggested_target_name": "2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf"
           }
         },
         {
-          "id": "SRC045",
+          "id": "SRC046",
           "relative_path": "Scan vom 2025-10-29 11_38_47 AM.pdf",
           "name": "Scan vom 2025-10-29 11_38_47 AM.pdf",
           "folder": "",
@@ -2851,12 +2775,12 @@
             "document_date": "2025-10-29",
             "document_year": "2025",
             "document_type": "Customer Letter / Access Credentials Notice",
-            "suggested_folder": "Finance/Utilities/2025",
+            "suggested_folder": "Finanzen/Versorgung/2025",
             "suggested_target_name": "2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf"
           }
         },
         {
-          "id": "SRC046",
+          "id": "SRC047",
           "relative_path": "Scan vom 2025-10-29 11_39_31 AM.pdf",
           "name": "Scan vom 2025-10-29 11_39_31 AM.pdf",
           "folder": "",
@@ -2882,12 +2806,12 @@
             "document_date": "2025-10-29",
             "document_year": "2025",
             "document_type": "Customer Information Letter",
-            "suggested_folder": "Finance/Utilities/2025",
+            "suggested_folder": "Finanzen/Versorgung/2025",
             "suggested_target_name": "2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf"
           }
         },
         {
-          "id": "SRC047",
+          "id": "SRC048",
           "relative_path": "Scan vom 2025-10-29 11_40_29 AM.pdf",
           "name": "Scan vom 2025-10-29 11_40_29 AM.pdf",
           "folder": "",
@@ -2912,12 +2836,12 @@
             "document_date": "2022-07-28",
             "document_year": "2022",
             "document_type": "Residence Registration Confirmation",
-            "suggested_folder": "Reference/Correspondence/2022",
+            "suggested_folder": "Referenz/Korrespondenz/2022",
             "suggested_target_name": "2022-07-28 Anmeldebestätigung - the.pdf"
           }
         },
         {
-          "id": "SRC048",
+          "id": "SRC049",
           "relative_path": "Scan vom 2025-10-29 11_41_18 AM.pdf",
           "name": "Scan vom 2025-10-29 11_41_18 AM.pdf",
           "folder": "",
@@ -2942,12 +2866,12 @@
             "document_date": "2022-07-28",
             "document_year": "2022",
             "document_type": "Residence Registration Confirmation",
-            "suggested_folder": "Reference/Correspondence/2022",
+            "suggested_folder": "Referenz/Korrespondenz/2022",
             "suggested_target_name": "2022-07-28 Anmeldebestätigung - the.pdf"
           }
         },
         {
-          "id": "SRC049",
+          "id": "SRC050",
           "relative_path": "Scan vom 2025-10-29 11_41_54 AM.pdf",
           "name": "Scan vom 2025-10-29 11_41_54 AM.pdf",
           "folder": "",
@@ -2971,12 +2895,12 @@
             "document_date": "2022-07-28",
             "document_year": "2022",
             "document_type": "Official Registration Confirmation",
-            "suggested_folder": "Civic/Government/2022",
+            "suggested_folder": "Verwaltung/Behoerden/2022",
             "suggested_target_name": "2022-07-28 Anmeldebestätigung.pdf"
           }
         },
         {
-          "id": "SRC050",
+          "id": "SRC051",
           "relative_path": "Scan vom 2025-10-29 11_42_28 AM.pdf",
           "name": "Scan vom 2025-10-29 11_42_28 AM.pdf",
           "folder": "",
@@ -3000,12 +2924,12 @@
             "document_date": "2022-07-28",
             "document_year": "2022",
             "document_type": "Residence Registration Confirmation",
-            "suggested_folder": "Reference/Correspondence/2022",
+            "suggested_folder": "Referenz/Korrespondenz/2022",
             "suggested_target_name": "2022-07-28 Anmeldebestätigung.pdf"
           }
         },
         {
-          "id": "SRC051",
+          "id": "SRC052",
           "relative_path": "Scan vom 2025-10-29 11_43_07 AM.pdf",
           "name": "Scan vom 2025-10-29 11_43_07 AM.pdf",
           "folder": "",
@@ -3031,36 +2955,169 @@
             "document_date": "2025-10-29",
             "document_year": "2025",
             "document_type": "Marketing Letter / Insurance Promotion",
-            "suggested_folder": "Finance/Insurance/2025",
+            "suggested_folder": "Finanzen/Versicherungen/2025",
             "suggested_target_name": "2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm - BARMER.pdf"
           }
         }
       ],
-      "existing_folders": [],
+      "existing_folders": [
+        "Allgemein",
+        "Allgemein/2011",
+        "Allgemein/2022",
+        "Allgemein/2025",
+        "Finanzen",
+        "Finanzen/Einkommen",
+        "Finanzen/Einkommen/2002",
+        "Finanzen/Steuern",
+        "Finanzen/Steuern/2023",
+        "Finanzen/Steuern/2024",
+        "Finanzen/Steuern/2025",
+        "Finanzen/Vereinbarungen",
+        "Finanzen/Vereinbarungen/2025",
+        "Finanzen/Versicherungen",
+        "Finanzen/Versicherungen/2021",
+        "Finanzen/Versicherungen/2022",
+        "Finanzen/Versicherungen/2023",
+        "Finanzen/Versicherungen/2024",
+        "Finanzen/Versicherungen/2025",
+        "Finanzen/Versicherungen/2026",
+        "Finanzen/Versicherungen/2050",
+        "Finanzen/Versorgung",
+        "Finanzen/Versorgung/2022",
+        "Finanzen/Versorgung/2024",
+        "Finanzen/Versorgung/2025",
+        "Gesundheit",
+        "Gesundheit/Unterlagen",
+        "Gesundheit/Unterlagen/2020",
+        "Gesundheit/Unterlagen/2021",
+        "Gesundheit/Unterlagen/2025",
+        "Referenz",
+        "Referenz/Korrespondenz",
+        "Referenz/Korrespondenz/2022",
+        "Referenz/Korrespondenz/2025",
+        "Verwaltung",
+        "Verwaltung/Behoerden",
+        "Verwaltung/Behoerden/2022",
+        "_done"
+      ],
       "folder_examples": {
+        "_done": [],
+        "Allgemein": [],
+        "Finanzen": [],
+        "Gesundheit": [],
+        "Referenz": [],
+        "Verwaltung": [],
         "/": [
+          "020620017_Feuerst_ttenbescheid_202510250833260281.pdf",
           "Corona-PCR-21.10.2021.pdf",
-          "HOLLAND-BSN Kopie.pdf",
-          "HOLLAND-BSN.pdf"
+          "HOLLAND-BSN Kopie.pdf"
+        ],
+        "Verwaltung/Behoerden": [],
+        "Verwaltung/Behoerden/2022": [
+          "2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf",
+          "2022-07-28 Anmeldebestätigung.pdf"
+        ],
+        "Referenz/Korrespondenz": [],
+        "Referenz/Korrespondenz/2022": [
+          "2022-06-14 Rechnung - Neubeck.pdf",
+          "2022-07-28 Anmeldebestätigung - the.pdf",
+          "2022-07-28 Anmeldebestätigung.pdf"
+        ],
+        "Referenz/Korrespondenz/2025": [
+          "2025-08-20 Rechnung - Janning.pdf",
+          "2025-10-29 Elektro-Wandelt Bestellung 3668028 - Bestellbestätigung.pdf"
+        ],
+        "Gesundheit/Unterlagen": [],
+        "Gesundheit/Unterlagen/2020": [
+          "2020-09-22 Endbefundbericht Stoffwechsellabor - UniversitätsKlinikum.pdf"
+        ],
+        "Gesundheit/Unterlagen/2021": [
+          "2021-10-21 Coronavirus SARS-CoV-2-Testergebnisse 13405000 - VAULT Kunde.pdf"
+        ],
+        "Gesundheit/Unterlagen/2025": [
+          "2025-10-27 Mikrobiologischer LABORBERICHT.pdf"
+        ],
+        "Finanzen/Einkommen": [],
+        "Finanzen/Steuern": [],
+        "Finanzen/Vereinbarungen": [],
+        "Finanzen/Versicherungen": [],
+        "Finanzen/Versorgung": [],
+        "Finanzen/Versorgung/2022": [
+          "2022-06-05 Schlussrechnung - evd energieversorgung dormagen.pdf"
+        ],
+        "Finanzen/Versorgung/2024": [
+          "2024-11-30 Rechnung R2411093 - Jan.pdf"
+        ],
+        "Finanzen/Versorgung/2025": [
+          "2025-10-28 Wichtiges zur Rücksendung Ihrer Mietgeräte - Telekom.pdf",
+          "2025-10-29 1 1 Internetzugang - Nützliche Tipps und Informationen.pdf",
+          "2025-10-29 Ihre Zugangsdaten für den 1 1 DSL-Anschluss.pdf"
+        ],
+        "Finanzen/Versicherungen/2021": [
+          "2021-01-01 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - January.pdf"
+        ],
+        "Finanzen/Versicherungen/2022": [
+          "2022-01-24 Bescheinigung zur Sozialversicherung gemäß 25 DEÜV - 01 10 2021.pdf",
+          "2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf"
+        ],
+        "Finanzen/Versicherungen/2023": [
+          "2023-11-01 Versicherungsmitteilung zur jährlichen Dynamik - ALTE.pdf"
+        ],
+        "Finanzen/Versicherungen/2024": [
+          "2024-11-01 WWK-FondsPolice 24 460 105 - Nachtrag zum Versicherungsschein.pdf"
+        ],
+        "Finanzen/Versicherungen/2025": [
+          "2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf",
+          "2025-10-27 Vorabinformation zur Prämienanpassung Ihrer Wohngebäude-Versicherung - Baloise.pdf",
+          "2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf"
+        ],
+        "Finanzen/Versicherungen/2026": [
+          "2026-01-01 NACHTRAG ZUM VERSICHERUNGSSCHEIN.pdf"
+        ],
+        "Finanzen/Versicherungen/2050": [
+          "2050-06-01 Ihre Renteninformation - Deutsche.pdf"
+        ],
+        "Finanzen/Vereinbarungen/2025": [
+          "2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf",
+          "2025-10-29 Einverständniserklärung des Anlagenbetreibers - evd.pdf"
+        ],
+        "Finanzen/Steuern/2023": [
+          "2023-01-01 Ihre Jahressteuerbescheinigung - January.pdf",
+          "2023-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
+        ],
+        "Finanzen/Steuern/2024": [
+          "2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf"
+        ],
+        "Finanzen/Steuern/2025": [
+          "2025-10-27 Bescheid der Stadt Dormagen über Grundbesitzabgaben - the.pdf"
+        ],
+        "Finanzen/Einkommen/2002": [
+          "2002-08-01 Renteninformation 2025 - 01 08 2002.pdf"
+        ],
+        "Allgemein/2011": [
+          "2011-02-04 Bauantragsplanung - Kellergeschoss.pdf"
+        ],
+        "Allgemein/2022": [
+          "2022-07-23 Ihre 1 1 Service-PIN für den telefonischen Kontakt.pdf"
+        ],
+        "Allgemein/2025": [
+          "2025-05-13 Angebot - Bernhard Pohlmann - Cool Components.pdf",
+          "2025-10-23 Green Castle Wall with Stone Texture.pdf",
+          "2025-10-23 MacBook Keyboard and Dock Screenshot.pdf"
         ]
+      },
+      "configuration": {
+        "locale": "de"
       }
     },
     "validation": {
       "status": "warn",
-      "notes": "Most operations are valid, but there are duplicate filenames in the same folder and potential misclassifications. Some files are copied to folders that may not logically match their content (e.g., marketing letters in Insurance). Also, multiple files share identical names in the same folder, which may cause overwrites or confusion.",
+      "notes": "Most operations are valid, but there are duplicate file copies to the same target folder with identical names, which may cause overwrites or conflicts. Also, one folder creation is redundant as it already exists.",
       "issues": [
-        "Duplicate filenames in same folder: '2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf' (SRC002, SRC003) in 'Civic/Government/2022'.",
-        "Duplicate filenames in same folder: '2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf' (SRC007, SRC008, SRC009, SRC011, SRC024, SRC033) in 'Finance/Taxes/2024'.",
-        "Duplicate filenames in same folder: '2025-10-24 Einverständniserklärung des Anlagenbetreibers - the.pdf' (SRC012, SRC013) in 'Finance/Agreements/2025'.",
-        "Duplicate filenames in same folder: '2022-07-22 Ihre beitragsfreie Versicherung bitte halten Sie uns auf dem Laufenden - Techniker.pdf' (SRC026, SRC034) in 'Finance/Insurance/2022'.",
-        "Duplicate filenames in same folder: '2025-10-27 Früherkennungsuntersuchung U7a für Ihre Tochter Valerie - Techniker.pdf' (SRC029) and '2025-10-28 Versicherungsbestätigung Nr HA221F9 - Ummeldung des Fahrzeugs mit dem amtlichen Kennzeichen RP-LY 393 - HUK-COBURG.pdf' (SRC031) and '2025-10-28 ACHTUNG NEUE BANKVERBINDUNG - Baloise.pdf' (SRC035) and '2025-10-29 Bis zu 600 Euro jährlich mit unseren Geld-zurück-Tarifen und dem Bonusprogramm - BARMER.pdf' (SRC051) in 'Finance/Insurance/2025' — while not identical, multiple files may be misclassified as 'Insurance' when some are marketing or notifications.",
-        "Potential misclassification: Marketing/promotional letter (SRC051) filed under 'Finance/Insurance/2025' — may belong in 'Reference/Correspondence' or a separate 'Marketing' folder.",
-        "Potential misclassification: '2025-10-27 Dein neues Girokonto bei der DKB.pdf' (SRC020) filed under 'General/2025' — may belong in 'Finance/Banking/2025'.",
-        "Potential misclassification: '2025-10-27 Ansicht von innen Maßstab 1 15.pdf' (SRC019) filed under 'General/2025' — may belong in 'General/Architectural/2025' or similar.",
-        "Potential misclassification: '2025-10-23 MacBook Keyboard and Dock Screenshot.pdf' (SRC005) and '2025-10-23 Green Castle Wall with Stone Texture.pdf' (SRC006) filed under 'General/2025' — may belong in 'Media/Images/2025' or similar if image categorization is intended.",
-        "Folder 'Finance/Income/2002' created for pension info (SRC038) — may be better under 'Finance/Insurance/2002' or 'Finance/Pensions/2002'.",
-        "Folder 'Finance/Utilities/2025' contains customer service letters (SRC032, SRC045, SRC046) — may be better under 'Reference/Correspondence/2025' or a 'CustomerService' subfolder.",
-        "Folder 'Reference/Correspondence/2022' contains multiple 'Anmeldebestätigung' files (SRC047, SRC048, SRC050) — may be better under 'Civic/Government/2022' for consistency with SRC049."
+        "Duplicate copy operations for SRC004 and SRC003 both targeting 'Verwaltung/Behoerden/2022' with identical target name '2022-01-18 Inschrijving als niet-ingezetene in de Basisregistratie Personen - the.pdf' — may overwrite or conflict.",
+        "Duplicate copy operations for SRC008, SRC009, SRC010, SRC012, SRC034 all targeting 'Finanzen/Steuern/2024' with identical target name '2024-01-01 Prämienrechnung Verbundene Wohngebäude-Versicherung - Baloise.pdf' — high risk of overwrite.",
+        "Folder 'Verwaltung/Behoerden/2025' is created via 'create_folder', but it is not listed in existing folders — this is acceptable, but note that SRC001 copies into it immediately after creation, which is safe if execution is sequential.",
+        "SRC050 and SRC051 both copy files named '2022-07-28 Anmeldebestätigung.pdf' into different folders ('Verwaltung/Behoerden/2022' and 'Referenz/Korrespondenz/2022') — this is acceptable if intentional, but may indicate misclassification if the same document is being duplicated across categories."
       ]
     }
   }

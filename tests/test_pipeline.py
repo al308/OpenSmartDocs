@@ -32,8 +32,9 @@ class FakeOllama:
     def __init__(self, settings):
         pass
 
-    def request_metadata(self, image_bytes):
+    def request_metadata(self, *, image_bytes=None, text=None):
         assert image_bytes == b"png"
+        assert text is None
         return {"title": "Test", "author": "Unit"}
 
 
@@ -65,11 +66,66 @@ def test_pipeline_run_once(monkeypatch, tmp_path: Path):
     monkeypatch.setattr(pipeline, "OllamaClient", fake_ollama_factory)
     monkeypatch.setattr(pipeline, "pdf_to_png_pages", lambda pdf, max_pages=1: [b"png"])
     monkeypatch.setattr(pipeline, "embed_metadata", lambda pdf, metadata: b"updated-pdf")
+    monkeypatch.setattr(pipeline, "extract_pdf_text", lambda pdf: "")
+    monkeypatch.setattr(pipeline, "extract_pdf_metadata_fields", lambda pdf: {})
 
     pipe = pipeline.Pipeline(settings)
     processed = pipe.run_once()
     assert processed == 1
     assert fake_onedrive.uploaded[0][0] == "file.pdf"
+
+
+def test_pipeline_prefers_text(monkeypatch, tmp_path: Path):
+    settings = PipelineSettings(
+        graph=GraphSettings(
+            tenant_id="tenant",
+            client_id="client",
+            client_secret="secret",
+            user_id="user",
+            token_cache_path=tmp_path / "token_cache.json",
+        ),
+        ollama=OllamaSettings(model="test"),
+        db_path=tmp_path / "state.db",
+        log_path=tmp_path / "pipeline.log",
+        config_path=tmp_path / "config.json",
+        auto_process_inbox=True,
+    )
+
+    fake_onedrive = FakeOneDrive(settings.graph)
+
+    def fake_onedrive_factory(_):
+        return fake_onedrive
+
+    class TextFirstOllama:
+        def __init__(self, _settings):
+            self.calls = []
+
+        def request_metadata(self, *, image_bytes=None, text=None):
+            self.calls.append({"image_bytes": image_bytes, "text": text})
+            assert text is not None
+            assert "Document metadata:" in text
+            assert "Existing" in text
+            return {"title": "Text", "author": "Unit"}
+
+    def fake_ollama_factory(_):
+        return TextFirstOllama(settings.ollama)
+
+    monkeypatch.setattr(pipeline, "OneDriveClient", fake_onedrive_factory)
+    monkeypatch.setattr(pipeline, "OllamaClient", fake_ollama_factory)
+
+    long_text = "A" * pipeline.Pipeline._MIN_TEXT_CHARS
+    monkeypatch.setattr(pipeline, "extract_pdf_text", lambda pdf: long_text)
+    monkeypatch.setattr(pipeline, "extract_pdf_metadata_fields", lambda pdf: {"Title": "Existing"})
+
+    def fail_pdf_to_png(_pdf, max_pages=1):
+        raise AssertionError("pdf_to_png_pages should not be called when text is available")
+
+    monkeypatch.setattr(pipeline, "pdf_to_png_pages", fail_pdf_to_png)
+    monkeypatch.setattr(pipeline, "embed_metadata", lambda pdf, metadata: b"updated-pdf")
+
+    pipe = pipeline.Pipeline(settings)
+    processed = pipe.run_once()
+    assert processed == 1
 
 
 def test_run_executes_startup_checks(monkeypatch, tmp_path: Path):

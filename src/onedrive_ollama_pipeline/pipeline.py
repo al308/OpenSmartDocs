@@ -4,21 +4,31 @@ from __future__ import annotations
 import io
 import logging
 import time
-from typing import Callable, Optional
+from typing import Callable, Literal, Optional
 
 from PIL import Image
 
 from .config import PipelineSettings, load_settings
 from .ollama_client import OllamaClient
 from .onedrive_client import OneDriveClient
-from .pdf_processor import embed_metadata, pdf_to_png_pages
+from .pdf_processor import (
+    embed_metadata,
+    extract_pdf_metadata_fields,
+    extract_pdf_text,
+    pdf_to_png_pages,
+)
 from .state_store import StateStore
+
+MetadataStrategy = Literal["auto", "text", "image", "both"]
 
 _LOGGER = logging.getLogger(__name__)
 
 
 class Pipeline:
     """Orchestrate the OneDrive to Ollama metadata enrichment flow."""
+
+    _MIN_TEXT_CHARS = 200
+    MetadataStrategy = Literal["auto", "text", "image", "both"]
 
     def __init__(self, settings: PipelineSettings):
         self._settings = settings
@@ -74,23 +84,124 @@ class Pipeline:
         index: Optional[int] = None,
         total: Optional[int] = None,
         progress_callback: Optional[Callable[[str], None]] = None,
+        metadata_strategy: MetadataStrategy = "auto",
     ) -> dict:
         position = self._format_position(index, total)
         _LOGGER.info("Processing %s%s", position, item.name)
         self._notify_progress(progress_callback, "download")
         self._log_progress(position, item.name, "download")
         pdf_bytes = self._onedrive.download_item(item)
-        self._notify_progress(progress_callback, "convert")
-        self._log_progress(position, item.name, "convert")
-        png_pages = pdf_to_png_pages(pdf_bytes, max_pages=1)
-        if not png_pages:
-            raise RuntimeError("PDF conversion returned no pages")
-        image_bytes = self._compress_image_if_needed(png_pages[0], item.name)
-        size_mb = len(image_bytes) / (1024 * 1024)
-        _LOGGER.info("%s%s: preparing metadata request (image %.2f MB)", position, item.name, size_mb)
-        self._notify_progress(progress_callback, "metadata")
-        self._log_progress(position, item.name, "metadata")
-        metadata = self._ollama.request_metadata(image_bytes)
+        doc_metadata_fields = extract_pdf_metadata_fields(pdf_bytes)
+        if doc_metadata_fields:
+            _LOGGER.info(
+                "%s%s: detected %d embedded metadata field(s).",
+                position,
+                item.name,
+                len(doc_metadata_fields),
+            )
+
+        metadata_stage_sent = False
+
+        def _notify_metadata_stage() -> None:
+            nonlocal metadata_stage_sent
+            if metadata_stage_sent:
+                return
+            self._notify_progress(progress_callback, "metadata")
+            self._log_progress(position, item.name, "metadata")
+            metadata_stage_sent = True
+
+        if metadata_strategy not in {"auto", "text", "image", "both"}:
+            raise ValueError(f"Unsupported metadata strategy '{metadata_strategy}'")
+
+        text_excerpt = ""
+        text_chars = 0
+        text_available = False
+
+        attempts_text = metadata_strategy in {"auto", "text", "both"}
+        if attempts_text:
+            text_excerpt = extract_pdf_text(pdf_bytes)
+            text_chars = len(text_excerpt)
+            text_available = text_chars > 0
+            if text_available:
+                self._notify_progress(progress_callback, "extract_text")
+                self._log_progress(position, item.name, "extract_text")
+                _LOGGER.info(
+                    "%s%s: extracted %d text chars for metadata",
+                    position,
+                    item.name,
+                    text_chars,
+                )
+            else:
+                _LOGGER.info("%s%s: no extractable text detected.", position, item.name)
+
+        if metadata_strategy == "auto":
+            use_text = text_available and text_chars >= self._MIN_TEXT_CHARS
+        else:
+            use_text = text_available and attempts_text
+
+        if metadata_strategy == "text" and not use_text:
+            _LOGGER.warning(
+                "%s%s: text-only strategy requested but no extractable text found; falling back to image.",
+                position,
+                item.name,
+            )
+        if metadata_strategy == "both" and not use_text:
+            _LOGGER.warning(
+                "%s%s: text+image strategy requested but no extractable text found; using image only.",
+                position,
+                item.name,
+            )
+
+        use_image = metadata_strategy in {"image", "both"}
+        if metadata_strategy == "auto" and not use_text:
+            use_image = True
+        if metadata_strategy == "text" and not use_text:
+            use_image = True
+
+        if metadata_strategy == "auto":
+            if use_text:
+                _LOGGER.info(
+                    "%s%s: auto strategy selected text path (chars=%d).",
+                    position,
+                    item.name,
+                    text_chars,
+                )
+            else:
+                _LOGGER.info("%s%s: auto strategy falling back to image path.", position, item.name)
+
+        image_bytes: Optional[bytes] = None
+        if use_image:
+            self._notify_progress(progress_callback, "convert")
+            self._log_progress(position, item.name, "convert")
+            png_pages = pdf_to_png_pages(pdf_bytes, max_pages=1)
+            if not png_pages:
+                raise RuntimeError("PDF conversion returned no pages")
+            image_bytes = self._compress_image_if_needed(png_pages[0], item.name)
+            size_mb = len(image_bytes) / (1024 * 1024)
+            _LOGGER.info("%s%s: prepared first-page image (%.2f MB)", position, item.name, size_mb)
+
+        if not use_text and not use_image:
+            raise RuntimeError("Metadata request has neither text nor image input.")
+
+        text_payload: Optional[str] = None
+        if use_text:
+            text_payload = text_excerpt
+            if doc_metadata_fields:
+                metadata_lines = "\n".join(f"{key}: {value}" for key, value in doc_metadata_fields.items())
+                text_payload = f"{text_excerpt}\n\nDocument metadata:\n{metadata_lines}"
+                _LOGGER.info(
+                    "%s%s: appended %d metadata field(s) to text payload.",
+                    position,
+                    item.name,
+                    len(doc_metadata_fields),
+                )
+
+        _notify_metadata_stage()
+        metadata = self._ollama.request_metadata(
+            text=text_payload,
+            image_bytes=image_bytes if use_image else None,
+        )
+
         self._notify_progress(progress_callback, "embed")
         self._log_progress(position, item.name, "embed")
         enriched_pdf = embed_metadata(pdf_bytes, metadata)
@@ -116,6 +227,7 @@ class Pipeline:
         messages = {
             "download": "downloading from OneDrive",
             "convert": "converting to image",
+            "extract_text": "extracting text content",
             "metadata": "requesting metadata",
             "embed": "embedding metadata",
             "upload": "uploading to sorted folder",

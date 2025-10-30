@@ -13,6 +13,7 @@
     "auto_process_inbox": false
   },
   "structure": {
-    "model": "qwen3-vl:235b-cloud"
+    "model": "qwen3-vl:235b-cloud",
+    "language": "de"
   }
 }
