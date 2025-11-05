@@ -226,6 +226,16 @@
             .config-form .checkbox-row input {
                 width: auto;
             }
+            /* Generic checkbox row for forms outside config-form */
+            .checkbox-row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.6rem;
+            }
+            .checkbox-row input {
+                width: auto;
+            }
             .inbox-controls {
                 display: flex;
                 flex-wrap: wrap;
@@ -281,6 +291,51 @@
                 border: none;
                 border-radius: 6px;
                 background: #0b1224;
+            }
+            /* Simplex scan rows */
+            .simplex-row {
+                display: grid;
+                gap: 0.75rem;
+                align-items: stretch;
+            }
+            .simplex-row.two {
+                grid-template-columns: 1fr 1fr;
+            }
+            .simplex-preview {
+                background: #111c3a;
+                border-radius: 8px;
+                border: 1px solid rgba(148, 163, 184, 0.18);
+                padding: 0.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                min-height: 180px;
+            }
+            .simplex-preview-title {
+                font-size: 0.85rem;
+                color: rgba(226, 232, 240, 0.75);
+            }
+            .order-note { color: rgba(226, 232, 240, 0.6); margin-left: 0.35rem; }
+            #ingest-odd-preview-frame,
+            #ingest-even-preview-frame {
+                width: 100%;
+                height: 160px;
+                background: #0b1224;
+                border-radius: 6px;
+            }
+            .info-icon {
+                color: #93c5fd;
+                margin-left: 0.35rem;
+                cursor: help;
+            }
+            @media (max-width: 680px) {
+                .simplex-row {
+                    grid-template-columns: 1fr !important;
+                }
+                #ingest-odd-preview-frame,
+                #ingest-even-preview-frame {
+                    height: 200px;
+                }
             }
             @media (max-width: 1024px) {
                 .table-preview-container {
@@ -470,19 +525,36 @@
                     </div>
 
                     <div class="ingest-card">
-                        <h2>Mass scan (2-sided)</h2>
+                        <h2>Simplex Scan (2-sided)</h2>
                         <p>Combine odd and even simplex scans, then deliver the merged PDF to the inbox.</p>
-                        <div class="dropzone" id="ingest-odd-drop" role="button" tabindex="0">
-                            <strong id="ingest-odd-label">Drop odd pages PDF</strong>
-                            <div class="ingest-hint">First pass - front sides.</div>
-                            <input type="file" id="ingest-odd-input" accept="application/pdf" />
+                        <div class="simplex-row two">
+                            <div class="dropzone" id="ingest-odd-drop" role="button" tabindex="0">
+                                <strong id="ingest-odd-label">Drop odd pages PDF</strong>
+                                <div class="ingest-hint">First pass - front sides.</div>
+                                <input type="file" id="ingest-odd-input" accept="application/pdf" />
+                            </div>
+                            <div class="dropzone" id="ingest-even-drop" role="button" tabindex="0">
+                                <strong id="ingest-even-label">Drop even pages PDF</strong>
+                                <div class="ingest-hint">Second pass - back sides.</div>
+                                <input type="file" id="ingest-even-input" accept="application/pdf" />
+                            </div>
                         </div>
-                        <div class="dropzone" id="ingest-even-drop" role="button" tabindex="0">
-                            <strong id="ingest-even-label">Drop even pages PDF</strong>
-                            <div class="ingest-hint">Second pass - back sides.</div>
-                            <input type="file" id="ingest-even-input" accept="application/pdf" />
+                        <div class="simplex-row two">
+                            <div class="simplex-preview" id="ingest-odd-preview">
+                                <div class="simplex-preview-title">Odd preview</div>
+                                <iframe id="ingest-odd-preview-frame" class="preview-frame" title="Odd pages preview"></iframe>
+                            </div>
+                            <div class="simplex-preview" id="ingest-even-preview">
+                                <div class="simplex-preview-title">Even preview <span id="ingest-even-order-note" class="order-note"></span></div>
+                                <iframe id="ingest-even-preview-frame" class="preview-frame" title="Even pages preview"></iframe>
+                            </div>
                         </div>
                         <form id="ingest-mass-form" class="ingest-form">
+                            <label class="checkbox-row" title="This usually happens if you just turn around a pile of sheets.">
+                                <input type="checkbox" id="ingest-even-reverse" name="reverseEven" checked />
+                                Even pages – reverse order
+                                <span class="info-icon" aria-hidden="true">ℹ︎</span>
+                            </label>
                             <label>Final filename (optional)
                                 <input type="text" id="ingest-output-name" name="outputName" placeholder="e.g. contract.pdf" />
                             </label>
@@ -1600,6 +1672,10 @@
                 const evenDrop = document.getElementById('ingest-even-drop');
                 const oddLabel = document.getElementById('ingest-odd-label');
                 const evenLabel = document.getElementById('ingest-even-label');
+                const oddPreviewFrame = document.getElementById('ingest-odd-preview-frame');
+                const evenPreviewFrame = document.getElementById('ingest-even-preview-frame');
+                const reverseEvenCheckbox = document.getElementById('ingest-even-reverse');
+                const evenOrderNote = document.getElementById('ingest-even-order-note');
                 const massForm = document.getElementById('ingest-mass-form');
                 const massSubmit = document.getElementById('ingest-mass-submit');
                 const massStatus = document.getElementById('ingest-mass-status');
@@ -1621,6 +1697,8 @@
                 let regularFile = null;
                 let oddFile = null;
                 let evenFile = null;
+                let oddObjectUrl = null;
+                let evenObjectUrl = null;
                 let currentIngestItem = null;
                 let ingestSelectedMode = null;
 
@@ -1836,12 +1914,14 @@
                         oddFile = null;
                         if (oddLabel) oddLabel.textContent = oddDefaultLabel;
                         if (oddInput) oddInput.value = '';
+                        if (oddPreviewFrame) oddPreviewFrame.removeAttribute('src');
                         updateMassReadyState();
                         return;
                     }
                     oddFile = file;
                     if (oddLabel) oddLabel.textContent = file.name;
                     if (oddInput) oddInput.value = '';
+                    refreshOddPreview();
                     updateMassReadyState();
                 }
 
@@ -1851,13 +1931,44 @@
                         evenFile = null;
                         if (evenLabel) evenLabel.textContent = evenDefaultLabel;
                         if (evenInput) evenInput.value = '';
+                        if (evenPreviewFrame) evenPreviewFrame.removeAttribute('src');
                         updateMassReadyState();
                         return;
                     }
                     evenFile = file;
                     if (evenLabel) evenLabel.textContent = file.name;
                     if (evenInput) evenInput.value = '';
+                    refreshEvenPreview();
                     updateMassReadyState();
+                }
+
+                function refreshOddPreview() {
+                    if (!oddPreviewFrame) return;
+                    try { if (oddObjectUrl) URL.revokeObjectURL(oddObjectUrl); } catch (_e) {}
+                    if (!oddFile) {
+                        oddPreviewFrame.removeAttribute('src');
+                        return;
+                    }
+                    oddObjectUrl = URL.createObjectURL(oddFile);
+                    oddPreviewFrame.src = `${oddObjectUrl}#page=1&zoom=page-fit`;
+                }
+
+                function refreshEvenPreview() {
+                    if (!evenPreviewFrame) return;
+                    try { if (evenObjectUrl) URL.revokeObjectURL(evenObjectUrl); } catch (_e) {}
+                    if (!evenFile) {
+                        evenPreviewFrame.removeAttribute('src');
+                        return;
+                    }
+                    evenObjectUrl = URL.createObjectURL(evenFile);
+                    // We always preview the first page; toggling reverse will refresh the frame
+                    evenPreviewFrame.src = `${evenObjectUrl}#page=1&zoom=page-fit`;
+                }
+
+                function updateEvenOrderNote() {
+                    if (!evenOrderNote) return;
+                    const reversed = reverseEvenCheckbox ? !!reverseEvenCheckbox.checked : true;
+                    evenOrderNote.textContent = reversed ? '(reverse)' : '(in order)';
                 }
 
                 function updateMassReadyState() {
@@ -1873,6 +1984,16 @@
                 attachDropHandlers(regularDrop, regularInput, setRegularFile);
                 attachDropHandlers(oddDrop, oddInput, setOddFile);
                 attachDropHandlers(evenDrop, evenInput, setEvenFile);
+
+                if (reverseEvenCheckbox) {
+                    reverseEvenCheckbox.addEventListener('change', () => {
+                        // Refresh even preview on toggle and update note
+                        updateEvenOrderNote();
+                        refreshEvenPreview();
+                    });
+                    // Initialize note based on default state
+                    updateEvenOrderNote();
+                }
 
                 if (regularUpload) {
                     regularUpload.addEventListener('click', async () => {
@@ -1924,6 +2045,9 @@
                         const formData = new FormData();
                         formData.append('oddFile', oddFile, oddFile.name);
                         formData.append('evenFile', evenFile, evenFile.name);
+                        if (reverseEvenCheckbox) {
+                            formData.append('reverseEven', reverseEvenCheckbox.checked ? 'true' : 'false');
+                        }
                         if (outputNameInput && outputNameInput.value.trim()) {
                             formData.append('outputName', outputNameInput.value.trim());
                         }
@@ -1941,6 +2065,9 @@
                             if (oddInput) oddInput.value = '';
                             if (evenInput) evenInput.value = '';
                             if (outputNameInput) outputNameInput.value = '';
+                            updateEvenOrderNote();
+                            refreshOddPreview();
+                            refreshEvenPreview();
                             await loadInbox();
                         } catch (error) {
                             showIngestStatus(massStatus, error.message || 'Upload failed.', 'error');

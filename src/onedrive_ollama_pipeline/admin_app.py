@@ -156,6 +156,30 @@ def _combine_duplex_pdfs(odd_pdf: bytes, even_pdf: bytes) -> tuple[bytes, int]:
     return buffer.getvalue(), len(odd_pages) + len(even_pages)
 
 
+def _combine_duplex_pdfs_forward(odd_pdf: bytes, even_pdf: bytes) -> tuple[bytes, int]:
+    """Merge simplex scans into a duplex PDF, preserving even order (no reverse)."""
+    try:
+        with pikepdf.Pdf.open(io.BytesIO(odd_pdf)) as odd_doc, pikepdf.Pdf.open(io.BytesIO(even_pdf)) as even_doc:
+            odd_pages = list(odd_doc.pages)
+            even_pages = list(even_doc.pages)
+            if len(odd_pages) != len(even_pages):
+                raise HTTPException(
+                    status_code=400,
+                    detail=f"Odd ({len(odd_pages)}) and even ({len(even_pages)}) scans must contain the same number of pages.",
+                )
+            combined = pikepdf.Pdf.new()
+            for index, odd_page in enumerate(odd_pages):
+                combined.pages.append(odd_page)
+                combined.pages.append(even_pages[index])
+    except pikepdf.PdfError as exc:
+        raise HTTPException(status_code=400, detail=f"Invalid PDF upload: {exc}") from exc
+
+    buffer = io.BytesIO()
+    combined.save(buffer)
+    combined.close()
+    return buffer.getvalue(), len(odd_pages) + len(even_pages)
+
+
 def _has_meaningful_text(pdf_bytes: bytes, *, min_chars: int = 200) -> bool:
     try:
         inspection = inspect_pdf_content(pdf_bytes, text_max_pages=3, text_max_chars=3000)
@@ -702,6 +726,7 @@ def api_ingest_process(request: IngestProcessRequest) -> dict[str, Any]:
 async def api_ingest_mass_scan(
     odd_file: UploadFile = File(..., alias="oddFile"),
     even_file: UploadFile = File(..., alias="evenFile"),
+    reverse_even: bool = Form(True, alias="reverseEven"),
     output_name: str = Form("", alias="outputName"),
 ) -> dict[str, Any]:
     if not odd_file.filename or not even_file.filename:
@@ -716,7 +741,10 @@ async def api_ingest_mass_scan(
         raise HTTPException(status_code=400, detail="Uploaded PDFs must not be empty")
 
     try:
-        combined_pdf, total_pages = _combine_duplex_pdfs(odd_bytes, even_bytes)
+        if reverse_even:
+            combined_pdf, total_pages = _combine_duplex_pdfs(odd_bytes, even_bytes)
+        else:
+            combined_pdf, total_pages = _combine_duplex_pdfs_forward(odd_bytes, even_bytes)
     except HTTPException:
         raise
 
